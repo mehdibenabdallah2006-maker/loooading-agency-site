@@ -318,8 +318,14 @@ button {
     color: var(--color-text-main);
 }
 
-.logo-accent {
+.logo-accent,
+.brand-accent {
     color: var(--color-primary);
+}
+
+.brand-text {
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
 .footer-logo {
