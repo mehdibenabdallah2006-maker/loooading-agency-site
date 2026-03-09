@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loooading | Creative Agency</title>
+    <meta name="description" content="A creative agency designing ideas, brands and experiences.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-mark"><span class="dots"><span class="dot">.</span><span class="dot">.</span><span
+                            class="dot">.</span></span></div>
+                loooading<span class="logo-dots">...</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+
+            <a href="#contact" class="btn btn-primary magnetic">
+                <span>Start project</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                loooading<span class="animated-dots"><span class="dot">.</span><span class="dot">.</span><span
+                        class="dot">.</span></span>
+            </h1>
+            <h2 class="hero-subtitle">
+                <span class="handwriting">ideas brands experiences</span>
+            </h2>
+            <div class="hero-badge">
+                <div class="badge-dot"></div>
+                <p class="hero-desc">A creative agency designing ideas, brands and experiences.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Focus Section -->
+    <section id="services" class="focus-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h3 class="section-title">Our Focus</h3>
+                <span class="section-meta">01 — 03</span>
+            </div>
+
+            <div class="focus-grid">
+                <!-- Focus 1 -->
+                <div class="focus-card reveal">
+                    <div class="focus-icon">
+                        <span class="material-icons">lightbulb</span>
+                    </div>
+                    <h4 class="focus-card-title">Ideas</h4>
+                    <p class="focus-card-desc">Strategic thinking and creative concepts that challenge the status quo
+                        and spark meaningful conversations.</p>
+                </div>
+
+                <!-- Focus 2 -->
+                <div class="focus-card reveal">
+                    <div class="focus-icon">
+                        <span class="material-icons">fingerprint</span>
+                    </div>
+                    <h4 class="focus-card-title">Brands</h4>
+                    <p class="focus-card-desc">Identity design and brand systems built for longevity, resonance, and
+                        distinct visual storytelling.</p>
+                </div>
+
+                <!-- Focus 3 -->
+                <div class="focus-card reveal">
+                    <div class="focus-icon">
+                        <span class="material-icons">architecture</span>
+                    </div>
+                    <h4 class="focus-card-title">Experiences</h4>
+                    <p class="focus-card-desc">Digital and physical brand touchpoints that create immersive journeys for
+                        your audience.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-separator">
+            <span class="animated-separator"><span class="dot">.</span><span class="dot">.</span><span
+                    class="dot">.</span></span>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work" class="portfolio-section">
+        <div class="container">
+            <h3 class="section-title reveal">Selected Work</h3>
+
+            <div class="portfolio-masonry">
+                <!-- Project 1 -->
+                <a href="#project1" class="portfolio-card reveal">
+                    <div class="portfolio-image-wrapper">
+                        <img src="images/project-kinetic.png" alt="The Kinetic Project" loading="lazy"
+                            class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-category">Brand Identity</span>
+                                <h4 class="portfolio-title">The Kinetic Project</h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="#project2" class="portfolio-card reveal">
+                    <div class="portfolio-image-wrapper">
+                        <img src="images/project-lumina.png" alt="Lumina Systems" loading="lazy"
+                            class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-category">Digital Experience</span>
+                                <h4 class="portfolio-title">Lumina Systems</h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="#project3" class="portfolio-card reveal">
+                    <div class="portfolio-image-wrapper">
+                        <img src="images/project-void.png" alt="Void Studio" loading="lazy" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-category">Web Design</span>
+                                <h4 class="portfolio-title">Void Studio</h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 4 -->
+                <a href="#project4" class="portfolio-card reveal">
+                    <div class="portfolio-image-wrapper">
+                        <img src="images/project-aura.png" alt="Aura 2024" loading="lazy" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-category">Campaign</span>
+                                <h4 class="portfolio-title">Aura 2024</h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <div class="about-content reveal">
+                <h3 class="about-title">Why 'Loooading'?</h3>
+                <p class="about-desc">
+                    We believe the most exciting part of any journey is the state of becoming. 'Loooading' isn't just a
+                    status—it's our philosophy.
+                </p>
+                <p class="about-highlight">Always creating, never static.</p>
+                <a href="#contact" class="btn btn-outline-white magnetic">
+                    <span>Read our story</span>
+                    <span class="animated-dots-small"><span class="dot">.</span><span class="dot">.</span><span
+                            class="dot">.</span></span>
+                </a>
+            </div>
+            <div class="about-image-column reveal">
+                <div class="about-image-wrapper">
+                    <img src="images/about-studio.png" alt="Loooading Studio" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section id="contact" class="contact-cta">
+        <div class="container contact-container reveal">
+            <h2 class="contact-title">
+                Let's build<br>
+                something <span class="handwriting highlight">great</span><span class="animated-dots"><span
+                        class="dot">.</span><span class="dot">.</span><span class="dot">.</span></span>
+            </h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Project description" rows="1" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary magnetic">
+                    <span>Send message</span>
+                    <span class="animated-dots-small"><span class="dot">.</span><span class="dot">.</span><span
+                            class="dot">.</span></span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                boooading<span class="logo-dots">...</span>
+            </div>
+
+            <div class="footer-socials">
+                <a href="#" class="social-link magnetic">Instagram</a>
+                <a href="#" class="social-link magnetic">Twitter</a>
+                <a href="#" class="social-link magnetic">Behance</a>
+            </div>
+
+            <div class="footer-copyright">
+                &copy; 2024 Loooading Agency.<br>All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="animations.js"></script>
+</body>
+
+</html>
