@@ -474,9 +474,13 @@ button {
 }
 
 .focus-card-title {
-    font-size: 1.25rem;
+    font-family: var(--font-script);
+    color: var(--color-primary);
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: var(--space-2);
+    text-transform: lowercase;
+    /* Matches the user's reference image style */
 }
 
 .focus-card-desc {
