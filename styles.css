@@ -15,6 +15,8 @@
     --color-text-muted: #666666;
     --color-border: #EAEAEA;
     --color-white: #FFFFFF;
+    --color-about-bg: #130D0C;
+    /* New dark theme from user swatch */
 
     /* Typography */
     --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -592,11 +594,10 @@ button {
 
 /* --- 10. About Section --- */
 .about-section {
-    background-color: var(--color-primary);
+    background-color: var(--color-about-bg);
     color: var(--color-white);
     padding: var(--space-24) 0;
     margin-top: 100px;
-    /* To account for masonry offset */
 }
 
 .about-container {
