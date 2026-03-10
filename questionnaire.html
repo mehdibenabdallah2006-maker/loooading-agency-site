@@ -10,9 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Caveat:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -57,29 +55,33 @@
         textarea:focus,
         select:focus {
             border-color: #ff4422 !important;
-            ring-color: #ff4422 !important;
+            box-shadow: 0 0 0 1px #ff4422 !important;
         }
     </style>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
     <!-- Top Navigation -->
     <header
         class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 lg:px-20 py-4">
         <div class="max-w-[1200px] mx-auto flex items-center justify-between">
             <div class="flex items-center gap-2">
-                <div class="size-8 text-primary">
-                    <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z">
-                        </path>
-                    </svg>
-                </div>
-                <h1 class="text-2xl font-extrabold tracking-tight">loooading</h1>
+                <a href="index.html" class="logo">
+                    l<span class="logo-accent"><span>o</span><span>o</span><span>o</span></span>ading<span
+                        class="animated-dots-small"><span class="dot">.</span><span class="dot">.</span><span
+                            class="dot">.</span></span>
+                </a>
             </div>
             <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
-                <a class="hover:text-primary transition-colors" href="index.html#work">Work</a>
-                <a class="hover:text-primary transition-colors" href="index.html#services">Services</a>
+                <a class="hover:text-primary transition-colors" href="index.html#services-main">Services</a>
+                <a class="hover:text-primary transition-colors" href="services/websites.html">Websites</a>
+                <a class="hover:text-primary transition-colors" href="services/ecommerce.html">E-commerce</a>
+                <a class="hover:text-primary transition-colors" href="services/branding.html">Branding</a>
+                <a class="hover:text-primary transition-colors" href="services/apps.html">Apps</a>
                 <a class="hover:text-primary transition-colors" href="index.html#about">About</a>
                 <a href="index.html"
                     class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:opacity-90 transition-all inline-block">
@@ -477,14 +479,11 @@
     <footer class="bg-white border-t border-primary/5 py-12 px-6">
         <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
             <div class="flex items-center gap-2">
-                <div class="size-6 text-primary">
-                    <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z">
-                        </path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-extrabold">loooading</h3>
+                <a href="index.html" class="logo">
+                    l<span class="logo-accent"><span>o</span><span>o</span><span>o</span></span>ading<span
+                        class="animated-dots-small"><span class="dot">.</span><span class="dot">.</span><span
+                            class="dot">.</span></span>
+                </a>
             </div>
             <div class="flex gap-8 text-sm font-bold text-slate-400">
                 <a class="hover:text-primary" href="#">Instagram</a>
@@ -541,6 +540,7 @@
                 this.reset();
             });
         </script>
+        <script src="animations.js"></script>
 </body>
 
 </html>

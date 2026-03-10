@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Design | Loooading Agency</title>
+    <meta name="description" content="UX/UI design for mobile apps and digital products.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                l<span class="logo-accent"><span>o</span><span>o</span><span>o</span></span>ading<span
+                    class="animated-dots-small"><span class="dot">.</span><span class="dot">.</span><span
+                        class="dot">.</span></span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html#services-main" class="nav-link">Services</a>
+                <a href="websites.html" class="nav-link">Websites</a>
+                <a href="ecommerce.html" class="nav-link">E-commerce</a>
+                <a href="branding.html" class="nav-link">Branding</a>
+                <a href="apps.html" class="nav-link">Apps</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+            </div>
+
+            <a href="../questionnaire.html" class="btn btn-primary magnetic">
+                <span>Start project</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title" style="font-size: clamp(3rem, 10vw, 5rem);">App Design</h1>
+            <h2 class="hero-subtitle">
+                <span class="handwriting">Digital products built to flow.</span>
+            </h2>
+            <div class="hero-badge">
+                <div class="badge-dot"></div>
+                <p class="hero-desc">We design intuitive mobile and web applications with premium UX/UI.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Selected Projects Section -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h3 class="section-title">Selected Projects</h3>
+                <span class="section-meta">App Design Showcase</span>
+            </div>
+
+            <div class="portfolio-masonry">
+                <!-- Project 1 -->
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-image-wrapper">
+                        <img src="../images/project-lumina.png" alt="Lumina App" loading="lazy" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-category">Product Design</span>
+                                <h4 class="portfolio-title">Lumina Platform</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-image-wrapper">
+                        <img src="../images/project-void.png" alt="Void UI" loading="lazy" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-category">Interface Design</span>
+                                <h4 class="portfolio-title">Void App</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="focus-section bg-light" style="padding: 100px 0;">
+        <div class="container">
+            <div class="section-header reveal">
+                <h3 class="section-title">What We Do</h3>
+                <span class="section-meta">Our Expertise</span>
+            </div>
+
+            <div class="focus-grid">
+                <div class="focus-card reveal">
+                    <div class="focus-icon"><span class="material-icons">architecture</span></div>
+                    <h4 class="focus-card-title">UX/UI</h4>
+                    <p class="focus-card-desc">Intuitive interface design and user psychology-led UX mapping.</p>
+                </div>
+                <div class="focus-card reveal">
+                    <div class="focus-icon"><span class="material-icons">touch_app</span></div>
+                    <h4 class="focus-card-title">Prototyping</h4>
+                    <p class="focus-card-desc">High-fidelity interactive prototypes to test and validate ideas.</p>
+                </div>
+                <div class="focus-card reveal">
+                    <div class="focus-icon"><span class="material-icons">extension</span></div>
+                    <h4 class="focus-card-title">Design Systems</h4>
+                    <p class="focus-card-desc">Scalable component libraries built for consistency and efficiency.</p>
+                </div>
+                <div class="focus-card reveal">
+                    <div class="focus-icon"><span class="material-icons">devices</span></div>
+                    <h4 class="focus-card-title">Product Design</h4>
+                    <p class="focus-card-desc">End-to-end digital product design for web and mobile platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="about-section" style="background: #23120f; color: white;">
+        <div class="container">
+            <div class="section-header reveal">
+                <h3 class="section-title" style="color: white;">Our Process</h3>
+                <span class="section-meta" style="color: rgba(255,255,255,0.5);">Workflow</span>
+            </div>
+
+            <div class="focus-grid" style="margin-top: 50px;">
+                <div class="focus-card reveal"
+                    style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <h4 class="focus-card-title" style="color: white;">01. Strategy</h4>
+                    <p class="focus-card-desc" style="color: rgba(255,255,255,0.7);">User research and product
+                        positioning.</p>
+                </div>
+                <div class="focus-card reveal"
+                    style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <h4 class="focus-card-title" style="color: white;">02. Design</h4>
+                    <p class="focus-card-desc" style="color: rgba(255,255,255,0.7);">Wireframing and high-fidelity UX/UI
+                        design.</p>
+                </div>
+                <div class="focus-card reveal"
+                    style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <h4 class="focus-card-title" style="color: white;">03. Build</h4>
+                    <p class="focus-card-desc" style="color: rgba(255,255,255,0.7);">Development-ready design and asset
+                        handoff.</p>
+                </div>
+                <div class="focus-card reveal"
+                    style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <h4 class="focus-card-title" style="color: white;">04. Launch</h4>
+                    <p class="focus-card-desc" style="color: rgba(255,255,255,0.7);">Testing, launch assistance, and
+                        iteration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="contact-cta">
+        <div class="container contact-container reveal">
+            <h2 class="contact-title">
+                Ready to build<br>
+                your <span class="handwriting highlight">next app</span><span class="animated-dots"><span
+                        class="dot">.</span><span class="dot">.</span><span class="dot">.</span></span>
+            </h2>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="../questionnaire.html" class="btn btn-primary magnetic"
+                    style="padding: 20px 60px; font-size: 1.2rem;">
+                    <span>Start your project</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                l<span class="logo-accent"><span>o</span><span>o</span><span>o</span></span>ading
+            </div>
+
+            <div class="footer-socials">
+                <a href="#" class="social-link magnetic">Instagram</a>
+                <a href="#" class="social-link magnetic">Twitter</a>
+                <a href="#" class="social-link magnetic">Behance</a>
+            </div>
+
+            <div class="footer-copyright">
+                &copy; 2024 l<span class="logo-accent"><span>o</span><span>o</span><span>o</span></span>ading
+                Agency.<br>All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../animations.js"></script>
+</body>
+
+</html>
