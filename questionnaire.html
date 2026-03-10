@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Branding Questionnaire - loooading</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Caveat:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff4422",
+                        "background-light": "#f8f6f5",
+                        "background-dark": "#23120f",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"],
+                        "script": ["Caveat", "cursive"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .dot-separator::after {
+            content: "...";
+            color: #ff4422;
+            letter-spacing: 0.2em;
+            font-size: 2rem;
+            display: block;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .custom-checkbox:checked {
+            background-color: #ff4422;
+            border-color: #ff4422;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #ff4422 !important;
+            ring-color: #ff4422 !important;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+    <!-- Top Navigation -->
+    <header
+        class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 lg:px-20 py-4">
+        <div class="max-w-[1200px] mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="size-8 text-primary">
+                    <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z">
+                        </path>
+                    </svg>
+                </div>
+                <h1 class="text-2xl font-extrabold tracking-tight">loooading</h1>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a class="hover:text-primary transition-colors" href="index.html#work">Work</a>
+                <a class="hover:text-primary transition-colors" href="index.html#services">Services</a>
+                <a class="hover:text-primary transition-colors" href="index.html#about">About</a>
+                <a href="index.html"
+                    class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:opacity-90 transition-all inline-block">
+                    Back to Home
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main class="max-w-[900px] mx-auto px-6 py-16">
+        <!-- Hero Section -->
+        <div class="text-center mb-16">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Branding Questionnaire</h1>
+            <p class="text-xl md:text-2xl font-medium mb-2">
+                Create your <span class="font-script text-primary text-3xl md:text-4xl">personalized</span> brand guide.
+            </p>
+            <div class="flex items-center justify-center gap-2 text-slate-500 font-medium">
+                <span class="material-symbols-outlined text-sm">schedule</span>
+                <p>Estimated time: 10–15 minutes</p>
+            </div>
+        </div>
+        <div class="dot-separator"></div>
+        <form class="space-y-12">
+            <!-- Section 1 - General Information -->
+            <section class="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-xl shadow-sm border border-primary/5">
+                <div class="flex items-center gap-4 mb-8">
+                    <span
+                        class="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">01</span>
+                    <h2 class="text-2xl font-bold">General Information</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="col-span-1">
+                        <label class="block text-sm font-semibold mb-2">Company Name</label>
+                        <input
+                            class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none focus:ring-1"
+                            placeholder="e.g. Loooading Studio" type="text" />
+                    </div>
+                    <div class="col-span-1">
+                        <label class="block text-sm font-semibold mb-2">Slogan</label>
+                        <input
+                            class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none focus:ring-1"
+                            placeholder="Your brand catchphrase" type="text" />
+                    </div>
+                    <div class="col-span-2">
+                        <label class="block text-sm font-semibold mb-4">Industry</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input
+                                    class="custom-checkbox rounded size-5 border-primary/20 text-primary focus:ring-primary"
+                                    type="checkbox" />
+                                <span class="text-sm group-hover:text-primary transition-colors">Tech / SaaS</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input
+                                    class="custom-checkbox rounded size-5 border-primary/20 text-primary focus:ring-primary"
+                                    type="checkbox" />
+                                <span class="text-sm group-hover:text-primary transition-colors">Lifestyle</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input
+                                    class="custom-checkbox rounded size-5 border-primary/20 text-primary focus:ring-primary"
+                                    type="checkbox" />
+                                <span class="text-sm group-hover:text-primary transition-colors">B2B</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer group">
+                                <input
+                                    class="custom-checkbox rounded size-5 border-primary/20 text-primary focus:ring-primary"
+                                    type="checkbox" />
+                                <span class="text-sm group-hover:text-primary transition-colors">E-commerce</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-span-2">
+                        <label class="block text-sm font-semibold mb-2">Target Audience</label>
+                        <textarea
+                            class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none focus:ring-1"
+                            placeholder="Describe who your primary customers are..." rows="4"></textarea>
+                    </div>
+                    <div class="col-span-2">
+                        <label class="block text-sm font-semibold mb-2">Existing Website / Socials</label>
+                        <input
+                            class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none focus:ring-1"
+                            placeholder="https://..." type="url" />
+                    </div>
+                </div>
+            </section>
+            <div class="dot-separator"></div>
+            <!-- Section 2 - Brand Style & Personality -->
+            <section class="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-xl shadow-sm border border-primary/5">
+                <div class="flex items-center gap-4 mb-8">
+                    <span
+                        class="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">02</span>
+                    <h2 class="text-2xl font-bold">Brand Style &amp; Personality</h2>
+                </div>
+                <div class="space-y-8">
+                    <div>
+                        <label class="block text-sm font-semibold mb-4">Desired Brand Style</label>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <label
+                                class="flex items-center gap-3 p-4 border border-primary/10 rounded-lg hover:border-primary/50 cursor-pointer">
+                                <input class="custom-checkbox rounded size-5 text-primary" type="checkbox" />
+                                <span>Minimalist</span>
+                            </label>
+                            <label
+                                class="flex items-center gap-3 p-4 border border-primary/10 rounded-lg hover:border-primary/50 cursor-pointer">
+                                <input class="custom-checkbox rounded size-5 text-primary" type="checkbox" />
+                                <span>Bold &amp; Loud</span>
+                            </label>
+                            <label
+                                class="flex items-center gap-3 p-4 border border-primary/10 rounded-lg hover:border-primary/50 cursor-pointer">
+                                <input class="custom-checkbox rounded size-5 text-primary" type="checkbox" />
+                                <span>Organic</span>
+                            </label>
+                            <label
+                                class="flex items-center gap-3 p-4 border border-primary/10 rounded-lg hover:border-primary/50 cursor-pointer">
+                                <input class="custom-checkbox rounded size-5 text-primary" type="checkbox" />
+                                <span>Classic</span>
+                            </label>
+                            <label
+                                class="flex items-center gap-3 p-4 border border-primary/10 rounded-lg hover:border-primary/50 cursor-pointer">
+                                <input class="custom-checkbox rounded size-5 text-primary" type="checkbox" />
+                                <span>Playful</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Tone of Voice</label>
+                            <select
+                                class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none appearance-none">
+                                <option>Professional &amp; Trustworthy</option>
+                                <option>Friendly &amp; Approachable</option>
+                                <option>Provocative &amp; Bold</option>
+                                <option>Luxury &amp; Exclusive</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Core Values</label>
+                            <input
+                                class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none focus:ring-1"
+                                placeholder="e.g. Innovation, Trust, Fun" type="text" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section 3 - Positioning -->
+            <section class="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-xl shadow-sm border border-primary/5">
+                <div class="flex items-center gap-4 mb-8">
+                    <span
+                        class="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">03</span>
+                    <h2 class="text-2xl font-bold">Positioning</h2>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">What makes you different?
+                            (Differentiators)</label>
+                        <textarea
+                            class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none focus:ring-1"
+                            rows="3"></textarea>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Brand Promise</label>
+                            <input
+                                class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none focus:ring-1"
+                                placeholder="What you guarantee your clients" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Long-term Vision</label>
+                            <input
+                                class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none focus:ring-1"
+                                placeholder="Where do you see the brand in 5 years?" type="text" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section 4 - Colors -->
+            <section class="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-xl shadow-sm border border-primary/5">
+                <div class="flex items-center gap-4 mb-8">
+                    <span
+                        class="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">04</span>
+                    <h2 class="text-2xl font-bold">Color Story</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Desired Colors</label>
+                        <div class="flex gap-4">
+                            <input class="size-12 rounded-full border-none p-0 cursor-pointer bg-transparent"
+                                type="color" value="#ff4422" />
+                            <input
+                                class="size-12 rounded-full border border-slate-200 p-0 cursor-pointer bg-transparent"
+                                type="color" value="#ffffff" />
+                            <input
+                                class="flex-1 rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-3 outline-none"
+                                placeholder="e.g. Earthy tones, Neon" type="text" />
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Desired Feelings</label>
+                        <input
+                            class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none"
+                            placeholder="e.g. Calm, Energetic, Royal" type="text" />
+                    </div>
+                    <div class="col-span-2">
+                        <label class="block text-sm font-semibold mb-2">Colors to Avoid</label>
+                        <input
+                            class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none"
+                            placeholder="Are there any colors you absolutely dislike?" type="text" />
+                    </div>
+                </div>
+            </section>
+            <!-- Section 5 - Typography & Imagery -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm border border-primary/5">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span
+                            class="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">05</span>
+                        <h2 class="text-xl font-bold">Typography</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <label class="block text-sm font-semibold">Style Preference</label>
+                        <select
+                            class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none appearance-none">
+                            <option>Serif (Classic &amp; Elegant)</option>
+                            <option>Sans-Serif (Modern &amp; Clean)</option>
+                            <option>Display/Decorative (Unique)</option>
+                            <option>Handwritten (Personal)</option>
+                        </select>
+                        <input
+                            class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none"
+                            placeholder="Fonts you love..." type="text" />
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm border border-primary/5">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span
+                            class="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">06</span>
+                        <h2 class="text-xl font-bold">Imagery</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <label class="block text-sm font-semibold">Visual Tone</label>
+                        <input
+                            class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none"
+                            placeholder="e.g. Gritty, High-exposure, Soft" type="text" />
+                        <label class="block text-sm font-semibold">Inspiring Brands</label>
+                        <input
+                            class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none"
+                            placeholder="Apple, Nike, Glossier..." type="text" />
+                    </div>
+                </div>
+            </section>
+            <!-- Section 7 - Brand Elements -->
+            <section class="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-xl shadow-sm border border-primary/5">
+                <div class="flex items-center gap-4 mb-8">
+                    <span
+                        class="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">07</span>
+                    <h2 class="text-2xl font-bold">Brand Elements</h2>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-4">Logo Status</label>
+                        <div class="flex flex-wrap gap-4">
+                            <label class="flex items-center gap-2">
+                                <input class="text-primary focus:ring-primary size-5 border-primary/20" name="logo"
+                                    type="radio" />
+                                <span>I need a new logo</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input class="text-primary focus:ring-primary size-5 border-primary/20" name="logo"
+                                    type="radio" />
+                                <span>I have a logo to refresh</span>
+                            </label>
+                            <label class="flex items-center gap-2">
+                                <input class="text-primary focus:ring-primary size-5 border-primary/20" name="logo"
+                                    type="radio" />
+                                <span>I'm happy with my logo</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Desired Symbols/Icons</label>
+                            <input
+                                class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none"
+                                placeholder="e.g. Leaves, Arrows, Abstract" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Patterns &amp; Textures</label>
+                            <input
+                                class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none"
+                                placeholder="e.g. Geometric, Watercolor" type="text" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section 8 - Applications -->
+            <section class="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-xl shadow-sm border border-primary/5">
+                <div class="flex items-center gap-4 mb-8">
+                    <span
+                        class="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">08</span>
+                    <h2 class="text-2xl font-bold">Applications &amp; Scope</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <label class="block text-sm font-semibold">Primary Usage</label>
+                        <div class="grid grid-cols-2 gap-2">
+                            <label class="flex items-center gap-2 text-sm"><input
+                                    class="rounded text-primary focus:ring-primary border-primary/20" type="checkbox" />
+                                Website</label>
+                            <label class="flex items-center gap-2 text-sm"><input
+                                    class="rounded text-primary focus:ring-primary border-primary/20" type="checkbox" />
+                                Social Media</label>
+                            <label class="flex items-center gap-2 text-sm"><input
+                                    class="rounded text-primary focus:ring-primary border-primary/20" type="checkbox" />
+                                Print Material</label>
+                            <label class="flex items-center gap-2 text-sm"><input
+                                    class="rounded text-primary focus:ring-primary border-primary/20" type="checkbox" />
+                                Packaging</label>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <label class="block text-sm font-semibold">Budget Range</label>
+                        <select
+                            class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none appearance-none">
+                            <option>$2k - $5k</option>
+                            <option>$5k - $15k</option>
+                            <option>$15k - $50k</option>
+                            <option>$50k+</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <!-- Section 9 - Additional Info -->
+            <section class="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-xl shadow-sm border border-primary/5">
+                <div class="flex items-center gap-4 mb-8">
+                    <span
+                        class="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">09</span>
+                    <h2 class="text-2xl font-bold">Extra Context</h2>
+                </div>
+                <label class="block text-sm font-semibold mb-2">Message for the Designer</label>
+                <textarea
+                    class="w-full rounded-lg border-primary/10 bg-background-light dark:bg-slate-800 p-4 outline-none focus:ring-1"
+                    placeholder="Anything else we should know?" rows="4"></textarea>
+            </section>
+            <!-- Section 10 - Contact -->
+            <section class="bg-slate-950 text-white p-8 md:p-12 rounded-xl shadow-xl">
+                <div class="flex items-center gap-4 mb-8">
+                    <span
+                        class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">10</span>
+                    <h2 class="text-2xl font-bold">Contact Details</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-widest text-primary mb-2">Full
+                            Name</label>
+                        <input class="w-full bg-slate-900 border-none rounded-lg p-4 focus:ring-1 focus:ring-primary"
+                            type="text" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-widest text-primary mb-2">Email
+                            Address</label>
+                        <input class="w-full bg-slate-900 border-none rounded-lg p-4 focus:ring-1 focus:ring-primary"
+                            type="email" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-widest text-primary mb-2">Phone
+                            Number</label>
+                        <input class="w-full bg-slate-900 border-none rounded-lg p-4 focus:ring-1 focus:ring-primary"
+                            type="tel" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-widest text-primary mb-2">Best Time to
+                            Reach</label>
+                        <input class="w-full bg-slate-900 border-none rounded-lg p-4 focus:ring-1 focus:ring-primary"
+                            placeholder="e.g. Mornings EST" type="text" />
+                    </div>
+                </div>
+            </section>
+            <!-- Submission -->
+            <div class="space-y-6 text-center">
+                <div class="flex items-center justify-center gap-3">
+                    <input class="rounded size-5 text-primary border-primary/20 focus:ring-primary" id="confirm"
+                        type="checkbox" />
+                    <label class="text-sm font-medium" for="confirm">I confirm all information provided is accurate and
+                        I'm ready to <span class="font-script text-primary text-lg">level up</span> my brand.</label>
+                </div>
+                <button
+                    class="w-full md:w-auto min-w-[300px] bg-primary text-white py-5 px-12 rounded-full text-xl font-extrabold hover:scale-105 active:scale-95 transition-all shadow-lg shadow-primary/20"
+                    type="submit">
+                    Submit Questionnaire
+                </button>
+                <p class="text-xs text-slate-400 font-medium tracking-wide">WE USUALLY RESPOND WITHIN 24-48 HOURS.</p>
+            </div>
+        </form>
+    </main>
+    <footer class="bg-white border-t border-primary/5 py-12 px-6">
+        <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="flex items-center gap-2">
+                <div class="size-6 text-primary">
+                    <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-extrabold">loooading</h3>
+            </div>
+            <div class="flex gap-8 text-sm font-bold text-slate-400">
+                <a class="hover:text-primary" href="#">Instagram</a>
+                <a class="hover:text-primary" href="#">Dribbble</a>
+                <a class="hover:text-primary" href="#">LinkedIn</a>
+            </div>
+            <p class="text-sm text-slate-400">© 2024 Loooading Agency. All rights reserved.</p>
+        </div>
+
+        <!-- Success Modal Styles -->
+        <style>
+            #successModal {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 1000;
+                align-items: center;
+                justify-content: center;
+                backdrop-filter: blur(4px);
+            }
+
+            #successModal.show {
+                display: flex;
+            }
+        </style>
+
+        <!-- Success Modal -->
+        <div id="successModal">
+            <div
+                class="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-2xl max-w-sm w-full text-center border border-primary/20">
+                <div
+                    class="size-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="material-symbols-outlined text-3xl">check</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Message Sent</h3>
+                <p class="text-slate-500 dark:text-slate-400 mb-8">We've received your branding questionnaire and will
+                    be in touch within 24-48 hours.</p>
+                <a href="index.html"
+                    class="inline-block w-full bg-primary text-white py-3 px-6 rounded-full font-bold hover:scale-105 transition-transform">Return
+                    Home</a>
+            </div>
+        </div>
+
+        <script>
+            document.querySelector('form').addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent actual submission
+
+                // Show success modal
+                const modal = document.getElementById('successModal');
+                modal.classList.add('show');
+
+                // Reset form
+                this.reset();
+            });
+        </script>
+</body>
+
+</html>

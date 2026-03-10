@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loooading Agency — Brand Guidelines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* === Design System === */
+        :root {
+            /* Colors */
+            --color-primary: #FF4422;
+            --color-primary-light: #FF5E42;
+            --color-secondary: #111111;
+            --color-accent: #F2F2F2;
+            --color-on-primary: #FFFFFF;
+
+            /* Neutrals */
+            --color-bg: #FFFFFF;
+            --color-surface: #FAFAFA;
+            --color-surface-alt: #EAEAEA;
+            --color-border: #EAEAEA;
+            --color-text: #111111;
+            --color-text-muted: #666666;
+            --color-danger: #e74c3c;
+
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2.5rem;
+            --space-2xl: 4rem;
+            --space-3xl: 6rem;
+
+            /* Typography */
+            --font-primary: 'Plus Jakarta Sans', sans-serif;
+            --font-secondary: 'Plus Jakarta Sans', sans-serif;
+            --font-script: 'Caveat', cursive;
+
+            /* Border radius & Shadows */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --radius-round: 9999px;
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+            /* Transitions */
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+            --duration-fast: 200ms;
+            --duration-normal: 400ms;
+            --duration-slow: 800ms;
+        }
+
+        /* === Base Styles === */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-primary);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        /* Hide scrollbar for cleaner presentation */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* === Slide Base === */
+        .slide {
+            min-height: 100vh;
+            padding: var(--space-3xl) var(--space-2xl);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            scroll-snap-align: start;
+        }
+
+        .slide__content {
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .slide__label {
+            display: inline-block;
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .slide__title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: var(--space-lg);
+        }
+
+        .slide__subtitle {
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-md);
+        }
+
+        /* === Animation Utilities === */
+        .animate-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity var(--duration-slow) var(--ease-out), transform var(--duration-slow) var(--ease-out);
+        }
+
+        .animate-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* === 1. Cover === */
+        .slide--cover {
+            background: var(--color-bg);
+            color: var(--color-text);
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .cover__logo {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 2rem;
+        }
+
+        .logo-accent {
+            color: var(--color-primary);
+            display: inline-flex;
+        }
+
+        .logo-accent span {
+            display: inline-block;
+            animation: bounce 1.2s infinite;
+        }
+
+        .logo-accent span:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .logo-accent span:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            30% {
+                transform: translateY(-20%);
+            }
+
+            60% {
+                transform: translateY(0);
+            }
+        }
+
+        .cover__subtitle {
+            font-family: var(--font-script);
+            font-size: 3rem;
+            color: var(--color-primary);
+            margin-top: 1rem;
+        }
+
+        .cover__line {
+            width: 40px;
+            height: 2px;
+            background: var(--color-border);
+            margin: 3rem auto;
+        }
+
+        .cover__meta {
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* === 2. Overview === */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+
+        .overview-card {
+            padding: var(--space-xl);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            background: var(--color-surface);
+        }
+
+        .overview-card h3 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .overview-card p {
+            font-size: 1.125rem;
+        }
+
+        /* === 3. Personality === */
+        .personality-scales {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+            margin: var(--space-xl) 0;
+            max-width: 800px;
+        }
+
+        .scale {
+            display: grid;
+            grid-template-columns: 120px 1fr 120px;
+            align-items: center;
+            gap: var(--space-lg);
+        }
+
+        .scale__left,
+        .scale__right {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-muted);
+        }
+
+        .scale__right {
+            text-align: right;
+        }
+
+        .scale__bar {
+            height: 8px;
+            background: var(--color-surface-alt);
+            border-radius: var(--radius-round);
+            position: relative;
+        }
+
+        .scale__fill {
+            height: 100%;
+            background: var(--color-primary);
+            border-radius: var(--radius-round);
+            transition: width 1.5s var(--ease-out);
+        }
+
+        .scale__dot {
+            width: 24px;
+            height: 24px;
+            background: var(--color-primary);
+            border: 4px solid var(--color-bg);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .personality__desc {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin-top: 2rem;
+            color: var(--color-text-muted);
+        }
+
+        /* === 4. Logo === */
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-xl);
+            margin: var(--space-xl) 0;
+        }
+
+        .logo-variant {
+            text-align: center;
+        }
+
+        .logo-preview {
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+        }
+
+        .logo-preview--dark {
+            background: var(--color-secondary);
+            color: var(--color-on-primary);
+        }
+
+        .logo-variant__label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-muted);
+        }
+
+        .dont-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-lg);
+        }
+
+        .dont-item {
+            text-align: center;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .dont-preview {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-surface);
+            border-radius: var(--radius-md);
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .dont-preview::after {
+            content: '✕';
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            color: var(--color-danger);
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .dont--stretched {
+            transform: scaleX(1.5);
+        }
+
+        .dont--rotated {
+            transform: rotate(-15deg);
+        }
+
+        .dont--recolored {
+            color: #3498db;
+        }
+
+        .dont--busy {
+            background: repeating-linear-gradient(45deg, #ccc, #ccc 10px, #eee 10px, #eee 20px);
+        }
+
+        /* === 5. Colors === */
+        .swatch-row {
+            display: flex;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+            flex-wrap: wrap;
+        }
+
+        .swatch-row--large .swatch {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .swatch-row--small .swatch {
+            width: 180px;
+        }
+
+        .swatch {
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
+            overflow: hidden;
+            background: var(--color-bg);
+            padding: 12px;
+        }
+
+        .swatch__color {
+            height: 160px;
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+        }
+
+        .swatch-row--small .swatch__color {
+            height: 100px;
+        }
+
+        .swatch__info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-size: 0.875rem;
+        }
+
+        .swatch__info strong {
+            font-size: 1.125rem;
+            margin-bottom: 4px;
+        }
+
+        .swatch__info span {
+            color: var(--color-text-muted);
+            font-family: monospace;
+            font-size: 0.8rem;
+        }
+
+        .usage-bar {
+            display: flex;
+            height: 16px;
+            border-radius: var(--radius-round);
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .usage-segment {
+            height: 100%;
+        }
+
+        /* === 6. Typography === */
+        .type-specimen {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            margin: var(--space-xl) 0;
+        }
+
+        .type-font {
+            padding: var(--space-2xl);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            background: var(--color-surface);
+        }
+
+        .type-font__name {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .type-font.script .type-font__name {
+            font-family: var(--font-script);
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .type-font__role {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .type-font__alphabet {
+            font-size: 1.125rem;
+            line-height: 2;
+            opacity: 0.6;
+            word-break: break-all;
+        }
+
+        .type-scale {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            border-left: 2px solid var(--color-primary);
+            padding-left: var(--space-lg);
+            margin-top: 2rem;
+        }
+
+        .type-scale__label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-muted);
+            margin-bottom: 8px;
+        }
+
+        /* === 7. Imagery === */
+        .imagery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+
+        .imagery-card {
+            padding: var(--space-xl);
+            background: var(--color-surface);
+            border-radius: var(--radius-lg);
+        }
+
+        .imagery-sample {
+            height: 160px;
+            border-radius: var(--radius-md);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            background: var(--color-surface-alt);
+        }
+
+        .imagery-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* === 8. Iconography === */
+        .icon-specs {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            background: var(--color-surface);
+            border-radius: var(--radius-md);
+            display: inline-flex;
+        }
+
+        .icon-spec strong {
+            color: var(--color-primary);
+            margin-right: 8px;
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .icon-item {
+            text-align: center;
+        }
+
+        .icon-box {
+            aspect-ratio: 1;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+            transition: all 0.3s;
+        }
+
+        .icon-box:hover {
+            background: var(--color-primary);
+            color: #fff;
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .icon-rules {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .icon-rules h3 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .icon-do h3 {
+            color: #2ecc71;
+        }
+
+        .icon-dont h3 {
+            color: var(--color-danger);
+        }
+
+        .icon-rules ul {
+            padding-left: 1.5rem;
+            line-height: 2;
+        }
+
+        /* === 9. Applications === */
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+
+        .mockup__frame {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-lg);
+            background: var(--color-bg);
+            transition: transform var(--duration-normal) var(--ease-out);
+        }
+
+        .mockup__frame:hover {
+            transform: translateY(-8px);
+        }
+
+        .mockup__browser-bar {
+            padding: 12px 16px;
+            background: var(--color-surface);
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .mockup__browser-bar .dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .mockup__browser-bar .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ccc;
+        }
+
+        .mockup__browser-bar .dot:nth-child(1) {
+            background: #ff5f57;
+        }
+
+        .mockup__browser-bar .dot:nth-child(2) {
+            background: #ffbd2e;
+        }
+
+        .mockup__browser-bar .dot:nth-child(3) {
+            background: #28c840;
+        }
+
+        .url-bar {
+            background: var(--color-bg);
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            letter-spacing: 1px;
+        }
+
+        .mock-content {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .mock-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--color-primary);
+            color: #fff;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            margin-top: 2rem;
+        }
+
+        .mockup__frame--card {
+            aspect-ratio: 1.6;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: var(--color-secondary);
+            color: #fff;
+        }
+
+        .mock-title {
+            font-family: var(--font-script);
+            color: var(--color-primary);
+            font-size: 1.5rem;
+        }
+
+        /* === Navigation === */
+        .slide-nav {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 100;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--color-border);
+            transition: all 0.3s ease;
+            position: relative;
+            text-decoration: none;
+            display: block;
+        }
+
+        .nav-dot.active {
+            background: var(--color-primary);
+            transform: scale(1.3);
+        }
+
+        .nav-dot::before {
+            content: attr(data-label);
+            position: absolute;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.2s;
+            color: var(--color-text);
+            pointer-events: none;
+        }
+
+        .nav-dot:hover::before {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: var(--space-xl) var(--space-md);
+            }
+
+            .slide-nav {
+                display: none;
+            }
+
+            .overview-grid,
+            .logo-grid,
+            .type-specimen,
+            .imagery-grid,
+            .icon-grid,
+            .mockup-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dont-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* === Print Styles for PDF Export === */
+        @media print {
+            html {
+                scroll-snap-type: none;
+                overflow: visible;
+            }
+
+            body {
+                overflow: visible;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .slide {
+                min-height: auto;
+                height: auto;
+                page-break-after: always;
+                scroll-snap-align: none;
+                padding: var(--space-xl);
+                display: block;
+            }
+
+            .slide__content {
+                max-width: 100%;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            .animate-in {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+
+            .slide-nav {
+                display: none !important;
+            }
+
+            .cover__logo span {
+                animation: none !important;
+                transform: none !important;
+            }
+
+            .scale__fill {
+                transition: none !important;
+            }
+
+            /* Ensure background colors print */
+            .slide--cover,
+            .overview-card,
+            .logo-preview,
+            .dont-preview,
+            .swatch__color,
+            .usage-segment,
+            .type-font,
+            .imagery-card,
+            .icon-box,
+            .mockup__frame,
+            .mockup__browser-bar,
+            .mock-btn {
+                background-color: inherit !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="slide-nav" aria-label="Section navigation">
+        <a href="#cover" class="nav-dot active" data-label="Cover"></a>
+        <a href="#overview" class="nav-dot" data-label="Overview"></a>
+        <a href="#personality" class="nav-dot" data-label="Personality"></a>
+        <a href="#logo" class="nav-dot" data-label="Logo"></a>
+        <a href="#colors" class="nav-dot" data-label="Colors"></a>
+        <a href="#typography" class="nav-dot" data-label="Typography"></a>
+        <a href="#imagery" class="nav-dot" data-label="Imagery"></a>
+        <a href="#iconography" class="nav-dot" data-label="Iconography"></a>
+        <a href="#applications" class="nav-dot" data-label="Applications"></a>
+    </nav>
+
+    <!-- 1. Cover -->
+    <section class="slide slide--cover" id="cover">
+        <div class="slide__content animate-in">
+            <div class="cover__logo">
+                l<span class="logo-accent"><span>o</span><span>o</span><span>o</span></span>ading
+            </div>
+            <h1 class="cover__subtitle">Brand Guidelines</h1>
+            <div class="cover__line"></div>
+            <p class="cover__meta">Version 1.0 — March 2026</p>
+        </div>
+    </section>
+
+    <!-- 2. Overview -->
+    <section class="slide" id="overview">
+        <div class="slide__content">
+            <span class="slide__label">01</span>
+            <h2 class="slide__title animate-in">Brand Overview</h2>
+            <div class="overview-grid">
+                <div class="overview-card animate-in" style="transition-delay: 100ms;">
+                    <h3>Brand Story</h3>
+                    <p>Loooading was founded on the belief that the most exciting part of any journey is the state of
+                        becoming. We design ideas, brands, and experiences for dynamic organizations, combining
+                        strategic thinking with premium aesthetics to craft digital environments that move.</p>
+                </div>
+                <div class="overview-card animate-in" style="transition-delay: 200ms;">
+                    <h3>Mission</h3>
+                    <p>To empower visionary teams by crafting brand identities and digital experiences that are always
+                        vibrant, always evolving, and never static.</p>
+                </div>
+                <div class="overview-card animate-in" style="transition-delay: 300ms;">
+                    <h3>Vision</h3>
+                    <p>A digital landscape where every brand interaction feels alive, purposeful, and flawlessly
+                        orchestrated.</p>
+                </div>
+                <div class="overview-card animate-in" style="transition-delay: 400ms;">
+                    <h3>Target Audience</h3>
+                    <p>Loooading speaks to forward-thinking founders and marketing leaders who value high-end design,
+                        motion, and memorable user experiences. They seek an agency partner that pushes boundaries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Personality -->
+    <section class="slide" id="personality">
+        <div class="slide__content">
+            <span class="slide__label">02</span>
+            <h2 class="slide__title animate-in">Brand Personality</h2>
+            <div class="personality-scales">
+                <div class="scale animate-in" style="transition-delay: 100ms;">
+                    <span class="scale__left">Formal</span>
+                    <div class="scale__bar">
+                        <div class="scale__fill" style="width: 80%"></div>
+                        <div class="scale__dot" style="left: 80%"></div>
+                    </div>
+                    <span class="scale__right">Dynamic</span>
+                </div>
+                <div class="scale animate-in" style="transition-delay: 200ms;">
+                    <span class="scale__left">Playful</span>
+                    <div class="scale__bar">
+                        <div class="scale__fill" style="width: 40%"></div>
+                        <div class="scale__dot" style="left: 40%"></div>
+                    </div>
+                    <span class="scale__right">Sophisticated</span>
+                </div>
+                <div class="scale animate-in" style="transition-delay: 300ms;">
+                    <span class="scale__left">Traditional</span>
+                    <div class="scale__bar">
+                        <div class="scale__fill" style="width: 95%"></div>
+                        <div class="scale__dot" style="left: 95%"></div>
+                    </div>
+                    <span class="scale__right">Avant-Garde</span>
+                </div>
+                <div class="scale animate-in" style="transition-delay: 400ms;">
+                    <span class="scale__left">Reserved</span>
+                    <div class="scale__bar">
+                        <div class="scale__fill" style="width: 75%"></div>
+                        <div class="scale__dot" style="left: 75%"></div>
+                    </div>
+                    <span class="scale__right">Bold</span>
+                </div>
+            </div>
+            <p class="personality__desc animate-in" style="transition-delay: 500ms;">
+                Our brand maintains a highly polished, premium aesthetic while injecting undeniable kinetic energy into
+                everything we do. We communicate with absolute confidence, using motion and striking color to lead
+                rather than follow.
+            </p>
+        </div>
+    </section>
+
+    <!-- 4. Logo -->
+    <section class="slide" id="logo">
+        <div class="slide__content">
+            <span class="slide__label">03</span>
+            <h2 class="slide__title animate-in">Logo System</h2>
+
+            <div class="logo-grid">
+                <div class="logo-variant animate-in" style="transition-delay: 100ms;">
+                    <div class="logo-preview">
+                        l<span style="color:#FF4422">ooo</span>ading
+                    </div>
+                    <p class="logo-variant__label">Primary Logomark</p>
+                </div>
+                <div class="logo-variant animate-in" style="transition-delay: 200ms;">
+                    <div class="logo-preview logo-preview--dark">
+                        l<span style="color:#FF4422">ooo</span>ading
+                    </div>
+                    <p class="logo-variant__label">Dark Mode Logomark</p>
+                </div>
+            </div>
+
+            <h3 class="slide__subtitle animate-in">Incorrect Usage</h3>
+            <div class="dont-grid animate-in" style="transition-delay: 300ms;">
+                <div class="dont-item">
+                    <div class="dont-preview dont--stretched">l<span style="color:#FF4422">ooo</span>ading</div>
+                    <p>Don't stretch or compress</p>
+                </div>
+                <div class="dont-item">
+                    <div class="dont-preview dont--rotated">l<span style="color:#FF4422">ooo</span>ading</div>
+                    <p>Don't rotate</p>
+                </div>
+                <div class="dont-item">
+                    <div class="dont-preview dont--recolored">l<span class="dont--recolored">ooo</span>ading</div>
+                    <p>Don't change accent color</p>
+                </div>
+                <div class="dont-item">
+                    <div class="dont-preview dont--busy">l<span style="color:#FF4422">ooo</span>ading</div>
+                    <p>Don't place on busy patterns</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Colors -->
+    <section class="slide" id="colors">
+        <div class="slide__content">
+            <span class="slide__label">04</span>
+            <h2 class="slide__title animate-in">Color System</h2>
+
+            <h3 class="slide__subtitle animate-in">Primary Colors</h3>
+            <div class="swatch-row swatch-row--large">
+                <div class="swatch animate-in" style="transition-delay: 100ms;">
+                    <div class="swatch__color" style="background:#FF4422"></div>
+                    <div class="swatch__info">
+                        <strong>Loooading Orange</strong>
+                        <span>HEX #FF4422</span>
+                        <span>RGB 255, 68, 34</span>
+                        <p style="margin-top:8px;opacity:0.8">The vibrant core of our identity. Used for the signature
+                            'ooo', CTAs, and key accents.</p>
+                    </div>
+                </div>
+                <div class="swatch animate-in" style="transition-delay: 200ms;">
+                    <div class="swatch__color" style="background:#111111"></div>
+                    <div class="swatch__info">
+                        <strong>Obsidian Dark</strong>
+                        <span>HEX #111111</span>
+                        <span>RGB 17, 17, 17</span>
+                        <p style="margin-top:8px;opacity:0.8">Provides necessary contrast and grounding. Used for text,
+                            dark mode backgrounds, and premium focus.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="slide__subtitle animate-in">Neutrals</h3>
+            <div class="swatch-row swatch-row--small">
+                <div class="swatch animate-in" style="transition-delay: 300ms;">
+                    <div class="swatch__color" style="background:#FFFFFF; border: 1px solid #EAEAEA;"></div>
+                    <div class="swatch__info"><strong>Pure White</strong><span>#FFFFFF</span></div>
+                </div>
+                <div class="swatch animate-in" style="transition-delay: 400ms;">
+                    <div class="swatch__color" style="background:#FAFAFA"></div>
+                    <div class="swatch__info"><strong>Surface Base</strong><span>#FAFAFA</span></div>
+                </div>
+                <div class="swatch animate-in" style="transition-delay: 500ms;">
+                    <div class="swatch__color" style="background:#EAEAEA"></div>
+                    <div class="swatch__info"><strong>Subtle Border</strong><span>#EAEAEA</span></div>
+                </div>
+            </div>
+
+            <div class="usage-bar animate-in" style="transition-delay: 600ms;">
+                <div class="usage-segment"
+                    style="width: 70%; background: #ffffff; border: 1px solid #eaeaea; border-right: none;"></div>
+                <div class="usage-segment" style="width: 20%; background: #111111;"></div>
+                <div class="usage-segment" style="width: 10%; background: #FF4422;"></div>
+            </div>
+            <p
+                style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 8px; color: var(--color-text-muted); text-align: right;">
+                White Space 70% / Dark 20% / Accent 10%</p>
+        </div>
+    </section>
+
+    <!-- 6. Typography -->
+    <section class="slide" id="typography">
+        <div class="slide__content">
+            <span class="slide__label">05</span>
+            <h2 class="slide__title animate-in">Typography</h2>
+
+            <div class="type-specimen">
+                <div class="type-font animate-in" style="transition-delay: 100ms;">
+                    <h3 class="type-font__name">Plus Jakarta Sans</h3>
+                    <p class="type-font__role">Primary Typeface (Headings & Body)</p>
+                    <p class="type-font__alphabet" style="font-weight: 700; font-size: 2rem; color: #111;">Aa Bb Cc Dd
+                        Ee Ff Gg</p>
+                    <p style="margin-top: 1rem; opacity: 0.8;">Chosen for its geometric precision, excellent legibility,
+                        and modern, digital-first aesthetic.</p>
+                </div>
+                <div class="type-font script animate-in" style="transition-delay: 200ms;">
+                    <h3 class="type-font__name">Caveat</h3>
+                    <p class="type-font__role">Accent Typeface</p>
+                    <p class="type-font__alphabet" style="font-weight: 700; font-size: 2.5rem; line-height: 1;">
+                        Expressive & Hand-drawn</p>
+                    <p style="margin-top: 1rem; opacity: 0.8; font-family: var(--font-primary);">Utilized sparingly to
+                        add a human, artistic touch to our otherwise structured layouts.</p>
+                </div>
+            </div>
+
+            <h3 class="slide__subtitle animate-in" style="margin-top: 2rem;">Type Layout</h3>
+            <div class="type-scale animate-in" style="transition-delay: 300ms;">
+                <div>
+                    <span class="type-scale__label">H1 — Extra Bold</span>
+                    <p style="font-size: 4rem; font-weight: 800; line-height: 1; letter-spacing: -2px;">Ideas
+                        Brands<br>Experiences</p>
+                </div>
+                <div>
+                    <span class="type-scale__label">Body — Regular</span>
+                    <p style="font-size: 1.125rem; max-width: 600px;">Strategic thinking and creative concepts that
+                        challenge the status quo and spark meaningful conversations in the digital space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Imagery -->
+    <section class="slide" id="imagery">
+        <div class="slide__content">
+            <span class="slide__label">06</span>
+            <h2 class="slide__title animate-in">Imagery Style</h2>
+
+            <div class="imagery-grid">
+                <div class="imagery-card animate-in" style="transition-delay: 100ms;">
+                    <div class="imagery-sample">📸</div>
+                    <h3>Mood & Tone</h3>
+                    <p>Confident, architectural, and deliberate. Our imagery captures the tension between structural
+                        design and dynamic motion.</p>
+                </div>
+                <div class="imagery-card animate-in" style="transition-delay: 200ms;">
+                    <div class="imagery-sample">💡</div>
+                    <h3>Lighting</h3>
+                    <p>Favor high-contrast, dramatic studio lighting that creates sharp shadows and highlights geometry.
+                        Avoid flat, washed-out tones.</p>
+                </div>
+                <div class="imagery-card animate-in" style="transition-delay: 300ms;">
+                    <div class="imagery-sample">📐</div>
+                    <h3>Composition</h3>
+                    <p>Emphasize negative space. Allow subjects to breathe within the frame, aligning with bold,
+                        asymmetrical grid structures.</p>
+                </div>
+                <div class="imagery-card animate-in" style="transition-delay: 400ms;">
+                    <div class="imagery-sample">🎨</div>
+                    <h3>Color Grading</h3>
+                    <p>Images should feel cool and desaturated, allowing our primary brand color (Orange-Red) to act as
+                        the sole point of warmth when overlaid or paired.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Iconography -->
+    <section class="slide" id="iconography">
+        <div class="slide__content">
+            <span class="slide__label">07</span>
+            <h2 class="slide__title animate-in">Iconography</h2>
+
+            <div class="icon-specs animate-in" style="transition-delay: 100ms;">
+                <div class="icon-spec"><strong>Style:</strong> Solid / Material Default</div>
+                <div class="icon-spec"><strong>Corners:</strong> Sharp edge preference</div>
+                <div class="icon-spec"><strong>Grid:</strong> 24×24px Canvas</div>
+            </div>
+
+            <div class="icon-grid animate-in" style="transition-delay: 200ms;">
+                <div class="icon-item">
+                    <div class="icon-box">✦</div><span>Ideas</span>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-box">■</div><span>Brands</span>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-box">▲</div><span>Experiences</span>
+                </div>
+                <div class="icon-item">
+                    <div class="icon-box">→</div><span>Action</span>
+                </div>
+            </div>
+
+            <div class="icon-rules">
+                <div class="icon-do animate-in" style="transition-delay: 300ms;">
+                    <h3>✓ Do</h3>
+                    <ul>
+                        <li>Maintain solid, bold icon styles</li>
+                        <li>Ensure optical balance with typography</li>
+                        <li>Use #FF4422 as the primary icon color on light mode</li>
+                    </ul>
+                </div>
+                <div class="icon-dont animate-in" style="transition-delay: 400ms;">
+                    <h3>✕ Don't</h3>
+                    <ul>
+                        <li>Mix thin, delicate line-icons with our typography</li>
+                        <li>Use gradient or multi-color icons</li>
+                        <li>Apply drop shadows directly to vector shapes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Applications -->
+    <section class="slide" id="applications">
+        <div class="slide__content">
+            <span class="slide__label">08</span>
+            <h2 class="slide__title animate-in">Brand Applications</h2>
+
+            <div class="mockup-grid">
+                <div class="mockup animate-in" style="transition-delay: 100ms;">
+                    <div class="mockup__frame">
+                        <div class="mockup__browser-bar">
+                            <div class="dots"><span class="dot"></span><span class="dot"></span><span
+                                    class="dot"></span></div>
+                            <div class="url-bar">loooading.agency</div>
+                        </div>
+                        <div class="mock-content">
+                            <h2 style="font-size: 3rem; font-weight: 800; letter-spacing: -2px;">Creative Engine<span
+                                    style="color:var(--color-primary)">.</span></h2>
+                            <div class="mock-btn">Explore Work</div>
+                        </div>
+                    </div>
+                    <p
+                        style="text-align:center; font-size: 0.75rem; text-transform: uppercase; margin-top: 1rem; color: var(--color-text-muted);">
+                        Website UI</p>
+                </div>
+
+                <div class="mockup animate-in" style="transition-delay: 200ms;">
+                    <div class="mockup__frame mockup__frame--card">
+                        <div>
+                            <div style="font-weight: 800; font-size: 1.5rem;">l<span
+                                    style="color:var(--color-primary)">ooo</span>ading</div>
+                        </div>
+                        <div>
+                            <p style="font-weight: 600;">Jane Doe</p>
+                            <p class="mock-title">Art Director</p>
+                        </div>
+                    </div>
+                    <p
+                        style="text-align:center; font-size: 0.75rem; text-transform: uppercase; margin-top: 1rem; color: var(--color-text-muted);">
+                        Business Card Front</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Update Navigation Dots
+                        document.querySelectorAll('.nav-dot').forEach(dot => dot.classList.remove('active'));
+                        const activeDot = document.querySelector(`.nav-dot[href="#${entry.target.id}"]`);
+                        if (activeDot) activeDot.classList.add('active');
+
+                        // Trigger animations in the slide
+                        entry.target.querySelectorAll('.animate-in').forEach(el => {
+                            el.classList.add('visible');
+                        });
+                    }
+                });
+            }, { threshold: 0.4 });
+
+            document.querySelectorAll('.slide').forEach(slide => {
+                observer.observe(slide);
+            });
+
+            // Arrow Key Navigation
+            document.addEventListener('keydown', (e) => {
+                const sections = document.querySelectorAll('.slide');
+                let currentIndex = -1;
+
+                sections.forEach((sec, idx) => {
+                    const rect = sec.getBoundingClientRect();
+                    // Check if section is currently mostly in view
+                    if (rect.top >= -window.innerHeight / 2 && rect.top < window.innerHeight / 2) {
+                        currentIndex = idx;
+                    }
+                });
+
+                if (currentIndex === -1) return;
+
+                if (e.key === 'ArrowDown' && currentIndex < sections.length - 1) {
+                    e.preventDefault();
+                    sections[currentIndex + 1].scrollIntoView({ behavior: 'smooth' });
+                } else if (e.key === 'ArrowUp' && currentIndex > 0) {
+                    e.preventDefault();
+                    sections[currentIndex - 1].scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
