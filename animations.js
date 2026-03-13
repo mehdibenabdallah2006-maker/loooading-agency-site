@@ -204,4 +204,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 3000);
         });
     }
+
+    /* --- 8. Intro Video Logic --- */
+    const introOverlay = document.getElementById('introOverlay');
+    const introVideo = document.getElementById('introVideo');
+
+    if (introOverlay && introVideo) {
+        // Quand la vidéo se termine, on révèle le site
+        introVideo.addEventListener('ended', () => {
+            introOverlay.classList.add('hidden');
+        });
+
+        // Sécurité : si la vidéo ne peut pas autoplay (mobile), on la masque après un délai
+        setTimeout(() => {
+            if (!introVideo.currentTime || introVideo.currentTime < 0.1) {
+                introOverlay.classList.add('hidden');
+            }
+        }, 12000); // 12 secondes max avant de forcer l'affichage du site
+    }
 });
