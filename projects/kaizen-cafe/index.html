@@ -1,0 +1,245 @@
+<html class="dark"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#bf1818",
+            "background-light": "#f8f6f6",
+            "background-dark": "#211111",
+            "accent-muted": "#c79494",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-primary/20">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<svg class="size-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-2xl font-bold tracking-tighter uppercase font-display">Kaizen Café</span>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Menu</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Concept</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Événements</a>
+<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded text-xs font-bold uppercase tracking-widest transition-all">
+          Réserver
+        </button>
+</div>
+</div>
+</header>
+<!-- Split Screen Hero Section -->
+<section class="min-h-screen pt-20 flex flex-col md:flex-row">
+<!-- Left Side: Image -->
+<div class="md:w-1/2 h-[50vh] md:h-auto relative overflow-hidden group">
+<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors duration-700 z-10"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="Exquisite close-up of high-end fusion cuisine dish" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBs2aHv5TFmjzEkQRh-B9s1Ax3FEVWG4_DXoJMHeD3g5goL0a39cxQxnnmI3SQAH9r7CXStyWJ-WCnn80gybzAUv4Tn3Ts-hgCYF0ISv-GXfRN0gaPOn70oISEn_ctG7QgpfmGoEMPPbTUagoi8fjdgvV22k0eaPUKiFYknmi46mHmgJPRB7k8AlSUVGDX9KbY1EfGcukcuEC2T4pPOk8dBV--Mjz7kdQ47HIiIBjVcmsgvN1vZ-O5hm9o1Uljn4wYQa8irQI0L7b9D');">
+</div>
+</div>
+<!-- Right Side: Content -->
+<div class="md:w-1/2 flex flex-col justify-center px-8 md:px-20 py-16 bg-background-light dark:bg-background-dark border-l border-slate-200 dark:border-primary/10">
+<div class="max-w-lg space-y-8">
+<div class="space-y-4">
+<span class="text-primary font-bold uppercase tracking-[0.3em] text-xs">Innovation culinaire</span>
+<h1 class="text-5xl md:text-7xl font-black leading-none tracking-tight font-display">
+            FUSION <br/> <span class="text-primary">&amp;</span> SÉRÉNITÉ
+          </h1>
+</div>
+<p class="text-lg md:text-xl text-slate-600 dark:text-accent-muted leading-relaxed font-light">
+          Découvrez l'art du Kaizen à travers une cuisine inventive où l'Orient rencontre l'Occident. Une amélioration continue dans chaque saveur.
+        </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-10 py-5 rounded text-sm font-bold uppercase tracking-[0.2em] transition-all">
+            Réserver une table
+          </button>
+<button class="border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-900 dark:text-slate-100 px-10 py-5 rounded text-sm font-bold uppercase tracking-[0.2em] transition-all">
+            Voir la carte
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Horizontal Scroll Section -->
+<section class="py-24 bg-background-light dark:bg-[#1a0d0d]">
+<div class="px-6 md:px-20 mb-12 flex items-end justify-between">
+<div class="space-y-2">
+<span class="text-primary font-bold uppercase tracking-[0.3em] text-xs">Exclusivités</span>
+<h2 class="text-4xl font-bold tracking-tight font-display">CRÉATIONS SIGNATURES</h2>
+</div>
+<div class="flex gap-4 mb-1">
+<button class="size-12 rounded-full border border-slate-300 dark:border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-12 rounded-full border border-slate-300 dark:border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Horizontal Grid Container -->
+<div class="flex overflow-x-auto no-scrollbar gap-8 px-6 md:px-20 pb-12">
+<!-- Card 1 -->
+<div class="min-w-[320px] md:min-w-[450px] group">
+<div class="aspect-[4/5] overflow-hidden rounded mb-6">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Rich ramen bowl with signature 24-hour broth" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhyYbwxYm_0g3yNGZhUVJ0q-LusySBfueImZnb40i7mSxaBWIOdC54YqmWEkeT0IiOnAEiqojKx8BgT4qcYYjEUJ1sKZL-a1fSgp2MJgRSlnTER-rNw3YVZPbw9yNyiJRqsJ4wRwcpIvHcay4nfC39_m0UtQaPpvgct-yKF-VWE7NYDpwleW1hjxY1mR1C9JjBNAhaF8cp9OEgQoL6LJgz0d8PO2K9BoYhQZk9WjgSr1oZTi4RPZq-oY-RzDyD03g2-8Roa619lFqE');">
+</div>
+</div>
+<div class="flex justify-between items-start border-b border-primary/10 pb-4">
+<div>
+<h3 class="text-xl font-bold font-display uppercase tracking-wider group-hover:text-primary transition-colors">Ramen Signature</h3>
+<p class="text-accent-muted text-sm mt-1 uppercase tracking-widest">Bouillon infusé 24h</p>
+</div>
+<span class="text-primary font-bold">28€</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[320px] md:min-w-[450px] group">
+<div class="aspect-[4/5] overflow-hidden rounded mb-6">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Artistic nigiri sushi platter fusion style" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUnLI74t4W0nSXRb_d73AJOSK7HpM7tnMVVRfHyb50Ag9x1yaIlG6kcjlrONFoRuHtkjdFCza6h1bowdqHb6Sz2LtkN_PeTbMcDW7Okj27XH0Y7_DKdRpwM_4UNSch9P5FN3CbMJFciw9Kv22iccyDA2r5DA7PuRpmmwn4UEEZWirWBOZq4d-biM9Lc0mHBKQjgdR8XzP9JZfIn---3hpIempUEZUSJe7TKKqNpVqHT_V6cPBadYP0t3kCmMpqIfsoGCO1pwDdPog3');">
+</div>
+</div>
+<div class="flex justify-between items-start border-b border-primary/10 pb-4">
+<div>
+<h3 class="text-xl font-bold font-display uppercase tracking-wider group-hover:text-primary transition-colors">Nigiri Prestige</h3>
+<p class="text-accent-muted text-sm mt-1 uppercase tracking-widest">Fusion Terre &amp; Mer</p>
+</div>
+<span class="text-primary font-bold">34€</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[320px] md:min-w-[450px] group">
+<div class="aspect-[4/5] overflow-hidden rounded mb-6">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Seared tuna dish with exotic rare spices" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDX-8vPeJGv6WrPM3eh8in9gmOpYgwQg9i-DmT2VL4g2dsRYsBw_eiUUGXNkraTWzjENOcfUoDqm2Rp6Jn9c7kiyH4Pu_lM0F6sR5z2ZDs5oXEaEMYa4TX1idqrhmhwhx5hMeu6vi7vYSXr2ltWsU7wcTxhtaCs2pRLG79h0mxYhG_PnJ1CuwVkjxCyjY1LpJ-x7eeOhlD_15WQNbBMgQn9_tgXwrPeh8EqswgRxN1lLFbIf7T0dV1Rv2BUvOwV5uXqUC2PkqbLdTwg');">
+</div>
+</div>
+<div class="flex justify-between items-start border-b border-primary/10 pb-4">
+<div>
+<h3 class="text-xl font-bold font-display uppercase tracking-wider group-hover:text-primary transition-colors">Thon Kaizen</h3>
+<p class="text-accent-muted text-sm mt-1 uppercase tracking-widest">Épices rares &amp; Seared</p>
+</div>
+<span class="text-primary font-bold">31€</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="min-w-[320px] md:min-w-[450px] group">
+<div class="aspect-[4/5] overflow-hidden rounded mb-6">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Japanese matcha dessert elegant presentation" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTLeqsFp2R1R7Jyx8l8CMg2G1pvz3VcSo7yVSVWY-blix2Xnp34gjFuflhwXRYe8VMuiOL-AJRfIB1uboSze--FoLEzuJaMH5DyrzW_jjcZeMp4WJsXdMsaY4XMVGcfn9EIpJm5ZUPvx2U6YXltK55syrdD3O7blZWb-BiJ3ZqTz4uVwq-MAg9ZDJxyDyImCkbWHw9nFnn0JxP-FYyP2xo4zmOZb6m-9Z0MbfX5LgfgKczy8QnxynpOT8nub6kluyB2Sp2y19_ojy6');">
+</div>
+</div>
+<div class="flex justify-between items-start border-b border-primary/10 pb-4">
+<div>
+<h3 class="text-xl font-bold font-display uppercase tracking-wider group-hover:text-primary transition-colors">Douceur Zen</h3>
+<p class="text-accent-muted text-sm mt-1 uppercase tracking-widest">Matcha Premium &amp; Yuzu</p>
+</div>
+<span class="text-primary font-bold">16€</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section (Editorial Style) -->
+<section class="bg-background-dark text-white py-32 relative">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhyCqvLdrSYljmQZ30md-_a8Dggi2b5cFgmRNrn2AKvFNREgibvFFc_6NM__W1Hhq0ngQBVgamRsGOG0Y6BaptgNpN2Wo_PpRZGA-Eq8sVqjS4H5xuoiuFItky6ynweJUuXnUFF3OX62lMaIxCMbKlXhCnmm5NTean1JmKWp_P6axwffErIcJyD8XN50TqiqeennYrDSKrhKulpvkTtjBBI2wZGe5IP3eItwTwP7BLNdpOZu7iDCU1v0Na9plFldGsrpEV9kaZMhA8');"></div>
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1 space-y-10">
+<h2 class="text-6xl md:text-8xl font-black font-display tracking-tighter opacity-10 absolute top-10 left-0 whitespace-nowrap hidden lg:block">RESTAURATION</h2>
+<div class="space-y-6 relative z-10">
+<span class="text-primary font-bold uppercase tracking-[0.3em] text-xs">Notre philosophie</span>
+<h3 class="text-5xl font-bold leading-tight font-display">L'EXPÉRIENCE DU DÉTAIL</h3>
+<p class="text-slate-400 text-lg leading-relaxed font-light">
+            Chaque ingrédient est sélectionné avec une rigueur absolue. Nos chefs travaillent selon les principes du Kaizen, cherchant constamment la perfection dans l'équilibre des textures et des températures.
+          </p>
+<div class="pt-6">
+<button class="group flex items-center gap-4 text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">
+              En savoir plus sur notre concept
+              <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 grid grid-cols-2 gap-4">
+<div class="aspect-[3/4] rounded bg-cover bg-center overflow-hidden" data-alt="Interior of modern Japanese minimalist restaurant" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRBE7u2M9D25Wc2Y1utBvn3J-HZuO8dw-gGGtRA3velmwY2rdZFexJEhnC1g6lz_5Y60K7XqooQzoF1mRWQ1OtVltkc2eMrbKc9xXAlOHHGBamBOSflBvzrZd6B5odaRiAzcwZW6qW4-I94QghomZHStx1lXH88ID_D7hfesIQoJdYgWEAzoXTwFCWtMHiR5dNFcpTaSpNRfOJVuVHt2oJdXUVv1DM4Y_eyl-1x1Uzw_efMxR7EeDHBZnDtzH3MSj26PL5trdgXMWd');">
+</div>
+<div class="aspect-[3/4] rounded bg-cover bg-center mt-12 overflow-hidden" data-alt="Close up of chef hands plating food" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwA-RRZkk9grw2O9y45UaiH1dQxV3IMzqkLaff9PeHZ38C7hTwOXP8zQKVJcfIjNOvE_eQy2ALoSLttpdAzaIHPO3BVMly7SW7tY8H1lc4s7MoEsEZk7I2zAMc045uj2s2HN8Dxu2KOUmrxuME8-DQ9ippkOPP8nd8jQodQRv1ctcwiu1Hadq6U1sloicrCqLw5EBOOngOS9o1I8XzXQyqVQ01HKcEkakAEddIXn0yUjWsdBBU2rsCI4u36CDp9pySbBhV9yKvEJik');">
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Footer Section -->
+<section class="py-24 bg-background-light dark:bg-background-dark">
+<div class="max-w-4xl mx-auto px-6 text-center space-y-12">
+<div class="space-y-4">
+<h2 class="text-4xl md:text-6xl font-black tracking-tight font-display uppercase">Rejoignez la table</h2>
+<p class="text-xl text-slate-600 dark:text-accent-muted font-light">Les réservations sont vivement conseillées pour le service du soir.</p>
+</div>
+<div class="flex flex-col items-center gap-8">
+<button class="bg-primary hover:bg-primary/90 text-white px-12 py-6 rounded text-lg font-bold uppercase tracking-widest transition-all shadow-xl shadow-primary/20">
+          Réserver maintenant
+        </button>
+<div class="flex items-center gap-12 text-slate-400">
+<div class="text-center">
+<p class="text-xs uppercase tracking-widest font-bold text-slate-900 dark:text-white mb-1">Téléphone</p>
+<p class="text-sm">+33 1 23 45 67 89</p>
+</div>
+<div class="w-px h-8 bg-primary/20"></div>
+<div class="text-center">
+<p class="text-xs uppercase tracking-widest font-bold text-slate-900 dark:text-white mb-1">Localisation</p>
+<p class="text-sm" data-location="Paris, France">75003 Paris, France</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-[#150a0a] border-t border-slate-200 dark:border-primary/10 py-12 px-6 md:px-20">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 transition-all">
+<span class="text-xl font-bold tracking-tighter uppercase font-display">Kaizen Café</span>
+</div>
+<div class="flex gap-8 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+<a class="hover:text-primary" href="#">Instagram</a>
+<a class="hover:text-primary" href="#">Facebook</a>
+<a class="hover:text-primary" href="#">Tripadvisor</a>
+</div>
+<p class="text-[10px] text-slate-400 uppercase tracking-widest">© 2024 Kaizen Café. Tous droits réservés.</p>
+</div>
+</footer>
+<script>
+document.addEventListener("click", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("mousedown", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("mouseup", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("submit", function(e) { e.preventDefault(); }, true);
+</script></body></html>

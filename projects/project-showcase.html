@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase | Loooading Agency</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #FF4422;
+            --color-bg: #FFFFFF;
+            --color-text: #111111;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--color-bg);
+            color: var(--color-text);
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .showcase-header {
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .back-btn:hover { color: var(--color-primary); }
+
+        .project-info { text-align: center; }
+        .project-title { font-weight: 800; font-size: 1.1rem; }
+        .project-category { font-size: 0.75rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+
+        .iframe-container {
+            flex: 1;
+            position: relative;
+            background: #f9f9f9;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        .device-selector {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .device-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #ccc;
+            transition: color 0.2s;
+        }
+
+        .device-btn.active { color: var(--color-primary); }
+
+        /* Device Wrappers */
+        .device-mobile {
+            width: 375px;
+            height: 667px;
+            border: 12px solid #1a1a1a;
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .device-tablet {
+            width: 768px;
+            height: 1024px;
+            border: 12px solid #1a1a1a;
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+            max-height: 90vh;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header class="showcase-header">
+        <a href="javascript:history.back()" class="back-btn">
+            <span class="material-icons">arrow_back</span>
+            Back to Portfolio
+        </a>
+        <div class="project-info">
+            <div class="project-category" id="category">Website</div>
+            <div class="project-title" id="title">Project Name</div>
+        </div>
+        <div class="device-selector">
+            <button class="device-btn active" onclick="setDevice('desktop')" title="Desktop view"><span class="material-icons">desktop_windows</span></button>
+            <button class="device-btn" onclick="setDevice('tablet')" title="Tablet view"><span class="material-icons">tablet_mac</span></button>
+            <button class="device-btn" onclick="setDevice('mobile')" title="Mobile view"><span class="material-icons">phone_iphone</span></button>
+        </div>
+    </header>
+
+    <div class="iframe-container" id="iframeContainer">
+        <iframe src="" id="projectIframe"></iframe>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const iframe = document.getElementById('projectIframe');
+        const container = document.getElementById('iframeContainer');
+        
+        if (urlParams.has('title')) document.getElementById('title').textContent = urlParams.get('title');
+        if (urlParams.has('category')) document.getElementById('category').textContent = urlParams.get('category');
+        if (urlParams.has('src')) iframe.src = urlParams.get('src');
+
+        function setDevice(device) {
+            const btns = document.querySelectorAll('.device-btn');
+            btns.forEach(b => b.classList.remove('active'));
+            
+            iframe.className = ''; // Reset classes
+            
+            if (device === 'mobile') {
+                iframe.classList.add('device-mobile');
+                btns[2].classList.add('active');
+            } else if (device === 'tablet') {
+                iframe.classList.add('device-tablet');
+                btns[1].classList.add('active');
+            } else {
+                btns[0].classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

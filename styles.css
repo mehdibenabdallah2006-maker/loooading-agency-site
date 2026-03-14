@@ -594,11 +594,20 @@ button {
     overflow: hidden;
 }
 
-.portfolio-image {
+.iframe-thumbnail {
+    width: 250%; /* Scale up the container */
+    height: 250%;
+    transform: scale(0.4); /* Scale down for high-DPI look */
+    transform-origin: top left;
+    pointer-events: none; /* Block interaction but allow scroll through */
+    background: white;
+}
+
+.iframe-thumbnail iframe {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-slow);
+    border: none;
+    display: block;
 }
 
 .portfolio-overlay {
@@ -615,8 +624,8 @@ button {
     padding: var(--space-6);
 }
 
-.portfolio-card:hover .portfolio-image {
-    transform: scale(1.05);
+.portfolio-card:hover .iframe-thumbnail {
+    transform: scale(0.42); /* Subtle zoom in */
 }
 
 .portfolio-card:hover .portfolio-overlay {
@@ -646,7 +655,8 @@ button {
     font-weight: 700;
 }
 
-/* --- 10. About Section --- */
+
+/* --- 11. About Section --- */
 .about-section {
     background-color: var(--color-about-bg);
     color: var(--color-white);

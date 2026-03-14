@@ -1,0 +1,342 @@
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Flow Studio | Yoga &amp; Pilates</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "sage": "#86a68e",
+                        "sage-light": "#b8c9bc",
+                        "cream": "#fdfbf7",
+                        "sand": "#f2ebe1",
+                        "studio-dark": "#2d3a31"
+                    },
+                    fontFamily: {
+                        "serif": ["Cormorant Garamond", "serif"],
+                        "sans": ["Montserrat", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { @apply bg-cream text-studio-dark font-sans; }
+            h1, h2, h3 { @apply font-serif; }
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased">
+<header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-sand">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sage text-3xl">spa</span>
+<span class="font-serif text-2xl font-bold tracking-tight uppercase">Flow Studio</span>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-sage transition-colors uppercase tracking-widest" href="#horaires">Planning</a>
+<a class="text-sm font-medium hover:text-sage transition-colors uppercase tracking-widest" href="#profs">Profs</a>
+<a class="text-sm font-medium hover:text-sage transition-colors uppercase tracking-widest" href="#tarifs">Tarifs</a>
+</nav>
+<div>
+<button class="bg-sage text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-studio-dark transition-all shadow-sm uppercase tracking-wider">
+                Réserver un cours
+            </button>
+</div>
+</div>
+</header>
+<section class="relative h-[85vh] w-full flex items-center overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Sunlit Studio" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT2SUpogI020x0epEMegpWV8CixhBUQl-f8Mi1DxU1vcF--XedmEis8-SVzUNigfRNBFLBh0aIN745PJqCKJky2tt0iT3Qb4cXBMnOF8cKIoL3vSK666yFwAX-kdVlw5cOLVFYdRMt8jgTJmImSSowYTeAYFAwIDwiG56BhFRhorNgWxCHMc3ZWncCy-vN2f-4Gbf1nTVLzSuXGRX0nVvJqFyznF2DtUfPc77-COCFwuv_boWaoF8Os_H8lGpJL1kTyNXueh7jbLs"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-6 w-full text-white">
+<div class="max-w-2xl">
+<span class="inline-block mb-4 text-sm font-semibold uppercase tracking-[0.3em]">Bienvenue chez vous</span>
+<h1 class="text-6xl md:text-8xl font-bold leading-tight mb-8">L'équilibre, <br/>simplement.</h1>
+<p class="text-lg md:text-xl font-light mb-10 max-w-lg leading-relaxed">
+                Un sanctuaire dédié au Yoga et au Pilates en plein cœur de la ville. Retrouvez la sérénité à travers le mouvement conscient.
+            </p>
+<div class="flex gap-4">
+<button class="bg-white text-studio-dark px-10 py-5 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-sand transition-colors">Découvrir le studio</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-cream px-6" id="horaires">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4">Planning de la semaine</h2>
+<div class="w-20 h-0.5 bg-sage mx-auto"></div>
+</div>
+<div class="overflow-x-auto scrollbar-hide">
+<div class="min-w-[1000px] grid grid-cols-7 gap-4">
+<script>
+                    const days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+                    const classes = [
+                        { time: '08:00', name: 'Hatha Yoga', prof: 'Elena', type: 'Yoga' },
+                        { time: '12:15', name: 'Pilates Mat', prof: 'Marcus', type: 'Pilates' },
+                        { time: '18:30', name: 'Vinyasa Flow', prof: 'Sarah', type: 'Yoga' }
+                    ];
+                </script>
+<div class="space-y-4">
+<h3 class="text-center font-bold uppercase tracking-widest text-xs text-sage mb-6">Lundi</h3>
+<div class="bg-white p-4 rounded-xl border border-sand shadow-sm">
+<span class="text-[10px] text-gray-400 font-bold uppercase">08:00 - 09:15</span>
+<p class="font-serif text-lg font-bold">Hatha Yoga</p>
+<p class="text-xs text-gray-500">Elena Ross</p>
+</div>
+<div class="bg-sand/30 p-4 rounded-xl border border-sand/50">
+<span class="text-[10px] text-gray-400 font-bold uppercase">12:15 - 13:15</span>
+<p class="font-serif text-lg font-bold text-sage">Pilates Core</p>
+<p class="text-xs text-gray-500">Marcus Chen</p>
+</div>
+<div class="bg-white p-4 rounded-xl border border-sand shadow-sm">
+<span class="text-[10px] text-gray-400 font-bold uppercase">18:30 - 19:45</span>
+<p class="font-serif text-lg font-bold">Vinyasa</p>
+<p class="text-xs text-gray-500">Sarah J.</p>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-center font-bold uppercase tracking-widest text-xs text-sage mb-6">Mardi</h3>
+<div class="bg-white p-4 rounded-xl border border-sand shadow-sm">
+<span class="text-[10px] text-gray-400 font-bold uppercase">07:30 - 08:30</span>
+<p class="font-serif text-lg font-bold">Ashtanga</p>
+<p class="text-xs text-gray-500">Elena Ross</p>
+</div>
+<div class="bg-white p-4 rounded-xl border border-sand shadow-sm">
+<span class="text-[10px] text-gray-400 font-bold uppercase">18:00 - 19:15</span>
+<p class="font-serif text-lg font-bold">Yin Yoga</p>
+<p class="text-xs text-gray-500">Maya T.</p>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-center font-bold uppercase tracking-widest text-xs text-sage mb-6">Mercredi</h3>
+<div class="bg-sand/30 p-4 rounded-xl border border-sand/50">
+<span class="text-[10px] text-gray-400 font-bold uppercase">10:00 - 11:00</span>
+<p class="font-serif text-lg font-bold text-sage">Pilates Flow</p>
+<p class="text-xs text-gray-500">Marcus Chen</p>
+</div>
+<div class="bg-white p-4 rounded-xl border border-sand shadow-sm">
+<span class="text-[10px] text-gray-400 font-bold uppercase">19:00 - 20:30</span>
+<p class="font-serif text-lg font-bold">Vinyasa Expert</p>
+<p class="text-xs text-gray-500">Elena Ross</p>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-center font-bold uppercase tracking-widest text-xs text-sage mb-6">Jeudi</h3>
+<div class="bg-white p-4 rounded-xl border border-sand shadow-sm">
+<span class="text-[10px] text-gray-400 font-bold uppercase">08:00 - 09:15</span>
+<p class="font-serif text-lg font-bold">Hatha Yoga</p>
+<p class="text-xs text-gray-500">Elena Ross</p>
+</div>
+<div class="bg-white p-4 rounded-xl border border-sand shadow-sm">
+<span class="text-[10px] text-gray-400 font-bold uppercase">12:30 - 13:30</span>
+<p class="font-serif text-lg font-bold">Lunch Yoga</p>
+<p class="text-xs text-gray-500">Sarah J.</p>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-center font-bold uppercase tracking-widest text-xs text-sage mb-6">Vendredi</h3>
+<div class="bg-sand/30 p-4 rounded-xl border border-sand/50">
+<span class="text-[10px] text-gray-400 font-bold uppercase">09:00 - 10:15</span>
+<p class="font-serif text-lg font-bold text-sage">Reformer</p>
+<p class="text-xs text-gray-500">Marcus Chen</p>
+</div>
+<div class="bg-white p-4 rounded-xl border border-sand shadow-sm">
+<span class="text-[10px] text-gray-400 font-bold uppercase">18:00 - 19:15</span>
+<p class="font-serif text-lg font-bold">Sunset Flow</p>
+<p class="text-xs text-gray-500">Maya T.</p>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-center font-bold uppercase tracking-widest text-xs text-sage mb-6">Samedi</h3>
+<div class="bg-white p-4 rounded-xl border border-sand shadow-sm">
+<span class="text-[10px] text-gray-400 font-bold uppercase">10:30 - 12:00</span>
+<p class="font-serif text-lg font-bold">Intense Flow</p>
+<p class="text-xs text-gray-500">Elena Ross</p>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-center font-bold uppercase tracking-widest text-xs text-sage mb-6">Dimanche</h3>
+<div class="bg-white p-4 rounded-xl border border-sand shadow-sm">
+<span class="text-[10px] text-gray-400 font-bold uppercase">11:00 - 12:30</span>
+<p class="font-serif text-lg font-bold">Méditation</p>
+<p class="text-xs text-gray-500">Sarah J.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white px-6" id="profs">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4">Vos Instructeurs</h2>
+<p class="text-gray-500 max-w-md mx-auto">Une équipe passionnée pour vous accompagner dans votre pratique.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="text-center">
+<div class="relative w-64 h-64 mx-auto mb-8">
+<img alt="Elena Ross" class="w-full h-full object-cover rounded-full shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWqgENdHfIgmRWRc01rjhcpjn-5_CfZZ5HGrR1V79FQaafn_fgmxcf-avZ9U3CZAndTYF-vIiHgI4REJCGJjrWLmnQR68W57JiqiOjIW-6-LmGo001IDqUxQEO8GCkhNcVJsTGG0vv2oNL8Hlx97XNKe0GH0qtHxerzWLS2MVsZ7SbKI_EItZViWS3J6gNj-b1RntXI9m6h6MWs0-PFC5Qm1myxpps37Mi-XnAoxpvU1IrLgVTwLryIsJWgHd6IlBmBKFbKEwysTM"/>
+</div>
+<h3 class="text-2xl font-bold mb-2">Elena Ross</h3>
+<p class="text-sage font-medium uppercase tracking-widest text-xs mb-4">Lead Yoga Guide</p>
+<p class="text-gray-600 text-sm leading-relaxed px-6 italic">"Le yoga est le voyage de soi, à travers soi, vers soi."</p>
+</div>
+<div class="text-center">
+<div class="relative w-64 h-64 mx-auto mb-8">
+<img alt="Marcus Chen" class="w-full h-full object-cover rounded-full shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWuqUDGALVW4sI5DY9y4MkprKwP85pEI_uMidpoXPqHSjQvQJZaT4ZaObCf5wkciRqbYH0OIswIRj_YDql3iSPS3PlauvaubeZu5yRczWpi_yugQu0OXei4c2hr9EbfdyGILVdm65lL3zDEw2ot0vlUhy0rjZNSnmT_efBCEPrJxGNKYzhbcjcLXPVRNx8UUYSDVo1ZrL7J9ejIAlW0e0Jgoz5nwGZCLyjk_Rr2bz9Pptp0KHvcKRq9JgKZ_pt-AX7vb3PAEcDL9o"/>
+</div>
+<h3 class="text-2xl font-bold mb-2">Marcus Chen</h3>
+<p class="text-sage font-medium uppercase tracking-widest text-xs mb-4">Pilates Expert</p>
+<p class="text-gray-600 text-sm leading-relaxed px-6 italic">"La précision et le contrôle sont les piliers d'un corps sain."</p>
+</div>
+<div class="text-center">
+<div class="relative w-64 h-64 mx-auto mb-8">
+<img alt="Sarah J." class="w-full h-full object-cover rounded-full shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe07umPiOS8JaCLZFur4hdgyhx22a1XKVdKfbaFRgLdHovSsxNIGVl9xNqrKiNMG2mfXJFOa0wSAwhhW2pApvpfnDEx64HCjZCGEhVj_fec9WN3qMcL2LiYaXGiLO4Ahi53H0n_tur6Dv7tvLnFu_FP6lZuKgRdvYqP3rs29_SmL7trWw67ynzd8Bm529yzDEYtujgcNEXrjNefQzSXQMpkGODayl6ExIY8PkhjBKr24jR0AXAaF_tQ8dwhFo32GKgUi-YI67SRUc"/>
+</div>
+<h3 class="text-2xl font-bold mb-2">Sarah J.</h3>
+<p class="text-sage font-medium uppercase tracking-widest text-xs mb-4">Mindfulness &amp; Yin</p>
+<p class="text-gray-600 text-sm leading-relaxed px-6 italic">"Apprendre à ralentir est la plus grande des forces."</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-sand/30 px-6" id="tarifs">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4">Nos Tarifs</h2>
+<div class="w-20 h-0.5 bg-sage mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-10 rounded-2xl shadow-sm border border-sand hover:shadow-md transition-shadow flex flex-col items-center text-center">
+<h3 class="font-bold text-xl mb-4">Découverte</h3>
+<div class="mb-6">
+<span class="text-4xl font-serif font-bold">45€</span>
+<span class="text-gray-400 text-sm">/ 3 cours</span>
+</div>
+<ul class="space-y-3 mb-10 text-gray-600 text-sm">
+<li>Valable 1 mois</li>
+<li>Tous niveaux</li>
+<li>Accès Yoga &amp; Pilates</li>
+</ul>
+<button class="mt-auto w-full py-4 border border-sage text-sage rounded-full font-bold hover:bg-sage hover:text-white transition-all uppercase tracking-widest text-xs">Sélectionner</button>
+</div>
+<div class="bg-studio-dark text-white p-10 rounded-2xl shadow-xl flex flex-col items-center text-center scale-105">
+<span class="bg-sage text-white text-[10px] px-3 py-1 rounded-full uppercase font-bold mb-4 tracking-widest">Le plus populaire</span>
+<h3 class="font-bold text-xl mb-4">Membre Illimité</h3>
+<div class="mb-6">
+<span class="text-4xl font-serif font-bold text-sage">110€</span>
+<span class="text-gray-400 text-sm">/ mois</span>
+</div>
+<ul class="space-y-3 mb-10 text-gray-300 text-sm">
+<li>Cours illimités</li>
+<li>Invitations workshops</li>
+<li>-10% sur la boutique</li>
+<li>Accès Premium App</li>
+</ul>
+<button class="mt-auto w-full py-4 bg-sage text-white rounded-full font-bold hover:bg-white hover:text-studio-dark transition-all uppercase tracking-widest text-xs">Sélectionner</button>
+</div>
+<div class="bg-white p-10 rounded-2xl shadow-sm border border-sand hover:shadow-md transition-shadow flex flex-col items-center text-center">
+<h3 class="font-bold text-xl mb-4">Carte 10 cours</h3>
+<div class="mb-6">
+<span class="text-4xl font-serif font-bold">180€</span>
+<span class="text-gray-400 text-sm">/ carte</span>
+</div>
+<ul class="space-y-3 mb-10 text-gray-600 text-sm">
+<li>Valable 6 mois</li>
+<li>Partageable avec un ami</li>
+<li>Flexibilité totale</li>
+</ul>
+<button class="mt-auto w-full py-4 border border-sage text-sage rounded-full font-bold hover:bg-sage hover:text-white transition-all uppercase tracking-widest text-xs">Sélectionner</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-cream px-6">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-sage-light text-6xl mb-8">format_quote</span>
+<div class="relative overflow-hidden">
+<div class="transition-transform duration-500">
+<p class="text-2xl md:text-3xl font-serif italic text-studio-dark leading-relaxed mb-8">
+                    "Un lieu unique où l'on se sent immédiatement apaisé. Les professeurs sont d'une bienveillance rare et le studio est tout simplement magnifique. Ma routine préférée de la semaine."
+                </p>
+<div class="flex flex-col items-center">
+<p class="font-bold text-sm uppercase tracking-widest mb-1">Maya Thompson</p>
+<p class="text-xs text-gray-400">Membre depuis 2 ans</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center gap-3 mt-12">
+<div class="w-1.5 h-1.5 rounded-full bg-sage"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-sand"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-sand"></div>
+</div>
+</div>
+</section>
+<footer class="bg-studio-dark text-white py-16 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-sage text-2xl">spa</span>
+<span class="font-serif text-xl font-bold uppercase">Flow Studio</span>
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">
+                Votre sanctuaire urbain dédié au bien-être. Yoga, Pilates et Méditation au coeur de la ville.
+            </p>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-6 text-sage">Navigation</h4>
+<ul class="space-y-4 text-sm text-gray-400">
+<li><a class="hover:text-white" href="#">Le Studio</a></li>
+<li><a class="hover:text-white" href="#">Planning</a></li>
+<li><a class="hover:text-white" href="#">Tarifs</a></li>
+<li><a class="hover:text-white" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-6 text-sage">Contact</h4>
+<ul class="space-y-4 text-sm text-gray-400">
+<li>12 Rue de la Sérénité, 75011</li>
+<li>hello@flowstudio.com</li>
+<li>01 23 45 67 89</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-6 text-sage">Newsletter</h4>
+<p class="text-gray-400 text-xs mb-4">Recevez nos conseils et actualités bien-être.</p>
+<div class="flex">
+<input class="bg-white/5 border-none focus:ring-1 focus:ring-sage rounded-l-lg text-sm w-full" placeholder="Email" type="email"/>
+<button class="bg-sage px-4 rounded-r-lg"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 flex flex-col md:row justify-between items-center text-[10px] text-gray-500 uppercase tracking-[0.2em]">
+<p>© 2024 Flow Studio. Tous droits réservés.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a href="#">Instagram</a>
+<a href="#">Facebook</a>
+<a href="#">Mentions Légales</a>
+</div>
+</div>
+</footer>
+
+<script>
+document.addEventListener("click", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("mousedown", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("mouseup", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("submit", function(e) { e.preventDefault(); }, true);
+</script></body></html>

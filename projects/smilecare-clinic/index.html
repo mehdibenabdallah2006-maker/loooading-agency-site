@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SmileCare Clinic - Votre Sourire, Notre Priorité</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0066cc",
+              "secondary": "#e6f2ff",
+              "accent": "#004d99",
+              "background-light": "#f8fafc",
+              "background-dark": "#0f172a",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.375rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display text-slate-800 bg-background-light;
+            }
+        }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="flex items-center bg-white border-b border-slate-100 px-6 py-4 sticky top-0 z-50 justify-between">
+<div class="flex items-center gap-2">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center bg-secondary rounded-lg">
+<span class="material-symbols-outlined text-3xl">dentistry</span>
+</div>
+<h1 class="text-slate-900 text-xl font-bold leading-tight tracking-tight">SmileCare Clinic</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8 text-slate-600 font-medium">
+<a class="hover:text-primary transition-colors" href="#">Accueil</a>
+<a class="hover:text-primary transition-colors" href="#services">Services</a>
+<a class="hover:text-primary transition-colors" href="#team">Équipe</a>
+<a class="hover:text-primary transition-colors" href="#testimonials">Témoignages</a>
+<a class="hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+<button class="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded-full font-bold transition-all shadow-md active:scale-95">
+                Prendre RDV
+            </button>
+</header>
+<main class="flex-1">
+<section class="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkivblazDaNTW5BxbpLp5lDiBBlfon27PtyiuIjqrTyr7YtcJ6kw0nnzp27kY6NsyYeUqpzoOc2mIEPoFQwemGIM5jF-U8qwMUVeA1ni2P74lXxrtT0BwOn3zGaIdRAyKaH3etv8RthJZD3MpsFIhbNwS4ZaM2SLCEqtqhFUhoghdveIJGM7fG64qo1oZsocgXH35H4lAyLawNN9OXdAl9kgRZ_uYUutIFoL6FMh2Cxd1YU5q0Cpucz7l3sg7QJZRPUk9uDJseW72X");'>
+<div class="absolute inset-0 bg-slate-900/40"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl">
+<h2 class="text-white text-4xl md:text-6xl font-black mb-6 leading-tight drop-shadow-lg">
+                        Votre Sourire, Notre Priorité
+                    </h2>
+<p class="text-white/90 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
+                        Découvrez une approche moderne et bienveillante de la médecine dentaire. Une équipe d'experts à votre écoute pour des résultats d'exception.
+                    </p>
+<button class="bg-primary hover:bg-accent text-white px-10 py-4 rounded-full text-lg font-bold transition-all shadow-xl hover:scale-105 active:scale-95">
+                        Prendre RDV
+                    </button>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-6 py-24" id="services">
+<div class="text-center mb-16">
+<h3 class="text-slate-900 text-3xl font-bold mb-4">Nos Services Spécialisés</h3>
+<div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-shadow group">
+<div class="size-14 rounded-2xl bg-secondary text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">health_and_safety</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 mb-3">Dentisterie Générale</h4>
+<p class="text-slate-600 leading-relaxed">Prévention, soins conservateurs et détartrage pour maintenir une hygiène bucco-dentaire optimale.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-shadow group">
+<div class="size-14 rounded-2xl bg-secondary text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">align_items_stretch</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 mb-3">Orthodontie</h4>
+<p class="text-slate-600 leading-relaxed">Alignement dentaire pour enfants et adultes grâce aux dernières technologies invisibles ou bagues.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-shadow group">
+<div class="size-14 rounded-2xl bg-secondary text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">auto_awesome</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 mb-3">Soins Esthétiques</h4>
+<p class="text-slate-600 leading-relaxed">Blanchiment professionnel, facettes et reconstructions esthétiques pour un sourire éclatant.</p>
+</div>
+</div>
+</section>
+<section class="bg-white py-24" id="team">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<div>
+<h3 class="text-slate-900 text-3xl font-bold mb-2">Notre Équipe d'Experts</h3>
+<p class="text-slate-500">Des praticiens passionnés dédiés à votre santé.</p>
+</div>
+<div class="h-0.5 flex-1 bg-slate-100 mx-8 hidden md:block"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+<div class="text-center">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden mb-6 shadow-lg grayscale hover:grayscale-0 transition-all duration-500">
+<img alt="Dr. Sophie Martin" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO0TbGTlbHMCt0I3VnvWkkA0W3teeydaYlhvv2pxZ3Rsh9oNrGO9c-7QofG3tbo1dyJG8IrMuYJt6HTt2pzCP6MaAjkA4mM5DFWpFpYQeuGZzEdkpPGR4VMKVMKyo6bNvQSopoMclwHEigo_6U0aWdMtcPGAJ2muDWdq5IawjrtAzkClMh3mzvFZa6hfDsIpYaGQLNKA2mLHn61zsUYkBxRN5fyt_2ZuY0yw6wDD_Yl49sD8MummeohoH0laid7OXo2-u98p-6sCiM"/>
+</div>
+<h4 class="text-xl font-bold text-slate-900">Dr. Sophie Martin</h4>
+<p class="text-primary font-medium">Orthodontiste D.E.</p>
+</div>
+<div class="text-center">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden mb-6 shadow-lg grayscale hover:grayscale-0 transition-all duration-500">
+<img alt="Dr. Thomas Petit" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzRbDYRzB0xWki2oO17HNOsMEqOHDJLAMBPcPxn3BkVwDTIi-no99L0_1gwOZk1SBKlozws8pSnMVFW674EftNHI3foU3H89IITlEpFxjqPjQRfZNciE8TwrUg7Ccq0YHgy3ESAIQ2LEXOpHGq1gbBJOqcRLlJoCMA5SO8CuePl37Q1EH0L07hB8lzrOz0aGk8ooY8xYyWpdVkYxfJtToDaG50ZbkfHeh91R2BNXFWCRfiFZFo9JUhuz5BsPMdyAxNQdxkqn7ae07g"/>
+</div>
+<h4 class="text-xl font-bold text-slate-900">Dr. Thomas Petit</h4>
+<p class="text-primary font-medium">Chirurgien-Dentiste</p>
+</div>
+<div class="text-center hidden lg:block">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden mb-6 shadow-lg bg-secondary flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined text-6xl">person</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900">Dr. Marc Lefèvre</h4>
+<p class="text-primary font-medium">Spécialiste en Implantologie</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-secondary/30 py-24" id="testimonials">
+<div class="max-w-4xl mx-auto px-6">
+<h3 class="text-slate-900 text-3xl font-bold mb-12 text-center">Ce que nos patients disent</h3>
+<div class="space-y-8">
+<div class="bg-white p-8 rounded-3xl shadow-sm relative border border-slate-100">
+<div class="flex gap-1 text-amber-400 mb-4">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-slate-700 text-lg italic mb-6 leading-relaxed">
+                                "Une expérience exceptionnelle du début à la fin. Le Dr Martin est d'une douceur remarquable et a su m'expliquer chaque étape de mon traitement d'orthodontie invisible."
+                            </p>
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">ER</div>
+<p class="font-bold text-slate-900">Émilie R.</p>
+</div>
+</div>
+<div class="bg-white p-8 rounded-3xl shadow-sm relative border border-slate-100">
+<div class="flex gap-1 text-amber-400 mb-4">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-slate-700 text-lg italic mb-6 leading-relaxed">
+                                "Cabinet très moderne et rassurant. Toute l'équipe est aux petits soins. Je recommande vivement pour toute la famille."
+                            </p>
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">JD</div>
+<p class="font-bold text-slate-900">Jean-Daniel P.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-primary py-20">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h2 class="text-white text-3xl md:text-4xl font-bold mb-6">Prêt pour votre nouveau sourire ?</h2>
+<p class="text-white/80 text-lg mb-10">Rejoignez nos patients satisfaits et prenez rendez-vous dès aujourd'hui pour une consultation.</p>
+<button class="bg-white text-primary hover:bg-slate-50 px-12 py-5 rounded-full text-xl font-bold shadow-2xl transition-all hover:-translate-y-1">
+                        Prendre RDV en ligne
+                    </button>
+</div>
+</section>
+</main>
+<footer class="bg-slate-950 text-slate-400 py-16 px-6" id="contact">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-white mb-6">
+<span class="material-symbols-outlined text-3xl text-primary">dentistry</span>
+<span class="text-xl font-bold tracking-tight">SmileCare Clinic</span>
+</div>
+<p class="text-sm leading-relaxed">
+                        Excellence et bienveillance au service de votre santé bucco-dentaire depuis 2015.
+                    </p>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Navigation</h5>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Accueil</a></li>
+<li><a class="hover:text-primary transition-colors" href="#services">Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#team">Notre Équipe</a></li>
+<li><a class="hover:text-primary transition-colors" href="#testimonials">Témoignages</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Contact</h5>
+<ul class="space-y-4 text-sm">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">location_on</span>
+<span>123 Avenue de la Santé, 75008 Paris</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">call</span>
+<span>01 23 45 67 89</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">mail</span>
+<span>contact@smilecare.clinic</span>
+</li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Horaires</h5>
+<ul class="space-y-2 text-sm">
+<li class="flex justify-between"><span>Lun - Ven:</span> <span class="text-white">8h00 - 19h00</span></li>
+<li class="flex justify-between"><span>Samedi:</span> <span class="text-white">9h00 - 14h00</span></li>
+<li class="flex justify-between"><span>Dimanche:</span> <span class="text-red-400 italic">Fermé</span></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center text-xs text-slate-600">
+<p>© 2024 SmileCare Clinic. Tous droits réservés. Mentions Légales.</p>
+</div>
+</footer>
+</div>
+
+<script>
+document.addEventListener("click", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("mousedown", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("mouseup", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("submit", function(e) { e.preventDefault(); }, true);
+</script></body></html>

@@ -1,0 +1,176 @@
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af37", // Gold
+                        "blush": "#fcf0ed",
+                        "ivory": "#fffdfa",
+                        "deep-charcoal": "#2d2d2d",
+                        "soft-gold": "#e5c687"
+                    },
+                    fontFamily: {
+                        "serif": ["Playfair Display", "serif"],
+                        "sans": ["Montserrat", "sans-serif"],
+                        "cursive": ["Pinyon Script", "cursive"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-ivory text-deep-charcoal font-sans;
+            }
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="overflow-x-hidden">
+<nav class="fixed top-0 z-[100] w-full flex items-center justify-between px-6 py-4 bg-ivory/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex-1">
+<h1 class="font-serif text-xl tracking-tighter font-bold uppercase text-primary">Eternal Events</h1>
+</div>
+<div class="hidden md:flex flex-1 justify-center space-x-8 text-[10px] uppercase tracking-[0.2em] font-medium">
+<a class="hover:text-primary transition-colors" href="#">Accueil</a>
+<a class="hover:text-primary transition-colors" href="#">Services</a>
+<a class="hover:text-primary transition-colors" href="#">Portfolio</a>
+</div>
+<div class="flex-1 flex justify-end">
+<button class="bg-primary text-white px-5 py-2 rounded-full text-[10px] uppercase tracking-widest font-bold shadow-md hover:bg-soft-gold transition-all active:scale-95">
+            Demander un devis
+        </button>
+</div>
+</nav>
+<section class="relative h-screen w-full overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Hero Image" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1B-9ucMLweQfJh6fPrU8pFxYmlwvGoBnNNBcqA7E6KlOs_h24aZa4vVRKBzNZjTKVpOYoG9agTtnqQ-EOMcTCSBUA2Xfg5Yy55c2FFdQ5f9YCw8tArsuh1Oe-BmDKdbmzPue9lxRT959QKDr9WpVIni6JoWzfQeJOBd-YJ3ltKtWnkizp6eMIBTC3PVTwH_eSHuYTwypsfl1Pltxzazl0UIQhqf-yuP_mb32kP5Xa724Sp3oSsUog_BgMeTKkMc268v1bTweCNS4"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative h-full flex flex-col items-center justify-center text-center px-6">
+<p class="text-white/90 font-sans text-xs uppercase tracking-[0.4em] mb-4">L'art de l'exceptionnel</p>
+<h2 class="text-white font-serif text-5xl md:text-7xl italic leading-tight mb-8">Crafting Your <br/><span class="text-soft-gold">Forever</span></h2>
+<div class="w-px h-24 bg-white/40"></div>
+</div>
+</section>
+<section class="py-20 px-6 space-y-24 bg-ivory">
+<div class="text-center mb-16">
+<h3 class="font-serif text-3xl italic mb-2">Nos Prestations</h3>
+<div class="w-12 h-0.5 bg-primary mx-auto"></div>
+</div>
+<div class="flex flex-col gap-8">
+<div class="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-xl">
+<img alt="Weddings" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC70R91o8NsdrrzAKEhq4D0-2p53TJ5piCRrFPZbya4oN5tRHzMBGQEpON_oiMA9aPl_xewASXhHQSbkSECRVpHM4hpyTbDnrZIzFr8xbreX1Nuo3R3oBKnXy9MFl6RGNGB8NAPjpF8mZEdXnprS6607qjtNY9GlA2UnQEncVlB-A6XQYoazEQESn0J7KF9JxCrAQm539b5cUZ9eZoNDSqFImdKWZHcm80JI26iFqyxy8pf9ttaHavPtsTJMZTAC5oCUsNXhSHOTyI"/>
+<div class="absolute inset-0 bg-blush/20"></div>
+</div>
+<div class="space-y-4 px-2">
+<h4 class="font-serif text-2xl">Mariages d'Exception</h4>
+<p class="text-deep-charcoal/70 leading-relaxed font-light">De la conception artistique à la coordination du grand jour, nous créons des unions intemporelles qui reflètent votre essence la plus pure.</p>
+<a class="inline-block text-primary font-semibold text-xs uppercase tracking-widest border-b border-primary pb-1" href="#">Découvrir</a>
+</div>
+</div>
+<div class="flex flex-col gap-8">
+<div class="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-xl">
+<img alt="Corporate" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2su87Tdd08D7LQnyNhEJF2BMIcyI7OP-MF1VWlRPEQFm9uX_bSEAzMIa4o1Fe6tqSmSbS_1zDCbzgIEL_reyfx2QG_M8n7D1_ngTHgbVLcdzQbbOfHPesBN17_GiCxKBxuMuGVI3VCH78Kibn6wC2L2-T4t02mdn5yOXcKoE0oYwnDVjbm8ZFgbccNsUj5mdDA6f5LPxWaaqdHBhWcVq__3zYg7ie4MCW7tQf5ash055PzpjapweM7SvX2kdv2DdYvGjX58h8Uao"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+</div>
+<div class="space-y-4 px-2">
+<h4 class="font-serif text-2xl">Événements Corporate</h4>
+<p class="text-deep-charcoal/70 leading-relaxed font-light">Galas, lancements de produits et soirées d'entreprise. Nous marions professionnalisme et élégance pour marquer les esprits de vos collaborateurs.</p>
+<a class="inline-block text-primary font-semibold text-xs uppercase tracking-widest border-b border-primary pb-1" href="#">En savoir plus</a>
+</div>
+</div>
+</section>
+<section class="py-20 bg-blush/30 px-4">
+<div class="text-center mb-12">
+<h3 class="font-serif text-3xl italic">Portfolio</h3>
+<p class="font-cursive text-2xl text-primary mt-2">Instants capturés</p>
+</div>
+<div class="columns-2 gap-4 space-y-4">
+<div class="break-inside-avoid rounded-lg overflow-hidden shadow-sm">
+<img alt="Portfolio 1" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyMd7ME8A-jeV7jS82PqIi75AOQstZ87kpmuuUpnO-SDp0ibNBDI2ni4cNt3bC6cJwxqQnFDHhfzlXbpOGpRPB1B9uxuEDqYEefz7kXUzdRCSRPtt_7HaKgNwXQBJoTNqrIlAQ5uBHyEVpsBScRZ5NKKzcm2GvWdfSBnUdEyFtrwZPs9gGhIdnoM62yKwTeXyUMA-FYjliPG4-I_5lsTe0qOKQb5GwF4tGYFawXsFt8-T4i8y_bhmg7NS2JMLGAkv6jvCYN11Yl_g"/>
+</div>
+<div class="break-inside-avoid rounded-lg overflow-hidden shadow-sm">
+<img alt="Portfolio 2" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdfXQ6i821owX3fhdXjWd7Vo2ZJLsdWUHUAdTx3frsEz1gz0Y07A3bclYJWrNUMx00NUIkTHNg_fzIJi2YybuAit1a8Zl1hquiWmZfuON_XLxcfhzpfBlaaOS8pGEPMDxRpEohxdGELA4qk5vLGMCU3forltdk-llM8VZ1SU5OqcoXSbYe9-k2qVhcRL2QGO_PjB3snm0dswl10yJf0V7WMccAaeqQ1OI9YXDcPmWdXDhtJhqAcxg05UMRDo1LKWhzIa-K56kJo34"/>
+</div>
+<div class="break-inside-avoid rounded-lg overflow-hidden shadow-sm">
+<img alt="Portfolio 3" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNrVFUwpT2UAjQ9wcmBqJoybVVXwoqcVBAHDInSpmRy6Cmgdj7rFF-a5-7Xc-V5F4lF-ZbTZuLSmSXbhVtfqi3xNE43ugzrUqJybQLyUCcUha1iG_3RsyX8Kk9HzVyzByR7lZxSsPt5KZYsUW72tzN72IhZ8SpjOvVtIcuOIEkpklhESahnqJlLzGxjFwDiu2T8tO1QGyKtwQfTqwrZr7nGg4ZhWuwQocLsc-B-LbSmfGAIZyS8JHmtq0N3o7dxgMeKi_e6MDaTqM"/>
+</div>
+<div class="break-inside-avoid rounded-lg overflow-hidden shadow-sm">
+<img alt="Portfolio 4" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD27FemTVeeDI1GayRaMT3IBn7uLzdPHgU4Pv3XIlOB6WSm4QI8_4CczoYHP4xrlCXLrWgwPa_ye1MHRkgMg65VWn_xJ_u02D82qhRrclSjxPpXT4G2NwOw74VSqECCAb4T_1jEILwrvbC_o_mx7t5HCJR1Yscoc3mHs2cp4z2gRW_Ky-_hJPeWE-rK5joOPgUYLPNOR0I8h7tpwm3isUg0hV-CdX-iPh91TxdVjSJioOOjpKU5qpkrmsUYhV9GhCFQGMMvD-xOy-w"/>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white px-6 overflow-hidden">
+<div class="relative max-w-lg mx-auto text-center">
+<span class="material-symbols-outlined text-primary/20 text-8xl absolute -top-10 left-1/2 -translate-x-1/2 select-none">format_quote</span>
+<div class="relative z-10">
+<p class="font-cursive text-3xl text-deep-charcoal leading-relaxed mb-8">
+                "Une expérience hors du temps. Eternal Events a su transformer nos rêves les plus fous en une réalité encore plus belle."
+            </p>
+<div class="space-y-1">
+<p class="font-sans font-bold tracking-[0.2em] text-xs text-primary uppercase">Clara &amp; Alexandre</p>
+<p class="text-[10px] text-deep-charcoal/40 uppercase tracking-widest italic">Château de Versailles, 2023</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-deep-charcoal text-ivory py-16 px-6">
+<div class="text-center space-y-8">
+<h2 class="font-serif text-3xl italic tracking-wide">Eternal Events</h2>
+<p class="text-ivory/60 text-sm max-w-xs mx-auto leading-relaxed font-light">
+            Planifions ensemble le plus beau chapitre de votre histoire.
+        </p>
+<div class="flex justify-center gap-6 py-4">
+<a class="w-10 h-10 rounded-full border border-ivory/20 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-ivory/20 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-ivory/20 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">call</span>
+</a>
+</div>
+<div class="pt-8 border-t border-ivory/10">
+<p class="text-[10px] uppercase tracking-[0.3em] text-ivory/30">
+                © 2024 Eternal Events. Haute Conciergerie de Mariage.
+            </p>
+</div>
+</div>
+</footer>
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-[90%] max-w-sm">
+<div class="bg-deep-charcoal/90 backdrop-blur-md rounded-full px-8 py-4 flex justify-between items-center shadow-2xl border border-ivory/10">
+<span class="material-symbols-outlined text-primary font-variation-fill">home</span>
+<span class="material-symbols-outlined text-ivory/50">auto_awesome_motion</span>
+<span class="material-symbols-outlined text-ivory/50">favorite</span>
+<span class="material-symbols-outlined text-ivory/50">chat_bubble</span>
+</div>
+</div>
+<style>
+    .font-variation-fill {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+</style>
+
+<script>
+document.addEventListener("click", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("mousedown", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("mouseup", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("submit", function(e) { e.preventDefault(); }, true);
+</script></body></html>

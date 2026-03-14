@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Riad Noor | Boutique Moroccan Luxury</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;700;900&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec3413", // Terracotta
+                        "sand": "#e5d1b8",
+                        "ivory": "#f8f6f6",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221310",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 1rem;
+        }
+        .masonry-tall { grid-row: span 2; }
+        .masonry-wide { grid-column: span 2; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 overflow-x-hidden">
+<!-- Header Component -->
+<nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-ivory/90 backdrop-blur-md border-b border-primary/10">
+<h1 class="font-serif text-2xl font-bold text-primary tracking-tight">Riad Noor</h1>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-serif text-slate-800 hover:text-primary transition-colors" href="#">Rooms</a>
+<a class="font-serif text-slate-800 hover:text-primary transition-colors" href="#">Experience</a>
+<a class="font-serif text-slate-800 hover:text-primary transition-colors" href="#">Gallery</a>
+<a class="font-serif text-slate-800 hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="md:hidden text-slate-900">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Split-Screen Hero Section -->
+<section class="flex flex-col md:flex-row min-h-[90vh] w-full">
+<!-- Left Side: Visual -->
+<div class="w-full md:w-1/2 h-[50vh] md:h-auto relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Traditional Moroccan riad courtyard with emerald tiles and pool" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAViKM2B9MAi2KVhVS4cMVLRXwFJrlohgvabB7BikjwwPAdNOGhjIN5GnxWUh616pO1kWo0Xfn6n0V4c56kjl8WxMU-oA7AOF2zJlgCHBn63Dfq5lobt6gPPZ8VsNG3Mfom4rVOFyOjQHGHGLDDmWrz71UPgx5g5KoeNHOjJIro3OjwEhBVYyngRVDqWu-3rS87SJ-6f5p3hNqfXatgu9-YPl1ymkllzeCYrQpP6JRhBetMBNVCeLR1eEF-yr4i2lKKKNOuxZUMmXU')"></div>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<!-- Right Side: Content & Booking -->
+<div class="w-full md:w-1/2 bg-sand/30 flex flex-col justify-center p-8 md:p-16 lg:p-24">
+<div class="max-w-md mx-auto md:mx-0">
+<span class="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Marrakech, Morocco</span>
+<h2 class="font-serif text-4xl md:text-6xl text-slate-900 leading-tight mb-8">A Sanctuary of Peace in the Heart of the Medina.</h2>
+<div class="bg-white/80 backdrop-blur p-6 rounded-xl shadow-xl border border-primary/5">
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<label class="text-xs font-bold text-slate-500 uppercase">Dates</label>
+<div class="flex items-center bg-ivory p-3 rounded-lg border border-slate-200">
+<span class="material-symbols-outlined text-primary mr-2">calendar_month</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full" placeholder="Select Dates" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-xs font-bold text-slate-500 uppercase">Guests</label>
+<div class="flex items-center bg-ivory p-3 rounded-lg border border-slate-200">
+<span class="material-symbols-outlined text-primary mr-2">group</span>
+<select class="bg-transparent border-none focus:ring-0 text-sm w-full">
+<option>2 Guests</option>
+<option>1 Guest</option>
+<option>3 Guests</option>
+<option>4+ Guests</option>
+</select>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg transition-all shadow-lg mt-2">
+                            Check Availability
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experiences Section -->
+<section class="py-20 px-6 max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h3 class="font-serif text-3xl md:text-5xl text-slate-900 mb-4">Curated Experiences</h3>
+<p class="text-slate-600 max-w-xl mx-auto">Immerse yourself in the rich tapestry of Moroccan culture through our hand-picked signature journeys.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Experience 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-4 relative">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="Traditional Moroccan hammam spa interior" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZ7KGh0iBkKTCtrOnkFlXiUa-tpKpw-iHQUl133htjdbay1mdQhKSgcKkXN07urJ083YSyb00Z3BM_FzrlgP42wPlhjmsCyxnwjFs7fYobGlUj_InGTx8AumAp60k-wHcKsv0M67qJMB67PIWMj9iNqLD5Xf-iIqkEYxyt3OvgbhhzaOZhpVcrBqqwAR_pAcn1XpKYqBvI4IUmHbpJm6qF_gZQUHPS4a9l7cwihDvknl3jHQq2Ri78FoQg4OuNqFRkLak1WlHnc0Y')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h4 class="font-serif text-2xl">Traditional Hammam</h4>
+</div>
+</div>
+<p class="text-slate-600 text-sm leading-relaxed">Indulge in ancient purification rituals with organic argan oils and eucalyptus soaps.</p>
+</div>
+<!-- Experience 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-4 relative">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="Rooftop terrace dining with Marrakech views" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNrLQuenBLOo7OCx_bYJp3T5b74v0zvCSD-XdxyRuQblPSC9jG0PMJxLs43rjy6HddJJnZVyQQVfyAbc3Qg9qcOUM8aUphoa59HNYEpekq4JGMgyQ5ZEDzLiacQbIr7s-RHtTs9f5Gq7WquRoYLVzXE1RczpL1Ohr43EKHtdfO16ysQV5yyqEmHYWZhIEKtZz8pEb6YBwlnS9NrmRwXjff26eJIjn6tmzusHZeC4aAsK8UpKYdChcaCasPvJc7-T-Ie8UfD65cHu4')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h4 class="font-serif text-2xl">Rooftop Dining</h4>
+</div>
+</div>
+<p class="text-slate-600 text-sm leading-relaxed">Exquisite Moroccan cuisine served under the starlit sky with panoramic Atlas views.</p>
+</div>
+<!-- Experience 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-4 relative">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="Desert sand dunes at sunset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2wXwFCmZdMHDeIZDN56C48snsHrR11rOSovVwvvLmkJ2WHW_sNvlhSTta7pqFOUM_q9wKKnXyvx-QD9dIiY04rjrU5CFh-wCoPxzZq9tt5KmDzB9brUOwF4RRBpDmF2uegq6jc4jNID36d9oZJjoE9qAy9SDAiqb-7mV-OhBXoixqVmvrkxWPLlmGpizlfR5EPPr5_oe0oZ2at7CWso_QZeXFi4S8DOcWvXKRM6c-yiiKPXC9Ltz8EK5eQvXatgWH7KVsyQLmYac')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h4 class="font-serif text-2xl">Desert Journeys</h4>
+</div>
+</div>
+<p class="text-slate-600 text-sm leading-relaxed">Private expeditions to the golden dunes of the Sahara with luxury camp stays.</p>
+</div>
+</div>
+</section>
+<!-- Mosaic Gallery Section -->
+<section class="py-20 bg-primary/5">
+<div class="max-w-7xl mx-auto px-6">
+<h3 class="font-serif text-3xl md:text-5xl text-center mb-16">The Art of Architecture</h3>
+<div class="masonry-grid">
+<div class="masonry-tall rounded-xl overflow-hidden shadow-md">
+<div class="w-full h-full bg-cover bg-center" data-alt="Detailed blue zellige mosaic tilework" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsIrX_sCOh-xBDamBxo1hL4KsxQDmELnbPbVdLuj764oIk08vDxrxXk177XfYTrTuVAr-ewLPiRMdSW0PArZeR1VELGKTgdkbcF0S0LFmsCXcjiAG35mUDQVCJv2RrtADCclC5vg1w084FtJFRbSY5ao3i5SIGV_btAcmcouJgcXwbLPpFq9YcMkfdFGUH1sIXk9hakqRSWwuC1nbdnRoV8znpxd5p9PYomQSj5Pcb85lkZw2NzsJwyaLZQ9Yi4VxuFZw-ihulF0Q')"></div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-md">
+<div class="w-full h-full bg-cover bg-center" data-alt="Intricate carved cedar wood doorway" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2NA219PDP0Bk9UbOJsT1nxx2LMkk0OkOxlJcsyBBX4J3o18dMXrKCOx8mYEmkieB5hBY3YoEif-3IN_vZFvBCKxZ0PCcfHgUGhKJrPAzRnE4NR0sKjo-HcODTurq9duAsP9idclfVUEy_WwgZv6QmdlgzuzmFGVfO5ysW5WB9CNAcSEMrjGyYhN5wAovxXmSlVP_ercmXOowupYCpMtNGOJkpBG3_EPbOV_yRc3VJcYaO0ZlOjKJNyjpSbHhAJ3qdWdwb5DBBU_4')"></div>
+</div>
+<div class="masonry-wide rounded-xl overflow-hidden shadow-md">
+<div class="w-full h-full bg-cover bg-center" data-alt="Luxury suite with Moroccan textiles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMyd8P9SlGk43IksQV8xr4Igp0uaLCa-1w2q25xtt5w4msvAnLZt33XVeP6SO2zDE6K2S6_NK9cQ5Ot1Lo6FEAkBunnEo2kgiw_whH5R27joGlGQ5YTWkXq0C_YD2g8_qKQaJ2kLbK0O6yczxguQm0vhxbg_ltFYjFcV1omYSiT_jY5KqMzW4FsybCfg8aA0LYlz54ctZ9UN3iAvTSCqwfbjshNe3PWVEmVoaxWvfDfdLxlYRLzmnFFuIUw1j6DY5vC-5c8951WlE')"></div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-md">
+<div class="w-full h-full bg-cover bg-center" data-alt="Lush green garden courtyard plants" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD1s44fPehvMZNw0kjZTgb_JPkA5aBElL6HvUq5U0UbPOUqbzUawNfmCRyrImo8BzFwA3J6XXSsZVAJkcCxTekckuvG6dogPlVjEyeKs4p8uuOeJOy7Qi_hTiQWxCm6VvcXTe17m2Anq75AXwhJ98tX_pLlCdXoBF4PaYtoaCogWIkJ39nwu43cTCj6FY_9YvZ0R1Z4ma3hwveLHwOnZfnR5B7s9wFnrVxSS4hn-RVh6LA46X1wgk1ZW0IE5ksL9NWTSUum3eAaSiA')"></div>
+</div>
+<div class="masonry-tall rounded-xl overflow-hidden shadow-md">
+<div class="w-full h-full bg-cover bg-center" data-alt="Traditional arched windows and shadows" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQkoLbnzqi8Mw2p9CPvISJ_Z6gsl9XNO1crP_Bj5M6Q-iVcemKzks5zgJra7C7RXEGYgGKFPARFvhaS985Ao5u3AbSF5maDKs2St67SQ-bReyyQ3y69zw2gMqOS7_qchyVVN5e0KqJzeCitgngfwOB-6B0Hz5EnO-kfZAeE5FkBlhwGn08S2rtqwfMooNNZLir8c6GpLzfQo4yBLeC-0dmpDriaoHHZQIHb1EpS1Cys4aoGHI3rH5gkrsfOj1nELOxMJTfl7ZBLUs')"></div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-md">
+<div class="w-full h-full bg-cover bg-center" data-alt="Copper lantern casting patterned shadows" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1HSAcXYl4WNZb8Nw1I7cKOyuOZ8eqWaP6HSpteO9RdNhbxnKl7JBEay8Pv7UiBrUtRLaJOKuGd9u2ULH0xzUdA7VtASdOgzaxOKI8K-ayJW7wDjg_viqyQmERp2MiXlvcByDMxyKGY5iJZHkfLPN4WFlfrNZsZtWaLH2qjn3mnARr9nWBgWDs4j9IViRBOQoouUleza4NglDOBNh8ve_Jw5d7U8YltlU7FjyGV6itaGH4Ade_eGs34xBw2B1J1sROUX8SC2ZHgSs')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-24 text-center px-6">
+<div class="max-w-2xl mx-auto">
+<h3 class="font-serif text-4xl mb-8">Begin Your Moroccan Journey</h3>
+<button class="px-12 py-5 bg-[#c5a059] hover:bg-[#b38e48] text-white font-bold rounded-full text-lg shadow-xl transform hover:scale-105 transition-all">
+                Book Your Stay
+            </button>
+</div>
+</section>
+<!-- Footer Component -->
+<footer class="bg-background-dark text-ivory py-16 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<h4 class="font-serif text-2xl mb-6">Riad Noor</h4>
+<p class="text-ivory/60 text-sm leading-relaxed mb-6">
+                    A destination for the soul, where traditional Moroccan hospitality meets modern luxury.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">social_leaderboard</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">camera</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">alternate_email</span>
+</div>
+</div>
+<div class="col-span-1">
+<h5 class="font-bold mb-6 uppercase text-xs tracking-widest text-primary">Contact</h5>
+<ul class="text-ivory/70 text-sm flex flex-col gap-3">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-1">location_on</span>
+<span>Derb Jdid, Medina<br/>Marrakech 40000, Morocco</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">phone</span>
+<span>+212 524 381 234</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">mail</span>
+<span>hello@riadnoor.com</span>
+</li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="font-bold mb-6 uppercase text-xs tracking-widest text-primary">Quick Links</h5>
+<ul class="text-ivory/70 text-sm flex flex-col gap-3">
+<li><a class="hover:text-primary transition-colors" href="#">Rooms &amp; Suites</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Restaurant Noor</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Press &amp; Awards</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="font-bold mb-6 uppercase text-xs tracking-widest text-primary">Newsletter</h5>
+<p class="text-ivory/60 text-sm mb-4">Subscribe to receive seasonal offers and news.</p>
+<div class="flex">
+<input class="bg-background-dark border-ivory/20 rounded-l-lg text-sm w-full focus:ring-primary focus:border-primary" placeholder="Email Address" type="email"/>
+<button class="bg-primary px-4 rounded-r-lg hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-ivory/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-ivory/40">
+<p>© 2024 Riad Noor Marrakech. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-ivory transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-ivory transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener("click", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("mousedown", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("mouseup", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
+document.addEventListener("submit", function(e) { e.preventDefault(); }, true);
+</script></body></html>
