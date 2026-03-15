@@ -577,11 +577,28 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
     transition: transform var(--transition-slow);
 }
 
 .portfolio-card:hover .portfolio-image {
     transform: scale(1.05);
+}
+
+.iframe-thumbnail {
+    width: 250%; /* Scale up the container */
+    height: 250%;
+    transform: scale(0.4); /* Scale down for high-DPI look */
+    transform-origin: top left;
+    pointer-events: none; /* Block interaction but allow scroll through */
+    background: white;
+}
+
+.iframe-thumbnail iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
 }
 
 .portfolio-card:nth-child(1) {
