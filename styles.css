@@ -561,11 +561,27 @@ button {
 
 .portfolio-card {
     position: relative;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-lg);
     overflow: hidden;
     display: block;
     aspect-ratio: 4/5;
     background-color: var(--color-bg-card);
+    transition: transform var(--transition-medium);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.portfolio-card:hover .portfolio-image {
+    transform: scale(1.05);
 }
 
 .portfolio-card:nth-child(1) {
@@ -586,28 +602,11 @@ button {
     aspect-ratio: 1/1;
 }
 
-
 .portfolio-image-wrapper {
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
-}
-
-.iframe-thumbnail {
-    width: 250%; /* Scale up the container */
-    height: 250%;
-    transform: scale(0.4); /* Scale down for high-DPI look */
-    transform-origin: top left;
-    pointer-events: none; /* Block interaction but allow scroll through */
-    background: white;
-}
-
-.iframe-thumbnail iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
 }
 
 .portfolio-overlay {
