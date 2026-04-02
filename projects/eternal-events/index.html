@@ -1,176 +1,291 @@
-<html lang="fr"><head>
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;family=Pinyon+Script&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#d4af37", // Gold
-                        "blush": "#fcf0ed",
-                        "ivory": "#fffdfa",
-                        "deep-charcoal": "#2d2d2d",
-                        "soft-gold": "#e5c687"
-                    },
-                    fontFamily: {
-                        "serif": ["Playfair Display", "serif"],
-                        "sans": ["Montserrat", "sans-serif"],
-                        "cursive": ["Pinyon Script", "cursive"]
-                    }
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#1a1c1a",
+              "primary-container": "#d4a190",
+              "on-primary-container": "#5c372b",
+              "secondary-fixed-dim": "#cec5bb",
+              "secondary-fixed": "#ebe1d6",
+              "on-surface": "#1a1c1a",
+              "surface-variant": "#e3e2e0",
+              "surface-tint": "#7e5447",
+              "inverse-primary": "#f0baa9",
+              "on-tertiary": "#ffffff",
+              "tertiary": "#6c5c44",
+              "on-tertiary-fixed": "#251a07",
+              "tertiary-fixed-dim": "#d9c4a5",
+              "inverse-on-surface": "#f2f1ee",
+              "surface-container-low": "#f4f3f1",
+              "on-tertiary-fixed-variant": "#53452e",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-dim": "#dbdad7",
+              "on-secondary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-secondary-fixed": "#1f1b14",
+              "primary-fixed": "#ffdbcf",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#6a635b",
+              "inverse-surface": "#2f312f",
+              "on-primary-fixed-variant": "#633d31",
+              "on-tertiary-container": "#4c3f28",
+              "primary": "#7e5447",
+              "on-primary-fixed": "#301309",
+              "secondary-container": "#ebe1d6",
+              "tertiary-container": "#beaa8d",
+              "primary-fixed-dim": "#f0baa9",
+              "tertiary-fixed": "#f6dfc0",
+              "surface-container-highest": "#e3e2e0",
+              "surface-container": "#efeeeb",
+              "outline-variant": "#d4c4b7",
+              "surface": "#faf9f6",
+              "on-secondary-fixed-variant": "#4c463e",
+              "outline": "#82756a",
+              "on-primary": "#ffffff",
+              "on-surface-variant": "#50453b",
+              "background": "#faf9f6",
+              "surface-container-high": "#e9e8e5",
+              "surface-bright": "#faf9f6",
+              "secondary": "#645d55"
             },
-        }
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
     </script>
-<style type="text/tailwindcss">
-        @layer base {
-            body {
-                @apply bg-ivory text-deep-charcoal font-sans;
-            }
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
-        .hero-gradient {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4) 100%);
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #faf9f6;
+            color: #1a1c1a;
+        }
+        .serif-display {
+            font-family: 'Noto Serif', serif;
+        }
+        .text-rose-accent {
+            color: #7e5447;
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="overflow-x-hidden">
-<nav class="fixed top-0 z-[100] w-full flex items-center justify-between px-6 py-4 bg-ivory/80 backdrop-blur-md border-b border-primary/10">
-<div class="flex-1">
-<h1 class="font-serif text-xl tracking-tighter font-bold uppercase text-primary">Eternal Events</h1>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f6]/90 backdrop-blur-md">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-[1440px] mx-auto">
+<div class="text-2xl font-serif tracking-[-0.02em] text-[#7e5447]">ELYSIA WEDDINGS</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-serif tracking-tight text-sm uppercase text-[#7e5447] border-b border-[#7e5447]/30 pb-0.5 transition-opacity hover:opacity-80" href="#">Philosophy</a>
+<a class="font-serif tracking-tight text-sm uppercase text-stone-600 hover:text-[#7e5447] transition-colors" href="#">Portfolios</a>
+<a class="font-serif tracking-tight text-sm uppercase text-stone-600 hover:text-[#7e5447] transition-colors" href="#">Services</a>
+<a class="font-serif tracking-tight text-sm uppercase text-stone-600 hover:text-[#7e5447] transition-colors" href="#">Journal</a>
+<a class="font-serif tracking-tight text-sm uppercase text-stone-600 hover:text-[#7e5447] transition-colors" href="#">Contact</a>
 </div>
-<div class="hidden md:flex flex-1 justify-center space-x-8 text-[10px] uppercase tracking-[0.2em] font-medium">
-<a class="hover:text-primary transition-colors" href="#">Accueil</a>
-<a class="hover:text-primary transition-colors" href="#">Services</a>
-<a class="hover:text-primary transition-colors" href="#">Portfolio</a>
-</div>
-<div class="flex-1 flex justify-end">
-<button class="bg-primary text-white px-5 py-2 rounded-full text-[10px] uppercase tracking-widest font-bold shadow-md hover:bg-soft-gold transition-all active:scale-95">
-            Demander un devis
-        </button>
+<button class="bg-[#7e5447] text-white px-8 py-2 text-xs uppercase tracking-widest hover:opacity-90 active:scale-[0.99] transition-all">
+                Enquire
+            </button>
 </div>
 </nav>
-<section class="relative h-screen w-full overflow-hidden">
-<div class="absolute inset-0">
-<img alt="Hero Image" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1B-9ucMLweQfJh6fPrU8pFxYmlwvGoBnNNBcqA7E6KlOs_h24aZa4vVRKBzNZjTKVpOYoG9agTtnqQ-EOMcTCSBUA2Xfg5Yy55c2FFdQ5f9YCw8tArsuh1Oe-BmDKdbmzPue9lxRT959QKDr9WpVIni6JoWzfQeJOBd-YJ3ltKtWnkizp6eMIBTC3PVTwH_eSHuYTwypsfl1Pltxzazl0UIQhqf-yuP_mb32kP5Xa724Sp3oSsUog_BgMeTKkMc268v1bTweCNS4"/>
-<div class="absolute inset-0 hero-gradient"></div>
+<!-- Hero Section -->
+<header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover brightness-[0.85]" data-alt="cinematic wide shot of an opulent outdoor wedding reception at dusk in a grand French estate garden with warm candlelight and string lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_arxWARb-3hRjEFUjmF3AIG9pqVE63MqX82qWsZQ6oa2m2Y1f0R2oL5hA--Q1W_NvoVqqNyQ-9p3pYr_l9Yn_4BYdAbsmk5r6FOeCRhpLsEHJNmqrFJMTUt3okAQH9l6hp7k2QKz27mzopRDf1rTfosKfxw_QHMWOPD-CovEmHYj6oeHbTUEW1bznt6lEfs1qpomTSJvoljdX9G2ySYW0vlBzzCJ4mKH4QOis0Mqzr3RyEmbj7zynh3siiT6BfiXHmISbbSSgXKs"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/40"></div>
 </div>
-<div class="relative h-full flex flex-col items-center justify-center text-center px-6">
-<p class="text-white/90 font-sans text-xs uppercase tracking-[0.4em] mb-4">L'art de l'exceptionnel</p>
-<h2 class="text-white font-serif text-5xl md:text-7xl italic leading-tight mb-8">Crafting Your <br/><span class="text-soft-gold">Forever</span></h2>
-<div class="w-px h-24 bg-white/40"></div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<h1 class="serif-display text-5xl md:text-8xl text-white mb-6 tracking-tight leading-tight">Crafting Your Forever</h1>
+<p class="font-body text-lg md:text-xl text-white/90 mb-10 tracking-wide font-light">Bespoke planning for the most discerning couples.</p>
+<button class="border border-[#d4a190] bg-white/10 backdrop-blur-sm text-white px-10 py-4 uppercase text-xs tracking-[0.2em] hover:bg-white hover:text-primary transition-all duration-500">
+                Explore Our Story
+            </button>
 </div>
-</section>
-<section class="py-20 px-6 space-y-24 bg-ivory">
-<div class="text-center mb-16">
-<h3 class="font-serif text-3xl italic mb-2">Nos Prestations</h3>
-<div class="w-12 h-0.5 bg-primary mx-auto"></div>
+</header>
+<!-- Philosophy Section -->
+<section class="py-32 px-12 md:px-24 bg-background">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-24 items-center">
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover" data-alt="elegant woman in high-end minimalist silk gown arranging exquisite floral centerpieces in a sun-drenched atelier" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtx9ZwoIZk33aO9H4j3FiR8Gnmer25BSnJPYt_ChJmhfG46NHQmD9d166OS6I0xRnPkXR_UU15PUKacHAH0aHIwiTng1JqZlGTGN7YdIdqDF7RPU7rNv3dV8TUqqRgHHTcdLABHYpidj6CvurxH-w6vjJwkycHJ-WN_LSY4bCPad-FZkatDdB7cnvnEzycAHzdViC7t9ajFIkVjLvJgfSOTK3L8jdMSpM2furRrtjpEYeitv6bq0JJO2EvnlEYyS-LvBvQ-Qz545c"/>
 </div>
-<div class="flex flex-col gap-8">
-<div class="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-xl">
-<img alt="Weddings" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC70R91o8NsdrrzAKEhq4D0-2p53TJ5piCRrFPZbya4oN5tRHzMBGQEpON_oiMA9aPl_xewASXhHQSbkSECRVpHM4hpyTbDnrZIzFr8xbreX1Nuo3R3oBKnXy9MFl6RGNGB8NAPjpF8mZEdXnprS6607qjtNY9GlA2UnQEncVlB-A6XQYoazEQESn0J7KF9JxCrAQm539b5cUZ9eZoNDSqFImdKWZHcm80JI26iFqyxy8pf9ttaHavPtsTJMZTAC5oCUsNXhSHOTyI"/>
-<div class="absolute inset-0 bg-blush/20"></div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-surface-container-low -z-10"></div>
 </div>
-<div class="space-y-4 px-2">
-<h4 class="font-serif text-2xl">Mariages d'Exception</h4>
-<p class="text-deep-charcoal/70 leading-relaxed font-light">De la conception artistique à la coordination du grand jour, nous créons des unions intemporelles qui reflètent votre essence la plus pure.</p>
-<a class="inline-block text-primary font-semibold text-xs uppercase tracking-widest border-b border-primary pb-1" href="#">Découvrir</a>
-</div>
-</div>
-<div class="flex flex-col gap-8">
-<div class="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-xl">
-<img alt="Corporate" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2su87Tdd08D7LQnyNhEJF2BMIcyI7OP-MF1VWlRPEQFm9uX_bSEAzMIa4o1Fe6tqSmSbS_1zDCbzgIEL_reyfx2QG_M8n7D1_ngTHgbVLcdzQbbOfHPesBN17_GiCxKBxuMuGVI3VCH78Kibn6wC2L2-T4t02mdn5yOXcKoE0oYwnDVjbm8ZFgbccNsUj5mdDA6f5LPxWaaqdHBhWcVq__3zYg7ie4MCW7tQf5ash055PzpjapweM7SvX2kdv2DdYvGjX58h8Uao"/>
-<div class="absolute inset-0 bg-primary/10"></div>
-</div>
-<div class="space-y-4 px-2">
-<h4 class="font-serif text-2xl">Événements Corporate</h4>
-<p class="text-deep-charcoal/70 leading-relaxed font-light">Galas, lancements de produits et soirées d'entreprise. Nous marions professionnalisme et élégance pour marquer les esprits de vos collaborateurs.</p>
-<a class="inline-block text-primary font-semibold text-xs uppercase tracking-widest border-b border-primary pb-1" href="#">En savoir plus</a>
-</div>
-</div>
-</section>
-<section class="py-20 bg-blush/30 px-4">
-<div class="text-center mb-12">
-<h3 class="font-serif text-3xl italic">Portfolio</h3>
-<p class="font-cursive text-2xl text-primary mt-2">Instants capturés</p>
-</div>
-<div class="columns-2 gap-4 space-y-4">
-<div class="break-inside-avoid rounded-lg overflow-hidden shadow-sm">
-<img alt="Portfolio 1" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyMd7ME8A-jeV7jS82PqIi75AOQstZ87kpmuuUpnO-SDp0ibNBDI2ni4cNt3bC6cJwxqQnFDHhfzlXbpOGpRPB1B9uxuEDqYEefz7kXUzdRCSRPtt_7HaKgNwXQBJoTNqrIlAQ5uBHyEVpsBScRZ5NKKzcm2GvWdfSBnUdEyFtrwZPs9gGhIdnoM62yKwTeXyUMA-FYjliPG4-I_5lsTe0qOKQb5GwF4tGYFawXsFt8-T4i8y_bhmg7NS2JMLGAkv6jvCYN11Yl_g"/>
-</div>
-<div class="break-inside-avoid rounded-lg overflow-hidden shadow-sm">
-<img alt="Portfolio 2" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdfXQ6i821owX3fhdXjWd7Vo2ZJLsdWUHUAdTx3frsEz1gz0Y07A3bclYJWrNUMx00NUIkTHNg_fzIJi2YybuAit1a8Zl1hquiWmZfuON_XLxcfhzpfBlaaOS8pGEPMDxRpEohxdGELA4qk5vLGMCU3forltdk-llM8VZ1SU5OqcoXSbYe9-k2qVhcRL2QGO_PjB3snm0dswl10yJf0V7WMccAaeqQ1OI9YXDcPmWdXDhtJhqAcxg05UMRDo1LKWhzIa-K56kJo34"/>
-</div>
-<div class="break-inside-avoid rounded-lg overflow-hidden shadow-sm">
-<img alt="Portfolio 3" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNrVFUwpT2UAjQ9wcmBqJoybVVXwoqcVBAHDInSpmRy6Cmgdj7rFF-a5-7Xc-V5F4lF-ZbTZuLSmSXbhVtfqi3xNE43ugzrUqJybQLyUCcUha1iG_3RsyX8Kk9HzVyzByR7lZxSsPt5KZYsUW72tzN72IhZ8SpjOvVtIcuOIEkpklhESahnqJlLzGxjFwDiu2T8tO1QGyKtwQfTqwrZr7nGg4ZhWuwQocLsc-B-LbSmfGAIZyS8JHmtq0N3o7dxgMeKi_e6MDaTqM"/>
-</div>
-<div class="break-inside-avoid rounded-lg overflow-hidden shadow-sm">
-<img alt="Portfolio 4" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD27FemTVeeDI1GayRaMT3IBn7uLzdPHgU4Pv3XIlOB6WSm4QI8_4CczoYHP4xrlCXLrWgwPa_ye1MHRkgMg65VWn_xJ_u02D82qhRrclSjxPpXT4G2NwOw74VSqECCAb4T_1jEILwrvbC_o_mx7t5HCJR1Yscoc3mHs2cp4z2gRW_Ky-_hJPeWE-rK5joOPgUYLPNOR0I8h7tpwm3isUg0hV-CdX-iPh91TxdVjSJioOOjpKU5qpkrmsUYhV9GhCFQGMMvD-xOy-w"/>
-</div>
-</div>
-</section>
-<section class="py-24 bg-white px-6 overflow-hidden">
-<div class="relative max-w-lg mx-auto text-center">
-<span class="material-symbols-outlined text-primary/20 text-8xl absolute -top-10 left-1/2 -translate-x-1/2 select-none">format_quote</span>
-<div class="relative z-10">
-<p class="font-cursive text-3xl text-deep-charcoal leading-relaxed mb-8">
-                "Une expérience hors du temps. Eternal Events a su transformer nos rêves les plus fous en une réalité encore plus belle."
-            </p>
-<div class="space-y-1">
-<p class="font-sans font-bold tracking-[0.2em] text-xs text-primary uppercase">Clara &amp; Alexandre</p>
-<p class="text-[10px] text-deep-charcoal/40 uppercase tracking-widest italic">Château de Versailles, 2023</p>
+<div class="md:col-span-7 pl-0 md:pl-12">
+<span class="label-sm uppercase tracking-[0.3em] text-primary text-xs mb-6 block">Our Philosophy</span>
+<h2 class="serif-display text-4xl md:text-5xl leading-tight mb-8 text-on-surface">Artistry in Every Detail</h2>
+<div class="space-y-6 font-body text-on-surface-variant leading-relaxed text-lg max-w-xl">
+<p>We believe that a wedding is more than an event; it is a meticulously curated narrative of your love. Our approach is deeply personal, focusing on the sensory nuances that transform a space into a sanctuary of celebration.</p>
+<p>From the tactile grain of hand-pressed stationery to the ephemeral glow of golden hour across a ballroom, we orchestrate every element with architectural precision and poetic grace.</p>
 </div>
 </div>
 </div>
 </section>
-<footer class="bg-deep-charcoal text-ivory py-16 px-6">
-<div class="text-center space-y-8">
-<h2 class="font-serif text-3xl italic tracking-wide">Eternal Events</h2>
-<p class="text-ivory/60 text-sm max-w-xs mx-auto leading-relaxed font-light">
-            Planifions ensemble le plus beau chapitre de votre histoire.
-        </p>
-<div class="flex justify-center gap-6 py-4">
-<a class="w-10 h-10 rounded-full border border-ivory/20 flex items-center justify-center hover:bg-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-sm">public</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-ivory/20 flex items-center justify-center hover:bg-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-sm">mail</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-ivory/20 flex items-center justify-center hover:bg-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-sm">call</span>
-</a>
+<!-- Services Section -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-[1440px] mx-auto px-12 md:px-24">
+<div class="text-center mb-20">
+<h2 class="serif-display text-4xl md:text-5xl text-on-surface">Curated Experiences</h2>
 </div>
-<div class="pt-8 border-t border-ivory/10">
-<p class="text-[10px] uppercase tracking-[0.3em] text-ivory/30">
-                © 2024 Eternal Events. Haute Conciergerie de Mariage.
-            </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<!-- Service 1 -->
+<div class="group">
+<div class="aspect-[3/4] overflow-hidden mb-8">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="close-up of a high-end luxury wedding table setting with crystal glassware, white roses, and gold-trimmed porcelain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxLUz_0TOxLIqjYiLRe-f-FBX07a86aRYlU43N6maJcwXMTDUpoldaomLA47Bt4chfyHX8g8-hhPKo706i579lgNwhW9luxwgASbFyC1ktpnmSzKaOmqpceoh0TYW-j8lZgo6k-Nn0jCGKAkMn4ACrS0PKQxy9Zmoo-Fav--URTnZpIZ4BqoFkD4GCwd6OM4Ty9rLcS8jwf08gakdLIZkJPH_UBjhEQfPX1OiNMWcXoKrtLqtHl275AY9il2FksC436nrpLkTJcHs"/>
 </div>
+<div class="h-px w-12 bg-primary mb-6"></div>
+<h3 class="serif-display text-2xl mb-4">Bespoke Weddings</h3>
+<p class="text-sm text-on-surface-variant font-body leading-relaxed tracking-wide">Complete end-to-end design and coordination for multi-day international celebrations.</p>
+</div>
+<!-- Service 2 -->
+<div class="group">
+<div class="aspect-[3/4] overflow-hidden mb-8">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="modern luxury corporate gala in a grand hall with minimalist geometric lighting and sophisticated decor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMePlElgsnJVFe_eahojesP6ACy5cv7eaNmKGNBw9KCdpcoG9TLaeycKZKixDReNaiphj140sSQiWt4AwOGi7KGynumPDx8tpQcXwRjoGxQHs47g2iYNa_PuMU_pYOVkCO4CySTT8ampdFVtqeiOWY-9Vw3fM9zzbEg9GTQqKDKo4e6Q39KHh7LRChg3o5y6N9jhq-jc5RADWoLczGyePhZ_k32iGrKqA1MENwcLJwVHJQSROr1s53tOACQD5c5QbrWn_HJebQ7eU"/>
+</div>
+<div class="h-px w-12 bg-primary mb-6"></div>
+<h3 class="serif-display text-2xl mb-4">Corporate Galas</h3>
+<p class="text-sm text-on-surface-variant font-body leading-relaxed tracking-wide">Sophisticated brand experiences and high-profile galas with a focus on editorial impact.</p>
+</div>
+<!-- Service 3 -->
+<div class="group">
+<div class="aspect-[3/4] overflow-hidden mb-8">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="intimate evening private dinner party with hanging fairy lights and dark wood tables under a canopy of trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvMlHwcMSTxOlUjDIdcr417az6dRL__j3W-bw5taBgUwTVlsaL8JTvb3t6oWZeSNWx3YHSPZRVPfKom8VAiX2cLHJIEpaGJX62sQ7N061WR8J1yrefDnTOsRdCAz1LVNtKM4BPnQ9kX9c1fsDX5FYyTgb957ySxkyXWKxSTzMYMV8I_D2ZZPsitghWzDWo95wfbP8b5v7kFuU6dHfzwpxOmp0hiRqb7Ibr_5MmLHmBjCZQYzqiVXs82EshpmcowHz3-MsK0bTO0FU"/>
+</div>
+<div class="h-px w-12 bg-primary mb-6"></div>
+<h3 class="serif-display text-2xl mb-4">Private Soirees</h3>
+<p class="text-sm text-on-surface-variant font-body leading-relaxed tracking-wide">Exquisite private celebrations designed with intimacy, warmth, and unparalleled detail.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio / Gallery -->
+<section class="py-32 bg-background">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="grid grid-cols-12 gap-6 items-end">
+<div class="col-span-12 md:col-span-8 mb-12">
+<h2 class="serif-display text-4xl md:text-6xl text-on-surface leading-tight">The Art of the Moment</h2>
+</div>
+<!-- Gallery Item 1 -->
+<div class="col-span-12 md:col-span-7 aspect-video overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="ethereal shot of a bride's silk train flowing down a grand marble staircase in a historical palace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUve12uj9OfsXEo7m1hz11zFUd_gB6zgTFdTA1-3zUCJZY_U-bIt9wqwVTcZ9tqz7hzg3plrGSSHKyEg92x8pyFiALlMhcfhu6Y8EK55RNeQeI0-RszUW59UFUid51InfYjd7OiQk17qKQxrZ4s4ofIdsvyIsK3M5HgcA4ZGJCUeN-2fvOgVt2cLaoOQ0RxAjLx4eMrCzfHaSBt0eI3Q8EHB1DG4RzHjuS0E8v8HIwJqgIKT8c856lQG-KslvvpTm_vl0Xae7Hscw"/>
+</div>
+<!-- Gallery Item 2 -->
+<div class="col-span-12 md:col-span-5 aspect-square overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="macro detail shot of an exquisite diamond engagement ring nestled in a bed of soft velvet and dried flower petals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBndzp-8zskT76_wJqDcwBq_rCeQ50FqZJJeRlMeWjJteGJ3JGdB8s5uDQVJw5IENA3N0ucLUDo_gL1lC0UlEiIIDUTLkKO00E1ZvI1C-4Z0NwUJB8ckOFVSXTMHDDp74x4C594_-NWlz9zAkMbnIaWxfrum7o9M3ZA2-G6ofp1IKy9rLk7p9yfhvl6sYB6zZF9hnW9BSvsfQBIBRXLs0boXyLctAySSXkojG5hKmsMRe2QAn7OYOj9_19fatZsBcrVu_E0c44WNlA"/>
+</div>
+<!-- Gallery Item 3 -->
+<div class="col-span-12 md:col-span-4 aspect-[4/5] overflow-hidden mt-6">
+<img class="w-full h-full object-cover" data-alt="three-tier minimalist wedding cake decorated with delicate real flowers on a stone pedestal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhuM3IVAk70OoDNSJu99iSa0W7g2E3ACCmEMsA0ABoDVZgnNeJYrG23V-s794a56ifIRso_SnmC26zg84OkNldZTvfYjUwdLK8u64jfEsbT-sNtcYuoao4qX6n2r6HWceVboal-4p-RpH3_Hp8uvbdgPwBfJO-fMKa_GEpFqaEL9UIc4RffcZB91CP8djQYWLLdZbZnJqD5OiYTtK9CkHCCzcodDCPxy6WiFU3NoaYWsYU2yiheKKfA_MsHS9ocIl9ldJZFEf-qsU"/>
+</div>
+<!-- Gallery Item 4 -->
+<div class="col-span-12 md:col-span-8 aspect-video overflow-hidden mt-6">
+<img class="w-full h-full object-cover" data-alt="newlyweds walking through a tunnel of sparklers at night with joy and blurred lights in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqhDEHcB0cRIaHN7PLNnyMWDA4--AxID7etQ9eZskS8Zl5sogm1km6ajbAuQkv6aSxwgLdz-u7rA4dPb-IlOB60QGOTg9-FBpTUCoPDnqC2YHRJWXoW15SMGY8smyYiPhViYYHaGKxaEagexvyzdPhkFCAv5SWofvx-Bv1UNXFM9VfxEBaU8nGqZ-nFyeOBgTMiHKQ86qlUHejWl0H5B3cdz2fkP9WxW_4lWzAqxUlg0x00HqS7s2vFaA6a8j_t-RjUe3QqOCMLyc"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-48 bg-surface-container-low text-center">
+<div class="max-w-4xl mx-auto px-12">
+<span class="material-symbols-outlined text-primary text-5xl mb-12" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<blockquote class="serif-display italic text-3xl md:text-5xl text-on-surface leading-snug mb-12">
+                "Every detail was a masterpiece... simply flawless. They didn't just plan a wedding; they curated an unforgettable atmosphere that felt like us in every way."
+            </blockquote>
+<cite class="not-italic font-label uppercase tracking-[0.2em] text-xs text-primary">— Sophie &amp; Julian, Chateau de Vaux-le-Vicomte</cite>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 bg-background border-t border-outline-variant/10">
+<div class="max-w-[1440px] mx-auto px-12 md:px-24 grid grid-cols-1 md:grid-cols-2 gap-24">
+<div>
+<h2 class="serif-display text-4xl md:text-5xl mb-8">Begin Your Journey</h2>
+<p class="font-body text-on-surface-variant text-lg mb-12 leading-relaxed">We accept a limited number of commissions each year to ensure every couple receives our undivided creative focus. Tell us about your vision.</p>
+<div class="space-y-6">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="font-body text-sm tracking-wide">atelier@elysiaweddings.com</span>
+</div>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-body text-sm tracking-wide">Paris | London | Lake Como</span>
+</div>
+</div>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-label uppercase text-[10px] tracking-widest text-primary">First Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-colors py-2 text-sm px-0" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label uppercase text-[10px] tracking-widest text-primary">Last Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-colors py-2 text-sm px-0" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label uppercase text-[10px] tracking-widest text-primary">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-colors py-2 text-sm px-0" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label uppercase text-[10px] tracking-widest text-primary">Desired Date &amp; Location</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-colors py-2 text-sm px-0" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label uppercase text-[10px] tracking-widest text-primary">How can we help?</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-colors py-2 text-sm px-0 resize-none" rows="3"></textarea>
+</div>
+<button class="bg-primary text-white px-12 py-4 uppercase text-xs tracking-[0.2em] hover:opacity-90 transition-all" type="submit">
+                    Send Inquiry
+                </button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full pt-24 pb-12 bg-[#f4f3f1]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 px-24 w-full max-w-[1440px] mx-auto">
+<div class="md:col-span-1">
+<div class="font-serif text-lg text-[#7e5447] mb-6">ELYSIA WEDDINGS</div>
+<p class="font-sans text-xs tracking-[0.1rem] leading-relaxed text-stone-500">
+                    Bespoke planning for the most discerning couples. Globally located.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-serif text-[#7e5447] text-sm uppercase mb-2">Navigation</h4>
+<a class="font-sans text-xs tracking-[0.1rem] text-stone-500 hover:text-[#7e5447] transition-colors" href="#">Our Philosophy</a>
+<a class="font-sans text-xs tracking-[0.1rem] text-stone-500 hover:text-[#7e5447] transition-colors" href="#">Portfolio</a>
+<a class="font-sans text-xs tracking-[0.1rem] text-stone-500 hover:text-[#7e5447] transition-colors" href="#">Concierge</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-serif text-[#7e5447] text-sm uppercase mb-2">Socials</h4>
+<a class="font-sans text-xs tracking-[0.1rem] text-stone-500 hover:text-[#7e5447] transition-colors" href="#">Instagram</a>
+<a class="font-sans text-xs tracking-[0.1rem] text-stone-500 hover:text-[#7e5447] transition-colors" href="#">Pinterest</a>
+<a class="font-sans text-xs tracking-[0.1rem] text-stone-500 hover:text-[#7e5447] transition-colors" href="#">Facebook</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-serif text-[#7e5447] text-sm uppercase mb-2">Legal</h4>
+<a class="font-sans text-xs tracking-[0.1rem] text-stone-500 hover:text-[#7e5447] transition-colors" href="#">Privacy Policy</a>
+<a class="font-sans text-xs tracking-[0.1rem] text-stone-500 hover:text-[#7e5447] transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="mt-24 px-24 max-w-[1440px] mx-auto border-t border-stone-200 pt-8">
+<p class="font-sans text-[10px] tracking-[0.1rem] text-stone-400">© 2024 ELYSIA WEDDINGS. EST. 2024. ALL RIGHTS RESERVED.</p>
 </div>
 </footer>
-<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-[90%] max-w-sm">
-<div class="bg-deep-charcoal/90 backdrop-blur-md rounded-full px-8 py-4 flex justify-between items-center shadow-2xl border border-ivory/10">
-<span class="material-symbols-outlined text-primary font-variation-fill">home</span>
-<span class="material-symbols-outlined text-ivory/50">auto_awesome_motion</span>
-<span class="material-symbols-outlined text-ivory/50">favorite</span>
-<span class="material-symbols-outlined text-ivory/50">chat_bubble</span>
-</div>
-</div>
-<style>
-    .font-variation-fill {
-        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
-</style>
-
-<script>
-document.addEventListener("click", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("mousedown", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("mouseup", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("submit", function(e) { e.preventDefault(); }, true);
-</script></body></html>
+</body></html>

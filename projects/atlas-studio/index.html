@@ -1,210 +1,238 @@
 <!DOCTYPE html>
-<html class="light" lang="en"><head>
+
+<html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;family=Oswald:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "sand": "#d2b48c",
-                        "off-white": "#f9f7f2",
-                        "brand-black": "#0a0a0a",
-                    },
-                    fontFamily: {
-                        "display": ["Oswald", "sans-serif"],
-                        "sans": ["Inter", "sans-serif"]
-                    },
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#494847",
+              "primary-fixed": "#ff7852",
+              "secondary-container": "#a80616",
+              "on-tertiary-fixed": "#2d003e",
+              "primary-fixed-dim": "#ff5d2e",
+              "tertiary-dim": "#d187e9",
+              "tertiary-container": "#e094f8",
+              "surface-bright": "#2c2c2c",
+              "on-secondary-container": "#ffdbd7",
+              "outline": "#777575",
+              "inverse-primary": "#b22e00",
+              "error-container": "#9f0519",
+              "secondary-fixed": "#ffc3bd",
+              "on-tertiary": "#5d1877",
+              "tertiary-fixed": "#e094f8",
+              "inverse-on-surface": "#565554",
+              "secondary-fixed-dim": "#ffafa8",
+              "on-background": "#ffffff",
+              "on-secondary-fixed-variant": "#a50314",
+              "on-tertiary-fixed-variant": "#5c1675",
+              "on-secondary-fixed": "#700009",
+              "on-secondary": "#4a0004",
+              "inverse-surface": "#fcf8f8",
+              "background": "#0e0e0e",
+              "surface-container-low": "#131313",
+              "on-primary-container": "#480d00",
+              "primary": "#ff8f70",
+              "on-error": "#490006",
+              "on-primary-fixed-variant": "#581200",
+              "surface-container-lowest": "#000000",
+              "surface-dim": "#0e0e0e",
+              "on-tertiary-container": "#52076c",
+              "on-surface-variant": "#adaaaa",
+              "surface": "#0e0e0e",
+              "secondary": "#ff7168",
+              "on-primary": "#5c1300",
+              "surface-tint": "#ff8f70",
+              "on-primary-fixed": "#000000",
+              "tertiary-fixed-dim": "#d187e9",
+              "secondary-dim": "#ff7168",
+              "surface-container": "#1a1919",
+              "surface-container-high": "#201f1f",
+              "primary-dim": "#ff734c",
+              "tertiary": "#eaa5ff",
+              "error": "#ff716c",
+              "surface-container-highest": "#262626",
+              "on-error-container": "#ffa8a3",
+              "error-dim": "#d7383b",
+              "surface-variant": "#262626",
+              "on-surface": "#ffffff",
+              "primary-container": "#ff7852"
             },
-        }
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
     </script>
-<style type="text/tailwindcss">
-        @layer base {
-            body {
-                @apply bg-off-white text-brand-black font-sans antialiased;
-            }
-        }
-        .vertical-text {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        body { background-color: #0e0e0e; color: white; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
     </style>
-<title>Atlas Studio | Lookbook</title>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="overflow-x-hidden">
-<button class="fixed right-0 top-1/2 -translate-y-1/2 z-[60] bg-brand-black text-off-white py-6 px-2 vertical-text text-[10px] tracking-[0.3em] font-display uppercase border-l border-brand-black hover:bg-sand transition-colors">
-        Shop
-    </button>
-<div class="relative flex flex-col min-h-screen">
-<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-6 bg-transparent mix-blend-difference text-white">
-<div class="flex-1">
-<h1 class="text-xl font-display font-bold tracking-tighter uppercase leading-none">Atlas Studio</h1>
+</head>
+<body class="font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/70 backdrop-blur-md flex justify-between items-center px-12 py-6 w-full no-line-rule background-shifts">
+<div class="text-2xl font-black tracking-tighter text-white font-['Epilogue'] uppercase">
+            ATLAS STUDIO
+        </div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-['Epilogue'] font-black uppercase tracking-tighter text-white/80 hover:text-[#ff8f70] transition-colors duration-300" href="#">COLLECTIONS</a>
+<a class="font-['Epilogue'] font-black uppercase tracking-tighter text-white/80 hover:text-[#ff8f70] transition-colors duration-300" href="#">EDITORIAL</a>
+<a class="font-['Epilogue'] font-black uppercase tracking-tighter text-white/80 hover:text-[#ff8f70] transition-colors duration-300" href="#">ARCHIVE</a>
+<a class="font-['Epilogue'] font-black uppercase tracking-tighter text-white/80 hover:text-[#ff8f70] transition-colors duration-300" href="#">STUDIO</a>
 </div>
-<nav class="hidden md:flex flex-1 justify-center gap-8 text-[10px] uppercase tracking-widest font-medium">
-<a class="hover:text-sand transition-colors" href="#">Collection</a>
-<a class="hover:text-sand transition-colors" href="#">Lookbook</a>
-<a class="hover:text-sand transition-colors" href="#">Story</a>
+<div class="flex gap-6 items-center text-white">
+<button class="hover:text-[#ff8f70] transition-colors scale-95 duration-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="hover:text-[#ff8f70] transition-colors scale-95 duration-200">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
 </nav>
-<div class="flex-1 flex justify-end">
-<button class="text-[10px] uppercase tracking-widest font-bold border-b border-white pb-0.5">Shop Now</button>
+<!-- Hero Section -->
+<section class="relative h-screen w-full overflow-hidden flex items-end">
+<img alt="Editorial fashion photography" class="absolute inset-0 w-full h-full object-cover z-0" data-alt="High-fashion model in avant-garde draped clothing posing against a brutalist concrete structure with sharp shadows and dramatic sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV-YVHlIStMafi0mZprIpT3qojylMU4H-FfrqxWMJWMEAMKnE_3EVtWB_LAs2EIhGOEn_0-1wR5WcvKx8VKC2XfkC-tb6t1AEG-T_vey5Mw3SfsyebMYXwBiRac-_-NUwcuAEFIKHIDsUcQPuFqeA5YBV4clKQCYbWaQdNuLvQNdg6loS02q07BhdY5-akDHwI3pS6KV1aXrkAjmgz9xXn0BC8j5XbI5ilW-j3qgLRDXjVJ5msQvIHyTVAU6KrWWkBgUj5wVmRddP2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+<div class="relative z-10 w-full px-12 pb-24 md:pb-32">
+<h1 class="font-headline font-black text-[12vw] leading-[0.8] tracking-[-0.05em] uppercase text-white mix-blend-difference">
+                ATLAS<br/>STUDIO
+            </h1>
+<div class="mt-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
+<p class="max-w-md font-body text-lg text-on-surface-variant leading-relaxed">
+                    A visual manifesto of modern Brutalism. Sculpting identity through raw textures and extreme silhouettes.
+                </p>
+<button class="w-fit bg-primary text-on-primary-fixed px-12 py-5 font-headline font-bold uppercase tracking-widest text-sm hover:bg-primary-fixed-dim transition-all">
+                    Explore Archive
+                </button>
 </div>
-</header>
-<main>
-<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
-<img alt="Atlas Studio Campaign" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzHPfmKu_CB4WX3ltChf8P-PjUbcDiDh-Y9Dtdz3OWHlVqWsUtnUZCdUBoxk3qW-wKfMp5TWsdcxGBwVDfNLEG1SKP3EFDby9ndwB0aIEdyRrBtIN1GBZ8SCDUFgo9C5ZC1AtO6hdLy6e305F-yEEwOlSNHN5rwQ17VBxz09suYG7l1UHKc11jTWgMo0G9g0QARFDNcSOQXEEE2YBxVqybW4qvTLAiSkE_Cvp9-CiV7IAJIIGljXob5zP5vkpXtouPJ4zV4sbAlTd7"/>
-<div class="absolute inset-0 bg-brand-black/10"></div>
-<div class="relative z-10 text-center px-4 w-full">
-<h2 class="text-[18vw] md:text-[14vw] font-display font-bold text-off-white leading-none tracking-tighter uppercase mix-blend-overlay">
-                        Atlas Studio
-                    </h2>
-<p class="text-off-white text-[10px] tracking-[0.4em] uppercase mt-4 font-light">Spring / Summer Lookbook 24</p>
-</div>
-<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-<div class="w-px h-12 bg-off-white opacity-50"></div>
-<span class="text-off-white text-[8px] uppercase tracking-[0.3em]">Scroll</span>
 </div>
 </section>
-<section class="py-24 px-4 bg-off-white">
-<div class="max-w-7xl mx-auto">
-<header class="mb-16">
-<h3 class="text-5xl font-display font-bold uppercase leading-none mb-2">New Collection</h3>
-<div class="w-12 h-0.5 bg-brand-black"></div>
-</header>
-<div class="grid grid-cols-12 gap-4">
-<div class="col-span-12 md:col-span-7 mb-8 md:mb-0">
-<div class="aspect-[3/4] overflow-hidden">
-<img alt="Sahara Hoodie" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgFl1FuW06sihcBfYnz-skmsLl4qIt6l-TTQfcprW0wDCPIfUK453qPGoWhpNnHUHFtYzhSTHBbFWITm8yk6ufXa9RO0blunDKIe4ehVI7NWfseI97zvudLTRwpFWjv4jFbsI0JpcjjG6HC3ZSjxddmNn57ndimA1mEesaZoK9BqoaCLpjviZJGdMRaZOZ4JuzlZg-CI0Rrlde450-ynXMgaNZDUYkB-Bk-e7hWkNPoKLyjDdcTMOL1zvxVOcXJmKc-ZqLuFpy3qeg"/>
+<!-- Collection Grid: Cinematic Brutalism -->
+<section class="py-32 px-12 bg-surface">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24">
+<!-- Section Header - Overlapping Layout -->
+<div class="md:col-span-12 mb-12">
+<h2 class="font-headline font-black text-6xl md:text-8xl uppercase tracking-tighter leading-none">
+                    Current <span class="text-primary italic font-light">Artifacts</span>
+</h2>
 </div>
-<div class="mt-4 flex justify-between items-end">
+<!-- The Sand Collection -->
+<div class="md:col-span-7 flex flex-col gap-8 group">
+<div class="overflow-hidden aspect-[4/5] bg-surface-container">
+<img alt="Sand Collection Editorial" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Editorial close up of textured beige fabric draping against a desert landscape with harsh midday sun and deep shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6puhYdTOcNKUEMmgwV72E5677ouEQzohKXo2pVyeLYZP9rQtdh3WF7gaAhMOF3MO33PD7MGdQCz3f90Am6zn2-qPrKuGrcd0jkO-yvhFERCrupNLcQ5OgjxE0qcMd8qJwaqgvpjN8lYX6JHZYbdCMsIdU1K2h4LsL1Bc0Vmg8UjuiL8A30AlHVcyuiMSetRoYJ18bDVZ8lmWf49HUjBu3XsaXj8vDyUuuHjJ1K5vs2XVy-KJzU-CvUQXTDk5DeH8oDGjuaIiZE-K0"/>
+</div>
+<div class="flex justify-between items-start">
 <div>
-<p class="text-[10px] uppercase tracking-widest opacity-60 mb-1">Vol. 04 — Item 01</p>
-<h4 class="text-lg font-display uppercase font-bold">Sahara Knit Hoodie</h4>
+<span class="font-label text-xs tracking-widest text-primary font-bold">CHAPTER 01</span>
+<h3 class="font-headline font-black text-4xl uppercase mt-2">The Sand Collection</h3>
 </div>
-<span class="text-sm font-light">$185</span>
-</div>
-</div>
-<div class="col-span-12 md:col-span-5 flex flex-col gap-12 pt-0 md:pt-24">
-<div class="w-full">
-<div class="aspect-square overflow-hidden bg-sand/10">
-<img alt="Medina Trousers" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiXCO0NPNtMlpBJWDfQ6lJq0FAaPUdYfSw7cus-wJfI4_KEiUWJ32B0DRwPY4mVuBSJvQVZvOfQmyW5o7Z3QEJDd3LJ2OfAShDyE4COvGnRzmqeCGS-AsFQ21FATXPJ4g9NTE2lROXgG9YR2UvrwQHYsjAfmDFXotXdTlJRkQ88P34vx8HVSMXSmKhR3gavaOEpb7XE2283ZH-dmdloFRo2dh9LuNCqQIuD3UnquUnYg5qLD35_yypvM9JwF-LFdOLUi-rOs4VLi1l"/>
-</div>
-<div class="mt-4">
-<h4 class="text-sm font-display uppercase font-bold">Medina Pleated Pant</h4>
-<p class="text-[10px] opacity-60">Deep Charcoal</p>
+<a class="font-label text-sm uppercase font-bold text-primary hover:underline underline-offset-8 transition-all" href="#">View Story</a>
 </div>
 </div>
-<div class="w-3/4 self-end">
-<div class="aspect-[4/5] overflow-hidden">
-<img alt="Structured Blazer" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC03xyIwEX0y6A9idrQImdreglqF3a7--WE6yTx26X6UGKB3B-cPZYvA7CtD6zYUpj4T9UJKseBUNi-i4OgEY_V9UZieDnxrwW4pVr0XTX8F6aa1-opnexlF51DNuQBG1TTkgFeGVsii0dpJd0g_TyTiPVdvGex-IseMoEbN-S_4TPJBJerl77csz7MHHWVifxhfTY0nwCrl0qbePliDN1aVAEc7A7Au77_WDZEYP6mhzkJMsx_zFj5UIQ3UIVuCHnpNQs-FIM5WRdU"/>
+<!-- Heritage in Motion -->
+<div class="md:col-span-5 md:mt-48 flex flex-col gap-8 group">
+<div class="overflow-hidden aspect-[3/4] bg-surface-container">
+<img alt="Heritage in Motion Editorial" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Full body shot of a model in motion wearing structured black tailoring in an industrial urban setting with steel beams." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXavY59WcS8UdwpkpewCZIbRF09879NLtf4ckymLyLzaOttNcAhGRgkKosp8KpOlGm_uqCncR-PDpeDFCk-NO1uv5M3pQrto0Y-SRAVPej7T4Bt9CFtqRuQARP1OgzYOACtOls5DE38UX00c36GxYQHKDg9a0RLe_GHJegsKvDCWJS_u5Q7EhGBtTi2F7S4lSKadD39K9sm5TlBnMHic9v1Mj18DRB9czYsKEjH0JEmzfFkx_pWOgHtVPBrPjYuRVAW9f4WmA0acfk"/>
 </div>
-<div class="mt-4">
-<h4 class="text-sm font-display uppercase font-bold">Structured Blazer</h4>
-<p class="text-[10px] opacity-60">Clay Earth Edition</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="bg-brand-black text-off-white py-24">
-<div class="px-4 mb-12 flex items-baseline justify-between">
-<h3 class="text-6xl font-display font-bold uppercase tracking-tighter">Lookbook</h3>
-<span class="text-[10px] tracking-[0.3em] uppercase opacity-40">Series 001/003</span>
-</div>
-<div class="flex flex-col gap-0">
-<div class="w-full h-[80vh] bg-neutral-900 overflow-hidden relative group">
-<img alt="Editorial Shot 1" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTfRzcvKqX3A1OTTOykHgR-jnU5YzLdf-NHMXEoSG6Hct3Yjhj8wfiAql5rS91asxi00pw9cw73Xg5SpgyzhE0C3jO540iPSUs4hJ0iv5xQgOY8dELQh2zP7ninRWSpH0W6xiwsYmfeLEqlgrhYcgaWA1zg0PdCeGyFYyaW5-O9_z3_2gknLtaGtPmNDlA0BFCus98nYo9n9-LxmLYO5y9bh75w5sDfYWdJY5V0gR1jF9-jPeHs_CJXWsTY_KBtg1KlCogA9InlcNZ"/>
-<div class="absolute bottom-8 left-8">
-<span class="text-[10px] tracking-widest uppercase border border-off-white/30 px-3 py-1">View Editorial</span>
-</div>
-</div>
-<div class="w-full h-[80vh] bg-neutral-800 overflow-hidden relative">
-<img alt="Editorial Shot 2" class="w-full h-full object-cover opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsUxImTgkJBJvpBPaE11Kf6CnQyl1ThV3-TkVGhU2lDG2Qjh8XZFTzPHKMmFCI1InaYLaafQPE1NCRWIkQwpPBSHmlCxOlBiY3KKZLoIBilxXlbxjGoB1GBdEeGKO-FTLQ-A08BtL_cj9coUJATcm9sYO8aswljm6FtU6W8SsL0jEd70ZdxBYRpF7MGvj9LGFWyqIMlsfP-FvlAwUmF9DfAlmvkn_dfINJeOetVd-1T8skHib5Yij9CVMMiyDPYST7mnGXJQUNLd1y"/>
-</div>
-</div>
-</section>
-<section class="bg-sand/20 py-32 px-4">
-<div class="max-w-2xl mx-auto text-center">
-<span class="text-[10px] uppercase tracking-[0.5em] text-brand-black/40 block mb-8">Heritage &amp; Future</span>
-<h3 class="text-3xl font-display font-medium uppercase leading-tight mb-8">
-                        The intersection of <span class="text-sand font-bold">Ancestral Craft</span> and <span class="italic">Modern Minimalism</span>.
-                    </h3>
-<p class="text-sm font-light leading-relaxed opacity-70 mb-12 max-w-lg mx-auto">
-                        Based in Casablanca, Atlas Studio is a creative laboratory exploring the tension between traditional Moroccan silhouettes and the functional requirements of contemporary urban life.
-                    </p>
-<button class="px-10 py-4 bg-brand-black text-off-white text-[10px] uppercase font-bold tracking-[0.2em] hover:bg-sand transition-colors">Discover Our Story</button>
-</div>
-</section>
-<section class="py-24 px-4 bg-off-white border-t border-brand-black/5">
-<div class="max-w-xl mx-auto text-center">
-<h4 class="text-xl font-display font-bold uppercase mb-8">Join the Studio</h4>
-<form class="flex flex-col gap-6">
-<input class="bg-transparent border-0 border-b border-brand-black py-4 px-0 focus:ring-0 focus:border-sand text-xs tracking-widest uppercase text-center placeholder:opacity-30" placeholder="YOUR EMAIL ADDRESS" type="email"/>
-<button class="text-[10px] uppercase tracking-[0.3em] font-bold border border-brand-black py-4 hover:bg-brand-black hover:text-off-white transition-all">Subscribe</button>
-</form>
-</div>
-</section>
-</main>
-<footer class="bg-off-white pt-24 pb-12 px-6 border-t border-brand-black/10">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-24">
-<div class="col-span-2">
-<h5 class="text-2xl font-display font-bold uppercase tracking-tighter mb-4">Atlas Studio</h5>
-<p class="text-[10px] font-light opacity-50 max-w-xs uppercase leading-loose tracking-widest">
-                        Designed in Morocco.<br/>
-                        Global shipping available.
+<div>
+<span class="font-label text-xs tracking-widest text-secondary font-bold">CHAPTER 02</span>
+<h3 class="font-headline font-black text-4xl uppercase mt-2">Heritage in Motion</h3>
+<p class="mt-4 font-body text-on-surface-variant max-w-xs">
+                        Redefining classic silhouettes with high-performance industrial fabrics.
                     </p>
 </div>
-<div class="flex flex-col gap-4">
-<h6 class="text-[10px] uppercase font-bold tracking-widest">Navigation</h6>
-<nav class="flex flex-col gap-2 text-[10px] opacity-60 uppercase tracking-wider">
-<a class="hover:opacity-100" href="#">Shop All</a>
-<a class="hover:opacity-100" href="#">Lookbooks</a>
-<a class="hover:opacity-100" href="#">Archive</a>
-</nav>
-</div>
-<div class="flex flex-col gap-4">
-<h6 class="text-[10px] uppercase font-bold tracking-widest">Follow</h6>
-<nav class="flex flex-col gap-2 text-[10px] opacity-60 uppercase tracking-wider">
-<a class="hover:opacity-100" href="#">Instagram</a>
-<a class="hover:opacity-100" href="#">Journal</a>
-<a class="hover:opacity-100" href="#">Contact</a>
-</nav>
 </div>
 </div>
-<div class="flex justify-between items-center border-t border-brand-black/5 pt-8">
-<span class="text-[8px] uppercase tracking-widest opacity-30">© 2024 Atlas Studio</span>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-sm opacity-30">language</span>
-<span class="text-[8px] uppercase tracking-widest opacity-30">MA / EN</span>
+</section>
+<!-- Editorial Sprawl (Asymmetric Feature) -->
+<section class="min-h-screen bg-surface-container-low flex flex-col md:flex-row overflow-hidden relative">
+<div class="md:w-1/2 p-12 md:p-24 flex flex-col justify-center z-10">
+<h2 class="font-headline font-black text-7xl md:text-9xl text-primary leading-none uppercase -ml-4 md:-ml-12 mb-12 mix-blend-lighten">
+                Raw<br/>State
+            </h2>
+<div class="bg-surface-container-highest p-12 max-w-lg">
+<p class="font-body text-xl leading-relaxed text-on-surface italic">
+                    "We don't design for the masses. We design for the space between the concrete and the sky. This is not clothing; it is armor for the soul."
+                </p>
+<div class="mt-8 font-label text-xs tracking-[0.3em] font-black uppercase text-white/40">
+                    — A. STEVENS, CREATIVE DIRECTOR
+                </div>
 </div>
+</div>
+<div class="md:w-2/3 h-[600px] md:h-auto relative">
+<img alt="Avant-Garde Studio Shoot" class="w-full h-full object-cover" data-alt="Abstract fashion shot focusing on the silhouette of a model against a white wall with dramatic red filtered light and sharp shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARIw7_Dkjg9D2XDcuIPGWyVUTj55NWMszMz9g3iupzElpLMSlIIpRrbEPpd3yXv81-DjnXRnWZGi7xB9y9rzXX4JmR0l7VuQNYP9QXtHd4v2KSCUqKjp47jRdJuATnxBb2vIEMLfge7F2Tc-JyZ7K9EtMsG1n8PtJcMjw07XJyMA-FysWS-3eRfX4JwGvQYOG2VNZm3MSS5yqGiE-IQ-ugFudBDYWb-gU98d8VTiUJYJo25M7fj9DEuIYu2f0xq54QAQY1IXYL0E3x"/>
+<!-- Floating Text Element -->
+<div class="absolute bottom-12 right-12 font-headline font-black text-6xl text-white/10 uppercase tracking-tighter select-none">
+                EST 2024
+            </div>
+</div>
+</section>
+<!-- Information Layer -->
+<section class="py-32 px-12 grid grid-cols-1 md:grid-cols-3 gap-24">
+<div>
+<h4 class="font-headline font-black text-xl uppercase mb-6 text-primary">Philosophy</h4>
+<p class="font-body text-sm text-on-surface-variant leading-loose">
+                Cinematic Brutalism is our guiding light. We embrace the raw, the unfinished, and the honest. Every garment is an architectural statement designed to withstand the noise of modern aesthetics.
+            </p>
+</div>
+<div>
+<h4 class="font-headline font-black text-xl uppercase mb-6 text-secondary">Craft</h4>
+<p class="font-body text-sm text-on-surface-variant leading-loose">
+                Our materials are sourced from heritage mills that understand the weight of legacy. We prioritize hand-stitched details and heavy-duty hardware that age with character.
+            </p>
+</div>
+<div>
+<h4 class="font-headline font-black text-xl uppercase mb-6 text-white">Join the Void</h4>
+<div class="relative group mt-2">
+<input class="w-full bg-transparent border-none border-b border-outline-variant/20 py-4 font-label text-sm tracking-widest focus:ring-0 focus:border-primary transition-all" placeholder="EMAIL ADDRESS" type="email"/>
+<button class="absolute right-0 bottom-4 text-primary font-bold text-sm tracking-widest hover:translate-x-2 transition-transform">SUBMIT</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="relative w-full min-h-[400px] mt-24 bg-[#000000] grid grid-cols-1 md:grid-cols-3 gap-12 p-16 w-full hard-transitions overflow-hidden">
+<div class="text-[12rem] font-black text-white/5 leading-none absolute -bottom-10 -left-10 overflow-hidden select-none pointer-events-none">
+            ATLAS
+        </div>
+<div class="z-10 flex flex-col gap-8">
+<div class="font-headline font-black text-2xl text-white tracking-tighter uppercase">ATLAS STUDIO</div>
+<p class="font-body text-xs text-white/40 leading-relaxed max-w-xs uppercase tracking-widest">
+                ©2024 ATLAS STUDIO. ALL RIGHTS RESERVED. CINEMATIC BRUTALISM ERA.
+            </p>
+</div>
+<div class="z-10 grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-3">
+<a class="font-['Work_Sans'] text-xs font-medium uppercase tracking-widest text-white/60 hover:underline hover:text-white decoration-2 transition-all duration-300" href="#">INSTAGRAM</a>
+<a class="font-['Work_Sans'] text-xs font-medium uppercase tracking-widest text-white/60 hover:underline hover:text-white decoration-2 transition-all duration-300" href="#">TIKTOK</a>
+<a class="font-['Work_Sans'] text-xs font-medium uppercase tracking-widest text-white/60 hover:underline hover:text-white decoration-2 transition-all duration-300" href="#">TWITTER</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-['Work_Sans'] text-xs font-medium uppercase tracking-widest text-white/60 hover:underline hover:text-white decoration-2 transition-all duration-300" href="#">PRIVACY</a>
+<a class="font-['Work_Sans'] text-xs font-medium uppercase tracking-widest text-white/60 hover:underline hover:text-white decoration-2 transition-all duration-300" href="#">TERMS</a>
+<a class="font-['Work_Sans'] text-xs font-medium uppercase tracking-widest text-white/60 hover:underline hover:text-white decoration-2 transition-all duration-300" href="#">CONTACT</a>
+</div>
+</div>
+<div class="z-10 flex flex-col justify-end text-right md:text-right">
+<span class="font-headline font-black text-primary text-4xl mb-4">LONDON / NYC</span>
+<span class="font-label text-xs tracking-widest text-white/20">GLOBAL SHIPPING AVAILABLE</span>
 </div>
 </footer>
-</div>
-<script>
-document.addEventListener("click", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("mousedown", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("mouseup", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("submit", function(e) { e.preventDefault(); }, true);
-</script></body></html>
+</body></html>

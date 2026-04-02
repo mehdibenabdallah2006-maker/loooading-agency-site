@@ -1,200 +1,268 @@
 <!DOCTYPE html>
-<html lang="fr"><head>
+
+<html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Casa Forma Scenography Homepage</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<title>Collections | MONOLITH</title>
+<!-- Material Symbols -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300..700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
             colors: {
-              "primary": "#2D2D2D",
-              "sand": "#F5F2EE",
-              "stone": "#E5E1DD",
-              "earth": "#4A4540",
-              "background-light": "#FAF9F6",
+              "primary-fixed-dim": "#d6d4d3",
+              "on-error-container": "#742410",
+              "primary-dim": "#535252",
+              "on-primary-container": "#525151",
+              "error": "#9e422c",
+              "surface-variant": "#e2e3dd",
+              "secondary": "#665e55",
+              "on-background": "#31332f",
+              "surface-container-low": "#f5f3f0",
+              "on-secondary-fixed": "#453e36",
+              "surface-bright": "#fbf9f6",
+              "error-dim": "#5c1202",
+              "secondary-dim": "#595249",
+              "on-secondary": "#fff8f2",
+              "on-primary-fixed": "#3f3f3f",
+              "on-surface-variant": "#5d605b",
+              "secondary-fixed": "#ece1d5",
+              "on-tertiary-fixed-variant": "#676259",
+              "tertiary-fixed-dim": "#e7ded3",
+              "on-surface": "#31332f",
+              "on-primary": "#faf7f6",
+              "on-error": "#fff7f6",
+              "on-secondary-fixed-variant": "#625a51",
+              "secondary-container": "#ece1d5",
+              "on-secondary-container": "#585148",
+              "on-primary-fixed-variant": "#5c5b5b",
+              "on-tertiary-fixed": "#4a463d",
+              "surface-tint": "#5f5e5e",
+              "outline-variant": "#b1b3ad",
+              "inverse-on-surface": "#9e9d9a",
+              "inverse-primary": "#ffffff",
+              "surface-container": "#eeeee9",
+              "surface-dim": "#d9dbd4",
+              "surface-container-highest": "#e2e3dd",
+              "tertiary-fixed": "#f5ede1",
+              "surface": "#fbf9f6",
+              "background": "#fbf9f6",
+              "tertiary-dim": "#57524a",
+              "primary": "#5f5e5e",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#f5ede1",
+              "outline": "#797b76",
+              "inverse-surface": "#0e0e0d",
+              "on-tertiary-container": "#5d584f",
+              "secondary-fixed-dim": "#ded3c7",
+              "surface-container-high": "#e8e8e3",
+              "on-tertiary": "#fff8f0",
+              "error-container": "#fe8b70",
+              "primary-container": "#e4e2e1",
+              "primary-fixed": "#e4e2e1",
+              "tertiary": "#645e56"
             },
             fontFamily: {
-              "sans": ["Inter", "sans-serif"]
+              "headline": ["Space Grotesk"],
+              "body": ["Newsreader"],
+              "label": ["Work Sans"]
             },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
           },
         },
       }
     </script>
-<style type="text/tailwindcss">
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FAF9F6;
-        }
-        .masonry-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-        .masonry-item:nth-child(even) {
-            margin-top: 24px;
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
 <style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="text-primary">
-<div class="relative min-h-screen w-full flex flex-col overflow-x-hidden">
-<header class="sticky top-0 z-50 flex items-center bg-white/70 backdrop-blur-xl px-6 py-4 justify-between border-b border-stone/50">
-<div class="flex-1">
-<h1 class="text-lg font-bold tracking-[0.15em] uppercase">CASA FORMA</h1>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(20px);
+      }
+      /* Custom fine line styling */
+      .datum-line {
+        background-color: #b1b3ad;
+        opacity: 0.2;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-label selection:bg-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-6 bg-surface/80 backdrop-blur-md border-b border-outline-variant/20">
+<div class="text-2xl font-bold tracking-tighter text-on-surface font-headline uppercase">MONOLITH</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-label text-[12px] uppercase tracking-widest text-primary border-b border-primary pb-1 transition-opacity duration-300" href="#">Collections</a>
+<a class="font-label text-[12px] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors transition-opacity duration-300" href="#">Philosophy</a>
+<a class="font-label text-[12px] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors transition-opacity duration-300" href="#">Bespoke</a>
+<a class="font-label text-[12px] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors transition-opacity duration-300" href="#">Contact</a>
 </div>
-<nav class="hidden md:flex gap-8 text-[11px] uppercase tracking-widest font-medium text-earth">
-<a class="hover:text-primary transition-colors" href="#">Mobilier</a>
-<a class="hover:text-primary transition-colors" href="#">Objets</a>
-<a class="hover:text-primary transition-colors" href="#">À Propos</a>
-</nav>
-<div class="flex-1 flex justify-end items-center gap-4">
-<button class="hidden md:block text-[10px] uppercase tracking-[0.2em] font-bold border border-primary px-5 py-2 hover:bg-primary hover:text-white transition-all">
-                    Voir la collection
-                </button>
-<button class="flex items-center justify-center">
-<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<div class="flex items-center space-x-6">
+<button class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
 </button>
 </div>
-</header>
-<section class="relative w-full aspect-[4/5] md:aspect-[16/7] overflow-hidden">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 scale-105" style='background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMYuxY3heUfMVppqGi8KctRhgnBcCAIT_VnYyli7mi1DPsoD_voijjGsrEb7ZvDxt31tFkTSQGSeGcbPjBXaNAg-kWVbOmijAjMENsp0xz3T70anzyiqwmGHOHS7oedWXHfmhmJBR6fX9n99_xosb-rVaRg949LB3cSMIVQ90-7bxBUqF-4RyDEoxmB7ph0oQxI7x710JwOYRrk4pXS1vjnHQ_32oACa9QedNvoMmUzOs4atBDn7l6uvWHGnGwIWNjAPlfWJj4Dt4");'>
-</div>
-<div class="absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-white">
-<span class="text-[10px] uppercase tracking-[0.4em] mb-4 opacity-90">Nouvelle Ère</span>
-<h2 class="text-4xl md:text-6xl font-extralight tracking-tight mb-8">
-                    L'Art de <span class="font-normal italic">l'Essentiel</span>
-</h2>
-<button class="bg-white text-primary px-10 py-4 text-[11px] uppercase tracking-[0.2em] font-bold shadow-2xl hover:bg-sand transition-colors">
-                    Voir la collection
-                </button>
-</div>
-</section>
-<section class="px-6 py-16 bg-background-light">
-<div class="flex flex-col mb-10">
-<h3 class="text-[10px] uppercase tracking-[0.3em] text-earth/60 mb-2">Sélection Curatée</h3>
-<h4 class="text-2xl font-light">Pièces de Caractère</h4>
-</div>
-<div class="masonry-grid">
-<div class="masonry-item group cursor-pointer">
-<div class="aspect-[3/4] overflow-hidden bg-stone">
-<img alt="Wooden Stool" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjEJbEmigOOe6uYLpzrVOJ7eMVX4GX2Jn8AkvyP8_KhDPb5t0Q0s-ArUzxVO4Q6DoGeOcknT6HUq2LyM5D-X7kqc4ebBFszigjnxa89t8EPPLV61yNajAWefZVJ4H7hek5JQXcLDZU21kh7eHjHTZHOMErCiFrBQOf3kwrn66g9obtZiKItyE9TZgYnfkhrhtD3pgqFiqKQiO13stWUI3noMM_rBueNE8C0Ab6EeFWWzi_DXDk68OzkgCBS8v05-lkrHQ3IlsJI-I"/>
-</div>
-<div class="mt-4">
-<p class="text-[11px] font-medium tracking-wide uppercase">Tabouret Soku</p>
-<p class="text-[10px] text-earth/60 mt-1 italic">Chêne massif</p>
-</div>
-</div>
-<div class="masonry-item group cursor-pointer">
-<div class="aspect-[3/4] overflow-hidden bg-stone">
-<img alt="Stone Vase" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTCBZo5axPt-sQo4IM-TG669IN8RFNEBR_flzLS42nf0rGyJRLACzf3BE2zYMOvGEE7Pf6N1SW8FToEfuN-2xNexSKW2DMSuhOmfL-jQdnM0Tv5D8sRzM7mvZpFgQZTqG7W4IMvJcs3YBxHw5wYUxRVUL1Xpvwuyniqvd5GwRvzgucRnEP0odWeZ5-5Fko75fHuMkbKTOoxD6zAzCkf9eminSo6wiHJ56NGvjOfZBocWiK2FIul24SYGlp1t8pXh5OKCN2-3hplno"/>
-</div>
-<div class="mt-4">
-<p class="text-[11px] font-medium tracking-wide uppercase">Vase Minéral</p>
-<p class="text-[10px] text-earth/60 mt-1 italic">Grès brut</p>
-</div>
-</div>
-<div class="masonry-item group cursor-pointer">
-<div class="aspect-[3/4] overflow-hidden bg-stone">
-<img alt="Linen Cushion" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVvK-ZPOgEwyHzd2dSaZbf0uaNbsrTuftcKH-k5bXRt0gtFrwvmoRj8aKF4ucVKeXdmB43nbWjErC9-7c2ZxzGcH28qin8_oBlvdjlP_lBqOh5ET-ZbkuMA6-O5ZwQWiiSA4nG2Gr776ytuM90_6hDiP_jTzaE-V91LKOpGQ85nKYJnmfXCopdfNbEYbRmD1VkpkTgy_70rlcxh2JZoDiTldvdVUPXkDEBRlThLo4uzSV6YxLQBvj3Qn4L4yeqoo1vEsN8lEiVntk"/>
-</div>
-<div class="mt-4">
-<p class="text-[11px] font-medium tracking-wide uppercase">Coussin Lin</p>
-<p class="text-[10px] text-earth/60 mt-1 italic">Tissage artisanal</p>
-</div>
-</div>
-<div class="masonry-item group cursor-pointer">
-<div class="aspect-[3/4] overflow-hidden bg-stone">
-<img alt="Side Table" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaO3_-T0kG4QE2vFMPx_9umG1ddflmEVcyFPG55_RPW8D-vrTyb0sNHOOYYBfb6Fy-4FjlmtS53amFq8qzGFXrKk2lGVv6wXorhHoKhdb1gVrLYTSuuusbcUzyUivhOfxpAcyNHPddhem9mKU2j2bqgvBHJfz3jtM1aQDnTrXHWP2tCMnKNFSmgZkd_tKRLTAm2Wys90n_Fv5sGgWX9UAY1Qn1uhElULJp4PFOcrZ7fXBoJJs4_uNry_9w1VGPZoQ9QVYOYfaVaTY"/>
-</div>
-<div class="mt-4">
-<p class="text-[11px] font-medium tracking-wide uppercase">Table Silo</p>
-<p class="text-[10px] text-earth/60 mt-1 italic">Travertin</p>
-</div>
-</div>
-</div>
-</section>
-<section class="py-20 bg-stone/20">
-<div class="px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="relative aspect-square overflow-hidden group">
-<img alt="Living Room" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeMVfqAaCGuIGnry77K_PDalsNDzbn9hdTU0NO6ZTeUrQf5sdTmXyWPqly2jwgMptR7ajrXmPVrRFPiyrXbiio3b3FBSgkG6krzbAbl8tGG9Cxvv41WfNFxNUb_qYTNU2ab5_3SPAetq83qd-nIh1DJx1psZfRKmnz_Uz209N-Cob-L7NMqhLXoPHKwicvgSAWDq6c6HCPplXOkzTVq4kAvdgzzuJZtYvaicyWyV2pAwsgHkZ2sg45fQHAg8U3QoWzASnd2Vocyi4"/>
-<div class="absolute inset-0 flex flex-col items-center justify-center bg-black/5 group-hover:bg-black/20 transition-all">
-<h5 class="text-white text-xs uppercase tracking-[0.4em] font-bold">Le Salon</h5>
-<div class="h-[1px] w-0 group-hover:w-12 bg-white mt-2 transition-all duration-500"></div>
-</div>
-</div>
-<div class="relative aspect-square overflow-hidden group">
-<img alt="Dining Room" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMYuxY3heUfMVppqGi8KctRhgnBcCAIT_VnYyli7mi1DPsoD_voijjGsrEb7ZvDxt31tFkTSQGSeGcbPjBXaNAg-kWVbOmijAjMENsp0xz3T70anzyiqwmGHOHS7oedWXHfmhmJBR6fX9n99_xosb-rVaRg949LB3cSMIVQ90-7bxBUqF-4RyDEoxmB7ph0oQxI7x710JwOYRrk4pXS1vjnHQ_32oACa9QedNvoMmUzOs4atBDn7l6uvWHGnGwIWNjAPlfWJj4Dt4"/>
-<div class="absolute inset-0 flex flex-col items-center justify-center bg-black/5 group-hover:bg-black/20 transition-all">
-<h5 class="text-white text-xs uppercase tracking-[0.4em] font-bold">La Table</h5>
-<div class="h-[1px] w-0 group-hover:w-12 bg-white mt-2 transition-all duration-500"></div>
-</div>
-</div>
-<div class="relative aspect-square overflow-hidden group">
-<img alt="Textiles" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjEJbEmigOOe6uYLpzrVOJ7eMVX4GX2Jn8AkvyP8_KhDPb5t0Q0s-ArUzxVO4Q6DoGeOcknT6HUq2LyM5D-X7kqc4ebBFszigjnxa89t8EPPLV61yNajAWefZVJ4H7hek5JQXcLDZU21kh7eHjHTZHOMErCiFrBQOf3kwrn66g9obtZiKItyE9TZgYnfkhrhtD3pgqFiqKQiO13stWUI3noMM_rBueNE8C0Ab6EeFWWzi_DXDk68OzkgCBS8v05-lkrHQ3IlsJI-I"/>
-<div class="absolute inset-0 flex flex-col items-center justify-center bg-black/5 group-hover:bg-black/20 transition-all">
-<h5 class="text-white text-xs uppercase tracking-[0.4em] font-bold">Textiles</h5>
-<div class="h-[1px] w-0 group-hover:w-12 bg-white mt-2 transition-all duration-500"></div>
-</div>
-</div>
-</div>
-</section>
-<footer class="bg-primary text-white py-20 px-6">
-<div class="max-w-screen-xl mx-auto flex flex-col items-center text-center">
-<h2 class="text-[10px] uppercase tracking-[0.5em] mb-6 opacity-60">Manifeste Casa Forma</h2>
-<p class="text-xl md:text-2xl font-light leading-relaxed max-w-2xl mb-12">
-                    Nous croyons en une esthétique intemporelle où chaque objet raconte une histoire de matière et de lumière.
+</nav>
+<!-- Hero / Title Section -->
+<header class="pt-48 pb-20 px-12 max-w-[1800px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-8">
+<h1 class="font-headline text-7xl md:text-9xl font-bold tracking-tighter leading-none mb-8">
+                    CASA <br/> FORMA
+                </h1>
+<p class="font-body text-2xl text-on-surface-variant max-w-xl italic">
+                    A dialogue between raw materiality and refined silhouette. Our latest series explores the intersection of Scandinavian restraint and organic brutalism.
                 </p>
-<div class="w-full max-w-md">
-<p class="text-[10px] uppercase tracking-[0.2em] mb-4">Rejoindre la Gazette</p>
-<div class="flex border-b border-white/30 pb-2">
-<input class="bg-transparent border-none w-full text-sm focus:ring-0 placeholder:text-white/30 uppercase tracking-widest" placeholder="Votre email" type="email"/>
-<button class="text-[10px] uppercase tracking-[0.2em] font-bold">S'inscrire</button>
+</div>
+<div class="md:col-span-4 flex justify-end">
+<div class="text-right">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-outline">Series 04 / 2024</span>
+<div class="h-[1px] w-32 datum-line mt-4 ml-auto"></div>
 </div>
 </div>
-<div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-12 text-left w-full border-t border-white/10 pt-12">
+</div>
+</header>
+<!-- Collections Grid: Asymmetrical/Bento style -->
+<main class="px-12 pb-32 max-w-[1800px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Product 1: Large Featured -->
+<div class="md:col-span-7 group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container-low">
+<img alt="Tabouret Soku" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-out scale-100 group-hover:scale-105" data-alt="Minimalist wooden stool with sharp geometric legs in a sunlit architectural space with soft shadows on concrete walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRao5grORRSI_DGc5kx3KcBbEMiIe3jty1wKkPZgrrEN5xjgUdf7UoY2j2GmLWvoefA3Tf2qUdJBKeNwnYvDkzK1jICViC_q4Wah9bpqOkgSVBQfBh0Yob3w6GbMdKQEmXvwTe8BStlo7M2fRl0c12CQwsmLi60Xhw1EGD61CTdlS3_aFo1Em_xKasglis5pbprTtmGm-V6Kav_FS9jwI6V1B4x-M09iEnmjb10dRn-z1WEwv53PnKdxDqoULXtWFQYz8CgJB9uRs"/>
+</div>
+<div class="mt-6 flex justify-between items-baseline">
 <div>
-<p class="text-[10px] uppercase tracking-[0.2em] mb-6 font-bold">Boutique</p>
-<ul class="text-[11px] space-y-3 opacity-60">
-<li><a href="#">Tous les produits</a></li>
-<li><a href="#">Nouveautés</a></li>
-<li><a href="#">Éditions limitées</a></li>
-</ul>
+<h3 class="font-headline text-2xl font-medium tracking-tight">Tabouret Soku</h3>
+<p class="font-body text-on-surface-variant mt-1">Sculpted Black Oak</p>
 </div>
+<span class="font-label text-sm font-medium">€1,240</span>
+</div>
+<div class="h-[0.5px] w-full datum-line mt-4"></div>
+</div>
+<!-- Product 2: Slim Vertical -->
+<div class="md:col-span-5 pt-24 group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
+<img alt="Vase Minéral" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-out scale-100 group-hover:scale-105" data-alt="Tall brutalist ceramic vase with raw textured surface standing against a minimalist beige lime-wash wall background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXZrsRoomRDB8UPdzS-31LOgleDTpmYUXmmEa2ar_I1ouIASyPloyF2LkjqvfmaBm7V4AaNk7Ou4BwR6o2vQoyRJyZSrZsyex53olMxBG4Me_B_7F77kAmAu67BdiXUc1_ieT6seLKABx4afTb7V2nZtnYpWmWUmRNfxsi6-KUKY-aMqTsYqBJrxav7lQeE2-mFLX4UMFcxInDX8rQ1FfTGPsUWjDTB-qPoApc6JuS-Zovuz4IRyRTdX2wOu-FIOpRZYxLfQfArvg"/>
+</div>
+<div class="mt-6 flex justify-between items-baseline">
 <div>
-<p class="text-[10px] uppercase tracking-[0.2em] mb-6 font-bold">Aide</p>
-<ul class="text-[11px] space-y-3 opacity-60">
-<li><a href="#">Livraison</a></li>
-<li><a href="#">Retours</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
+<h3 class="font-headline text-2xl font-medium tracking-tight">Vase Minéral</h3>
+<p class="font-body text-on-surface-variant mt-1">Raw Basalt Clay</p>
 </div>
-<div class="col-span-2 flex flex-col md:items-end">
-<p class="text-[14px] uppercase tracking-[0.2em] mb-6 font-bold">CASA FORMA</p>
-<p class="text-[10px] opacity-40">© 2024 Design Minimaliste. Tous droits réservés.</p>
+<span class="font-label text-sm font-medium">€480</span>
 </div>
+<div class="h-[0.5px] w-full datum-line mt-4"></div>
+</div>
+<!-- Product 3: Mid Wide -->
+<div class="md:col-span-4 group cursor-pointer">
+<div class="relative aspect-square overflow-hidden bg-surface-container-low">
+<img alt="Lampe Obscure" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-out scale-100 group-hover:scale-105" data-alt="Modern sculptural table lamp made of dark stone and frosted glass casting soft ambient light in a dim minimalist room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClXnjzPIIeAB9YZYVhI_z3P9llpnEF4EEzW07XFgpH3eGZAFw8uh6EKbwOxdMXpy2OBx5pdr_vcPG4cEywmWjZyyXA-tK3pUcJdhSiOoRUpk32KmsSdN06XRsTsF_AiaMAc97REWGWAqbKfF4LcTrsWn3xr9j1naksg36Gv21KTU97n_RQO-Ttfhim1WWHQloxFlkKVW0wuD-S11Iag3fNhmBm6Pv152pgpyPPP-07wX5m-3Qu6-ARdadzhD_GYGilJEbA70ebPq4"/>
+</div>
+<div class="mt-6 flex justify-between items-baseline">
+<div>
+<h3 class="font-headline text-2xl font-medium tracking-tight">Lampe Obscure</h3>
+<p class="font-body text-on-surface-variant mt-1">Honed Anthracite</p>
+</div>
+<span class="font-label text-sm font-medium">€890</span>
+</div>
+<div class="h-[0.5px] w-full datum-line mt-4"></div>
+</div>
+<!-- Product 4: Large Staggered -->
+<div class="md:col-span-8 -mt-12 group cursor-pointer">
+<div class="relative aspect-[16/9] overflow-hidden bg-surface-container-low">
+<img alt="Banc Nord" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-out scale-100 group-hover:scale-105" data-alt="Low-profile minimalist bench in a wide open architectural space with large floor-to-ceiling windows and soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBQAvVsKOvVcFYDOHuazSX0VIE8M3I1cCOo6Q9pcvAUnjt4AxYaczM3bwYCOWVUJ7U2y1a1bTrVC8_IdQouaIFq2a1fikhf8qDmIhr40kzR0L2M6SML64Ok810xUR4D-CIaHRcVul9XfKlZAEtUBtr-ZvuB3K2mQXkE-pNu5TjG1Q2TeSJUt3essOM2MZyJM8JqMKuXcQl7v0C3O9TWvK4t2NF-p3Qdl-Cz6yp9_c-M2Jg9_pc5TVSTjQP9eddOO41eufYFIAcCmY"/>
+</div>
+<div class="mt-6 flex justify-between items-baseline">
+<div>
+<h3 class="font-headline text-2xl font-medium tracking-tight">Banc Nord</h3>
+<p class="font-body text-on-surface-variant mt-1">Linen &amp; Ash</p>
+</div>
+<span class="font-label text-sm font-medium">€2,100</span>
+</div>
+<div class="h-[0.5px] w-full datum-line mt-4"></div>
+</div>
+<!-- Product 5: Vertical Accent -->
+<div class="md:col-span-5 group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container-low">
+<img alt="Console Brute" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-out scale-100 group-hover:scale-105" data-alt="Minimalist console table with thin steel frame and thick stone top placed in a contemporary gallery setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg2E0uXFDvlGlym-OpOWWS9n6e5GTsNUF0Zfr5w_yIspShrLfLxzqIzswRnHWjQC8Ltgi4D8iik_VfEWvV9DJeUtsxpcBEDFhmT8RR0psA_9rb4T1IO5xHc7INjXDk4H-Xy8LPP3Sr8-iLt6goOAvypp8sl7VXBVZk3cZ6yRBwCoSpa1URsXw9gw4wkNCCHuwbvawYyc-GveBNP4HaAWP6QwlnCkyPffhiDD25lLigQcHKh5RRylSh23u21RoyMNwA9SREKnKZua4"/>
+</div>
+<div class="mt-6 flex justify-between items-baseline">
+<div>
+<h3 class="font-headline text-2xl font-medium tracking-tight">Console Brute</h3>
+<p class="font-body text-on-surface-variant mt-1">Raw Travertine</p>
+</div>
+<span class="font-label text-sm font-medium">€3,450</span>
+</div>
+<div class="h-[0.5px] w-full datum-line mt-4"></div>
+</div>
+<!-- Text Content Block (Editorial Break) -->
+<div class="md:col-span-7 flex flex-col justify-center px-12">
+<div class="max-w-md">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-outline mb-4 block">The Philosophy</span>
+<h2 class="font-headline text-5xl font-bold tracking-tight mb-8">Architecture for the Home.</h2>
+<p class="font-body text-xl leading-relaxed text-on-surface-variant mb-12">
+                        Each piece is a study in proportion. We remove the superfluous to reveal the essential character of the material. Our process is slow, our production limited.
+                    </p>
+<button class="bg-primary text-on-primary font-label uppercase text-[12px] tracking-widest px-8 py-4 hover:opacity-90 transition-opacity">
+                        View Editorial
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Section Divider (Datum Line) -->
+<div class="px-12 py-20">
+<div class="h-[1px] w-full datum-line"></div>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container-low py-20 px-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 max-w-full mx-auto">
+<!-- Brand Column -->
+<div class="space-y-8">
+<div class="text-xl font-bold text-on-surface font-headline uppercase tracking-tighter">MONOLITH</div>
+<p class="font-body text-lg text-on-surface-variant italic">
+                    Designing the space between architecture and object.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col space-y-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mb-2">Shop</span>
+<a class="font-label text-sm opacity-80 hover:opacity-100 transition-opacity underline underline-offset-4" href="#">Collections</a>
+<a class="font-label text-sm opacity-80 hover:opacity-100 transition-opacity" href="#">New Arrivals</a>
+<a class="font-label text-sm opacity-80 hover:opacity-100 transition-opacity" href="#">Archive</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col space-y-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mb-2">Information</span>
+<a class="font-label text-sm opacity-80 hover:opacity-100 transition-opacity" href="#">Philosophy</a>
+<a class="font-label text-sm opacity-80 hover:opacity-100 transition-opacity" href="#">Bespoke</a>
+<a class="font-label text-sm opacity-80 hover:opacity-100 transition-opacity" href="#">Sustainability</a>
+</div>
+<!-- Links Column 3 -->
+<div class="flex flex-col space-y-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mb-2">Social</span>
+<a class="font-label text-sm opacity-80 hover:opacity-100 transition-opacity" href="#">Instagram</a>
+<a class="font-label text-sm opacity-80 hover:opacity-100 transition-opacity" href="#">Pinterest</a>
+<a class="font-label text-sm opacity-80 hover:opacity-100 transition-opacity" href="#">LinkedIn</a>
+</div>
+</div>
+<div class="mt-32 flex flex-col md:flex-row justify-between items-center border-t border-outline-variant/20 pt-8">
+<span class="font-label text-[10px] tracking-widest text-outline uppercase">© 2024 MONOLITH ARCHITECTURAL INTERIORS. ALL RIGHTS RESERVED.</span>
+<div class="flex space-x-8 mt-4 md:mt-0">
+<a class="font-label text-[10px] tracking-widest text-outline uppercase hover:text-on-surface" href="#">Legal</a>
+<a class="font-label text-[10px] tracking-widest text-outline uppercase hover:text-on-surface" href="#">Privacy</a>
 </div>
 </div>
 </footer>
-</div>
-
-<script>
-document.addEventListener("click", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("mousedown", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("mouseup", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("submit", function(e) { e.preventDefault(); }, true);
-</script></body></html>
+</body></html>

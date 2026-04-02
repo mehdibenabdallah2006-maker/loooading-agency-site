@@ -1,67 +1,88 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+
+<html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AURELIAN ATELIER | High Jewelry</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&amp;family=Montserrat:wght@200;300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#C5A059",
-                        "pale-beige": "#F9F7F2",
-                        "off-white": "#FFFFFF",
-                        "onyx": "#1A1A1A",
-                        "terracotta": "#D27D5E",
-                        "olive": "#6B705C",
-                        "sand": "#E5E0D8"
-                    },
-                    fontFamily: {
-                        "display": ["Cormorant Garamond", "serif"],
-                        "sans": ["Montserrat", "sans-serif"]
-                    },
-                    letterSpacing: {
-                        "extra-wide": "0.25em",
-                        "editorial": "0.15em"
-                    },
-                    boxShadow: {
-                        "soft": "0 10px 40px -10px rgba(0,0,0,0.08)",
-                        "glow": "0 0 20px rgba(197, 160, 89, 0.15)"
-                    },
-                    animation: {
-                        'scroll-left': 'scroll 20s linear infinite',
-                    },
-                    keyframes: {
-                        scroll: {
-                            '0%': { transform: 'translateX(0)' },
-                            '100%': { transform: 'translateX(-50%)' }
-                        }
-                    }
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#c6c6c6",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#e2e2e2",
+              "on-tertiary-fixed": "#261900",
+              "surface-dim": "#dbdad5",
+              "primary-container": "#c5a059",
+              "on-primary-container": "#4e3700",
+              "on-secondary": "#ffffff",
+              "secondary": "#5d5f5f",
+              "inverse-on-surface": "#f2f1ec",
+              "on-background": "#1b1c19",
+              "outline-variant": "#d1c5b4",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#fbf9f4",
+              "on-surface-variant": "#4e4639",
+              "surface-variant": "#e4e2dd",
+              "primary": "#775a19",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#1b1c19",
+              "secondary-container": "#dddddd",
+              "on-primary-fixed-variant": "#5d4201",
+              "surface-container": "#f0eee9",
+              "on-tertiary-fixed-variant": "#57441b",
+              "on-secondary-container": "#606161",
+              "tertiary-container": "#bca271",
+              "outline": "#7f7667",
+              "surface": "#fbf9f4",
+              "error": "#ba1a1a",
+              "inverse-primary": "#e9c176",
+              "surface-tint": "#775a19",
+              "tertiary": "#705b31",
+              "on-secondary-fixed-variant": "#454747",
+              "background": "#fbf9f4",
+              "primary-fixed": "#ffdea5",
+              "surface-container-highest": "#e4e2dd",
+              "primary-fixed-dim": "#e9c176",
+              "surface-container-high": "#eae8e3",
+              "surface-container-low": "#f5f3ee",
+              "inverse-surface": "#30312e",
+              "tertiary-fixed": "#fcdfa9",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#dfc38f",
+              "on-tertiary-container": "#4a3811",
+              "on-primary-fixed": "#261900",
+              "on-secondary-fixed": "#1a1c1c"
             },
-        }
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
     </script>
-<style type="text/tailwindcss">
-        @layer base {
-            body {
-                @apply bg-pale-beige text-onyx font-sans antialiased;
-            }
-            h1, h2, h3, h4, h5 {
-                @apply font-display;
-            }
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
-        .header-blur {
-            backdrop-filter: blur(12px);
-            background-color: rgba(255, 255, 255, 0.7);
+        .text-gold-gradient {
+            background: linear-gradient(45deg, #775a19, #c5a059);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .organic-shape-1 {
-            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        }
-        .organic-shape-2 {
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        .bg-gold-gradient {
+            background: linear-gradient(45deg, #775a19, #c5a059);
         }
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
@@ -71,221 +92,243 @@
             scrollbar-width: none;
         }
     </style>
-<style>
-        body {
-            min-height: max(884px, 100dvh);
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-pale-beige">
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-<header class="fixed top-0 left-0 right-0 z-[100] h-16 flex items-center justify-between px-6 header-blur border-b border-sand/50">
-<div class="flex-1 flex items-center">
-<button class="md:hidden flex items-center justify-center mr-4">
-<span class="material-symbols-outlined font-light">menu</span>
-</button>
-<h2 class="text-xl tracking-extra-wide font-display uppercase font-semibold text-onyx">Ayla</h2>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-[#fbf9f4]/80 dark:bg-stone-950/80 backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-[1920px] mx-auto">
+<!-- Navigation Links Left -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-stone-600 dark:text-stone-400 font-label uppercase tracking-[0.1em] text-xs hover:text-[#C5A059] transition-colors duration-300" href="#">Collections</a>
+<a class="text-stone-600 dark:text-stone-400 font-label uppercase tracking-[0.1em] text-xs hover:text-[#C5A059] transition-colors duration-300" href="#">Bespoke</a>
 </div>
-<nav class="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-editorial font-medium text-onyx/80">
-<a class="hover:text-terracotta transition-colors" href="#">Shop</a>
-<a class="hover:text-terracotta transition-colors" href="#">Collections</a>
-<a class="hover:text-terracotta transition-colors" href="#">Philosophy</a>
-<a class="hover:text-terracotta transition-colors" href="#">Craft</a>
+<!-- Brand Logo Centered -->
+<div class="text-center">
+<h1 class="text-3xl font-serif tracking-[0.2em] text-[#1b1c19] dark:text-stone-100">AURELIAN</h1>
+</div>
+<!-- Navigation Links Right + Icons -->
+<div class="flex items-center gap-8">
+<div class="hidden md:flex items-center gap-8">
+<a class="text-stone-600 dark:text-stone-400 font-label uppercase tracking-[0.1em] text-xs hover:text-[#C5A059] transition-colors duration-300" href="#">Atelier</a>
+<a class="text-stone-600 dark:text-stone-400 font-label uppercase tracking-[0.1em] text-xs hover:text-[#C5A059] transition-colors duration-300" href="#">Journal</a>
+</div>
+<div class="flex items-center gap-4 text-[#775a19] dark:text-[#C5A059]">
+<button class="cursor-pointer transition-opacity active:opacity-70 hover:text-[#C5A059]">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="cursor-pointer transition-opacity active:opacity-70 hover:text-[#C5A059]">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="cursor-pointer transition-opacity active:opacity-70 hover:text-[#C5A059]">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
 </nav>
-<div class="flex-1 flex justify-end items-center gap-5">
-<button class="flex items-center justify-center text-onyx">
-<span class="material-symbols-outlined font-light scale-90">search</span>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Cinematic macro shot of molten 18k yellow gold being poured into a jewelry mold with dramatic sparks and warm golden lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdOzYwBIStED0UVynqMikXurHJcHBCVxhWh0y51Ytnv8qxh589ZIczkCNplPTP1f0HvH0oXLg2K73EnSal2u6D1_3QKBflpSuEZmvda1_nzayLBEhd3rPkA-Xse-vB0B3j120OMrXHP9r4MHls5K2J2i8NhrUUJ5luwpGjtubWgX_XJ49a2D2JAswE_lTEM7-6qf3BHOkr-RHKOQisNn1ZsnT_vsclonkx6_4YB5GlhBOi2_dArBUuRqJzpwoodyJEzNiK9Tv1kQ"/>
+<div class="absolute inset-0 bg-stone-950/30"></div>
+</div>
+<div class="relative z-10 text-center px-6">
+<p class="font-label uppercase tracking-[0.4em] text-surface-container-lowest mb-6 text-sm">Mediterranean Heritage</p>
+<h2 class="font-headline text-5xl md:text-8xl text-surface-container-lowest tracking-tighter mb-12 max-w-4xl mx-auto leading-tight">
+                Sculpted by Light, <br/> Refined by Time
+            </h2>
+<button class="px-12 py-5 bg-gold-gradient text-on-primary font-label uppercase tracking-widest text-xs transition-transform duration-300 hover:scale-105 active:scale-95 shadow-2xl">
+                Discover the Collection
+            </button>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-surface-container-lowest/50">
+<span class="material-symbols-outlined text-3xl">expand_more</span>
+</div>
+</section>
+<!-- Brand Narrative Section -->
+<section class="py-32 px-12 md:px-24 bg-surface grid grid-cols-1 md:grid-cols-2 gap-24 items-center max-w-[1920px] mx-auto">
+<div class="order-2 md:order-1 relative group">
+<div class="absolute -inset-4 border border-outline-variant/20 translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-700"></div>
+<img class="w-full aspect-[4/5] object-cover relative z-10" data-alt="Artisan hands using a precision jeweler's torch on a gold ring setting with soft natural sunlight streaming through a studio window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbbpKOUfwbSrreNANYMp8S4LCNmkRKoEZrThWXR-jH7C_K7UARCf4E7O4e1weF79NbJkYat39raw987x1Q5RRNhCg2o69n8Ke736kceA5ItIZyojos-wHzv8SOuUl7nRzH58UMnyN02GdjPZvNmU9XPMO4-6S63FMj3_CRy_U9aS-RQ8_DVRcz9THAdUex0pwUQ7LN9Nid9L-HtRyfLNqG0PxDAMhJCBORuNfENGIWFh1QJWrjrXWX0Fn-t5Nkhm3RLg5ILTgvCQ"/>
+</div>
+<div class="order-1 md:order-2 space-y-12">
+<div class="space-y-4">
+<span class="font-label uppercase tracking-widest text-primary text-xs">The Atelier Legacy</span>
+<h3 class="font-headline text-4xl md:text-6xl text-on-background leading-[1.1] tracking-tight">The Art of the <br/> Ancient Modern</h3>
+</div>
+<p class="text-on-surface-variant leading-relaxed text-lg font-light max-w-lg">
+                Born on the sun-drenched shores of the Mediterranean, Aurelian Atelier bridges the gap between antiquity and the contemporary. Every curve of gold and facet of stone is a dialogue between the artisan's hand and the eternal light of the coast.
+            </p>
+<div class="pt-6">
+<a class="inline-flex items-center gap-4 text-primary font-label uppercase tracking-widest text-sm group" href="#">
+                    Our Craftsmanship
+                    <span class="h-px w-12 bg-primary group-hover:w-20 transition-all duration-500"></span>
+</a>
+</div>
+</div>
+</section>
+<!-- Horizontal Scrolling Product Gallery -->
+<section class="py-32 bg-surface-container-low overflow-hidden">
+<div class="px-12 md:px-24 mb-16 flex justify-between items-end">
+<div class="space-y-2">
+<span class="font-label uppercase tracking-widest text-primary text-xs">Featured Pieces</span>
+<h3 class="font-headline text-4xl text-on-background tracking-tighter">Curated Selections</h3>
+</div>
+<div class="flex gap-4">
+<button class="p-3 border border-outline-variant/30 hover:border-primary transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">west</span>
 </button>
-<button class="flex items-center justify-center relative text-onyx">
-<span class="material-symbols-outlined font-light scale-90">shopping_bag</span>
-<span class="absolute -top-1 -right-1 text-[9px] bg-terracotta text-white w-4 h-4 flex items-center justify-center rounded-full font-medium">1</span>
+<button class="p-3 border border-outline-variant/30 hover:border-primary transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">east</span>
 </button>
 </div>
-</header>
-<main>
-<section class="relative w-full h-[100vh] flex flex-col items-center justify-end pb-24 overflow-hidden pt-16">
-<img alt="Model wearing Mediterranean jewelry at golden hour" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnjOCfBiST5qJhIO1kHJZVIoZjI-gGfpLnyrwf1_ONTugBxS9fFg3LF37OZurzY5Dfl9Q7EiBOKX2rPddfQqmTXpIdHEZ5clnpd7f2_L2YvjoF7SUSaBkvcZg5K1AEPELY90TzzNGkN4cOqWZ_YLxb2lmc_Z-iKV3ZxLN9FCqjoCgrXBd6lw5c2L0Os2WINej7I2W-vYVv0OWqDVOA6iJTziXS4RYdsW5ZIPPMt6RskYwsm4bKv0zBoEbaiWcQ5WTJou1U4nIhmw"/>
-<div class="absolute inset-0 bg-gradient-to-t from-onyx/80 via-onyx/20 to-transparent"></div>
-<div class="relative z-10 text-center space-y-6 px-6 max-w-lg mx-auto w-full">
-<span class="text-[10px] tracking-[0.3em] uppercase text-white/80 font-medium block">Summer Collection</span>
-<h1 class="text-5xl md:text-6xl tracking-tight leading-none italic font-medium text-white shadow-sm">The Eternal Series</h1>
-<p class="text-white/90 text-sm font-light leading-relaxed mb-8 max-w-xs mx-auto">Bathed in the golden light of the Mediterranean coastline.</p>
-<button class="px-10 py-4 bg-white text-onyx text-[11px] font-medium tracking-extra-wide uppercase hover:bg-terracotta hover:text-white transition-colors duration-500 shadow-lg">
-                        Shop Collection
-                    </button>
 </div>
-</section>
-<section class="py-12 bg-white overflow-hidden border-b border-sand/50">
-<div class="flex whitespace-nowrap overflow-hidden relative w-full">
-<div class="animate-scroll-left flex items-center gap-16 px-8 min-w-max">
-<div class="flex items-center gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-<h4 class="text-xl font-display font-semibold tracking-widest uppercase">VOGUE</h4>
-<h4 class="text-xl font-display font-light tracking-widest uppercase italic">Elle</h4>
-<h4 class="text-xl font-sans font-bold tracking-[0.3em] uppercase">Bazaar</h4>
-<h4 class="text-xl font-display font-medium tracking-widest uppercase">Glamour</h4>
-<h4 class="text-xl font-display font-bold tracking-[0.2em] uppercase">Marie Claire</h4>
-<h4 class="text-xl font-display font-semibold tracking-widest uppercase">VOGUE</h4>
-<h4 class="text-xl font-display font-light tracking-widest uppercase italic">Elle</h4>
-<h4 class="text-xl font-sans font-bold tracking-[0.3em] uppercase">Bazaar</h4>
+<div class="flex gap-10 px-12 md:px-24 overflow-x-auto hide-scrollbar snap-x snap-mandatory">
+<!-- Product Item 1 -->
+<div class="snap-start min-w-[320px] md:min-w-[450px] group cursor-pointer">
+<div class="relative overflow-hidden bg-white">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Close up of a thick textured 18k yellow gold cuff bracelet resting on a smooth white marble surface with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyRq3cPb98wyIrozlq6aC97DJQ7fuM7K9RRydMLGcsRCoIwBxdG2WmgFtHqnquBGeUGMJhGzQpuxYw8eL0kHKadJtALG5goIr4VxBdPlNEJKXvJOa7qCamoxHCVg7h2_p-8FCMoOUJX38asAZPw1wYxWTXYzZYPbnI8MNzPhm_rUy6KF2hGLwX4jx6YthKIIFlsGhCqGF7NsIsUuLq53oBNAQ7bOMGjjFvDVDBYw8Lhsk4zsGA62eyspKlyaWjVPdp8yT6rKZ_tA"/>
+<div class="absolute inset-0 border border-outline-variant/10 pointer-events-none"></div>
+<div class="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<button class="bg-white/90 backdrop-blur-md p-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">add</span>
+</button>
 </div>
 </div>
+<div class="mt-8 flex justify-between items-start">
+<div class="space-y-1">
+<h4 class="font-headline text-xl text-on-background">Aurelia Sculpted Cuff</h4>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Hand-forged 18K Yellow Gold</p>
 </div>
-</section>
-<section class="py-24 px-6 bg-pale-beige text-center relative overflow-hidden">
-<div class="absolute top-10 -left-20 w-64 h-64 bg-terracotta/5 rounded-full blur-3xl mix-blend-multiply"></div>
-<div class="absolute bottom-10 -right-20 w-80 h-80 bg-olive/5 rounded-full blur-3xl mix-blend-multiply"></div>
-<div class="max-w-xl mx-auto space-y-8 relative z-10">
-<span class="text-[10px] tracking-[0.4em] uppercase text-terracotta font-semibold">Philosophy</span>
-<h3 class="text-4xl md:text-5xl leading-tight font-medium">Sculpted by Light, <br/><span class="italic text-terracotta font-light">Refined by Time</span></h3>
-<p class="text-base font-light leading-relaxed text-onyx/70 max-w-md mx-auto">
-                        Inspired by the rugged coastlines and the golden warmth of the Mediterranean sun. Our pieces are more than jewelry; they are quiet reflections of a life lived artfully.
-                    </p>
-<img alt="Details" class="w-24 h-24 object-cover mx-auto organic-shape-1 shadow-soft mt-8 opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAunCayL0wOdUB8jElrBdcyqYSjNZd3xk843E3hDsuXefzVlwesb-ZkRQyXYW8UfDjl76k8mFeaWP2EcGJ3IRuvQ4rQ_tc5YPbij8jHxbr_s7FuQRilPCRq-Uh-2YxmQAnsWoJCGyF9pIeVB5kf3_mIDdIczlCIcpYbGxtZB1t44p_HAUXSYdbybVGs0nBe0iecHp7y50g2TaGDojX3hw97VIR03sq1vd7whUBUdo_To5W2Q3URhn0Y7EzQSnPMbY0X9GkauGatyw"/>
-</div>
-</section>
-<section class="py-24 px-6 bg-white relative">
-<div class="flex flex-col items-center mb-16 text-center">
-<h2 class="text-3xl font-medium tracking-widest uppercase mb-4 text-onyx">Curated Selection</h2>
-<p class="text-sm text-onyx/60 font-light mb-6 max-w-xs">Discover pieces that capture the essence of sun-drenched afternoons.</p>
-<div class="w-16 h-[2px] bg-terracotta/40"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden shadow-soft organic-shape-2">
-<img alt="Editorial Lifestyle" class="w-full h-[60vh] md:h-[80vh] object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqZm6Tj95NgTwCC40wY26jDLK2e6mvNPMDnPntK4UWEg1fY8HqbTag6u-kr0An6L-ZZo7xJwi1scGqlXaTJen8rPxgmb1y2uHWfxLL522fF2qjZ82dKZuV-IcEt8gYs61iAPs4R4-rW7m6aE8tEg0Ez4feOduXp_s5TRdvnoRB6ozXocaTs20oFdTTylf4JiVT3D6_kCzX4E5QfTNRMHmVzEjEKkUJx0MRUDwe-db8I9vnixBfs_KD-lH2DDDd-TPh2a9qL0zuTA"/>
-<div class="absolute inset-0 bg-onyx/20 group-hover:bg-onyx/30 transition-colors duration-500"></div>
-<div class="absolute bottom-8 left-8 right-8 text-white z-10">
-<span class="text-[10px] tracking-widest uppercase mb-2 block text-white/80">Signature Piece</span>
-<h3 class="text-3xl font-medium italic mb-2">The Aurelia Choker</h3>
-<a class="text-xs uppercase tracking-widest border-b border-white pb-1 inline-block hover:text-terracotta hover:border-terracotta transition-colors" href="#">Shop Now</a>
+<span class="text-primary font-body text-sm tracking-widest">€4,250</span>
 </div>
 </div>
-<div class="group flex flex-col space-y-4">
-<div class="relative aspect-[4/5] w-full bg-sand/30 overflow-hidden shadow-sm">
-<img alt="Aurelia Ring Product" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-90 transition-opacity duration-500 group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUqFwznK0LJScibOaW1qo92X3o4cI0nXw7LvZFxoZB-BNqCPsE5vldCVfva3O6KfaSOPr5GxHQ1nHSsxEuk2If_JKEsk-nM4WPD2IUXGPaC6FofOQe1219nxuxwPBdt6IftWZ3GBGzD6FhILJxAWli96B2gMTswUgSR8cAi7dEVOLOfguz7DosorwvyEi37dK3Zt2x56QTQVl7vwINiQLykagE61xeJU29asP8_JsCbvkkF1iOjmt5DP_Fl5owauQ7vWErV5t-jA"/>
-<img alt="Aurelia Ring Worn" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEH8naagPXm3DJJfs_-asQfiMFjvJpBm0Vg4qrlsJyMag-f2C6TmYfFoZwuf4LvJrudhS90mrsfYmlTpX9eYiblfrnrcFLaZTxRn2Bk7lvYbOxITEjKBHfPEpwBDyX52PYKY9Dkcu7jRBCfHMaUVAKa0pBPZZhSfLxrdTyimOl8MRorNAiyrvi-XgxqHpKskzDKTqfcc0Go2HOJFUoE8TcCrVTqcbxB1_qCcvymSeU1V_YCjW_ngeRHJR-e0tUxY8yqh1GzMHC0Q"/>
-<div class="absolute top-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-terracotta">
-<span class="material-symbols-outlined text-sm font-light">favorite</span>
+<!-- Product Item 2 -->
+<div class="snap-start min-w-[320px] md:min-w-[450px] group cursor-pointer translate-y-12">
+<div class="relative overflow-hidden bg-white">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Dainty gold hoop earrings with delicate textured details hanging from a minimal stand in warm morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHUimkjhpU7t48HVMMP5SiIp8hQYBSsAPf7IFWFIyXx1MPjWDsgI0UAKsSBPOHbbxCQuCDAj3-dEVXSlaWuqNGKvQ7ZooGL26hI4VVrRNcNNfBOMD-wuvEvSqa9nF709wVmsnHRns69l3yFkFPIKjqke5gqL2y8qd8JDTDJmfS1Ce3xUIowY5-0B99yjvXGQheVzHulOqijA4mwSp5t5QCuIaFGFHG9JsMc7ubAJAkwVBP1sZeZl2OtnkPY58uDv1bkhkkU6oSkw"/>
+<div class="absolute inset-0 border border-outline-variant/10 pointer-events-none"></div>
+</div>
+<div class="mt-8 flex justify-between items-start">
+<div class="space-y-1">
+<h4 class="font-headline text-xl text-on-background">Selene Radiant Hoops</h4>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Etched Gold &amp; White Diamond</p>
+</div>
+<span class="text-primary font-body text-sm tracking-widest">€2,800</span>
 </div>
 </div>
-<div class="flex justify-between items-start pt-2">
-<div>
-<h5 class="text-lg font-medium mb-1">Aurelia Ring</h5>
-<p class="text-xs text-onyx/60 font-light">18k Recycled Gold</p>
+<!-- Product Item 3 -->
+<div class="snap-start min-w-[320px] md:min-w-[450px] group cursor-pointer">
+<div class="relative overflow-hidden bg-white">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="An ornate yellow gold signet ring with a deep green emerald stone centered on a textured beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPUUa-CexIG2NinICHH0Lq9dQ5As5sYS0h46AR8bmalRldh5ScEnmAJUJSDNoCLOSkOdBB4rkWvgEFXdn813IojEeJp5d3MWyB4DOpnWNcpPCDa0R9jDIWk07YzJfy57JD0ZwJkxOkwn_pwRRMZqG2TEHTQ4KUoVjC45fzWdtgI4sPpcxMX2rU1gHKhBdxs-FszcEf2PEXmQen0jnl_4QZmWDb6JeBOcqrZDsM7l6qatiEOPkFWOApsr6orID7rpL2riR4h9X2Bg"/>
+<div class="absolute inset-0 border border-outline-variant/10 pointer-events-none"></div>
 </div>
-<p class="text-[13px] font-medium">$240</p>
+<div class="mt-8 flex justify-between items-start">
+<div class="space-y-1">
+<h4 class="font-headline text-xl text-on-background">Gaia Signet Ring</h4>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Raw Emerald &amp; Satin Gold</p>
 </div>
-</div>
-<div class="group flex flex-col space-y-4">
-<div class="relative aspect-[4/5] w-full bg-sand/30 overflow-hidden shadow-sm">
-<img alt="Selene Hoops Product" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-90 transition-opacity duration-500 group-hover:opacity-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMDaywvA9rQklxlpH6TU5esdN108IT4uydFLGKLbBQHcP8aNRdkbSyJLfLy6gM2oYiWQ6MvzQ5ijG1Gx0eEAm1S9_BVfuctmltEeseGIC58RDLmuAsX_bm-5gIBS8LKDQMfJuBb-8cwAU9ihodtr-erIlJ1DWhmB8XBcSvwF3Ina3PcYk8169VPOI-uT6vCptSMrQi8wMZ63ERQJ5F4wABoWJZShAlNHee810m-KX2Aozr3pabKA9kHUT6vS7DeXszrH-9w3EzPg"/>
-<img alt="Selene Hoops Worn" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFeO_jYMcYAERRcqU_x6nlPt7ATohBjvlxxdOt1JB1ZCB0dgRr16ZeuWy1jE9W9ZXXkbCjpNSjOpSRG3H4XLnJOA9vC46UG92bZV5baG1LndGFaq6EPw1AxmxyUXNwOSAZ8vIs8V1ymHK2ZZYgiAM0PT4WOpQoPpFv9TBRAXjJ5QWuhGdbBxShDet29YnIVv0F90kgu0PXT8SCdLV1IndIZvPdCgqwhPzaND_XyOm9h-wqd6gVLsKwrTNRLRFfCG92DfA_nyDeUA"/>
-<div class="absolute top-4 right-4 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm text-onyx/40 hover:text-terracotta transition-colors">
-<span class="material-symbols-outlined text-sm font-light">favorite</span>
+<span class="text-primary font-body text-sm tracking-widest">€5,900</span>
 </div>
 </div>
-<div class="flex justify-between items-start pt-2">
-<div>
-<h5 class="text-lg font-medium mb-1">Selene Hoops</h5>
-<p class="text-xs text-onyx/60 font-light">Textured Gold</p>
+<!-- Product Item 4 -->
+<div class="snap-start min-w-[320px] md:min-w-[450px] group cursor-pointer translate-y-12">
+<div class="relative overflow-hidden bg-white">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A delicate thin gold necklace with a singular irregular gold nugget pendant catching sharp sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSdfyuvDKVNKj7D7BjygQmdb4MGytStEoUGy8xMGQsLKvJV29Dxe9HY1xNrycVDZZZQg-917wSee5-7mC205VzPOQawnSKkV4g-UYDZLRUMX3T2p-4919GvKKKDy1e0sQIiCJkctUgd5matvHkjohaxKFtiS0HVKNYyholDx7zH7V9JzqsnjOOqVLhYlXLb311R_St-JQ4ZYnk22R9Wr97Tf7oC2SkGAqB49Ckg7xV5GUjWHo2gf7J5F_VPM6DglbI9UaIdb7nEg"/>
+<div class="absolute inset-0 border border-outline-variant/10 pointer-events-none"></div>
 </div>
-<p class="text-[13px] font-medium">$310</p>
+<div class="mt-8 flex justify-between items-start">
+<div class="space-y-1">
+<h4 class="font-headline text-xl text-on-background">Solstice Pendant</h4>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Polished 18K Yellow Gold</p>
 </div>
+<span class="text-primary font-body text-sm tracking-widest">€1,450</span>
 </div>
-</div>
-<div class="text-center mt-12">
-<button class="px-8 py-3 border border-onyx text-[10px] tracking-extra-wide uppercase font-medium hover:bg-onyx hover:text-white transition-all duration-300">
-                        View All Pieces
-                    </button>
-</div>
-</section>
-<section class="py-20 px-6 bg-olive text-white">
-<div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
-<div class="w-full md:w-1/2 aspect-[3/4] overflow-hidden organic-shape-1 shadow-2xl relative">
-<img alt="Craftsmanship" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_QRA-g4r4EwOHMU5bcEpQekbD67avJAEEQ2b8EtDjRSGZtCWxN-vOYAeaUl0769w2bTUq8N6oMdZhV-g9OigRp1mSXIHIcWmLtSQSL1mYp0w36yydIO432qKlb7XANSD52atwp44luIOnIo8oXUr3OiVMtECusJ69TYS2NCBfHb-APS99RIAAlH84LHmtOM40Lp9r4KSom4vFtM5qNs3qt2XnN_bGPHAOaFqte3DdLZ8DJg_4VRXmfmbnywtsBYwo6gHJBrW5Ng"/>
-</div>
-<div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
-<h2 class="text-4xl md:text-5xl font-medium italic mb-2">Hand-Crafted Legacy</h2>
-<div class="w-12 h-px bg-terracotta mx-auto md:mx-0"></div>
-<p class="text-sm font-light leading-relaxed text-white/80 mb-8 max-w-sm mx-auto md:mx-0">
-                            Each piece is forged in our coastal studio using 100% recycled gold, carrying the soul of Mediterranean heritage into modern design.
-                        </p>
-<a class="text-[11px] tracking-editorial uppercase border-b border-terracotta text-terracotta pb-1 inline-block hover:text-white hover:border-white transition-colors font-medium" href="#">Discover Craft</a>
 </div>
 </div>
 </section>
-<section class="py-24 px-6 bg-pale-beige">
-<div class="text-center mb-12">
-<h2 class="text-2xl font-medium tracking-widest uppercase text-onyx mb-2">Ayla in the Wild</h2>
-<p class="text-sm font-light text-onyx/60 italic">@ayla.atelier</p>
+<!-- Join The Atelier (Newsletter) -->
+<section class="py-32 px-6 bg-surface-container-high text-center">
+<div class="max-w-2xl mx-auto space-y-12">
+<div class="space-y-4">
+<span class="font-label uppercase tracking-[0.3em] text-primary text-xs">Stay Connected</span>
+<h3 class="font-headline text-4xl md:text-5xl text-on-background tracking-tighter">Join the Atelier</h3>
+<p class="text-on-surface-variant font-light">Be the first to discover new collection arrivals, limited editions, and journal entries from our artisans.</p>
 </div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 max-w-6xl mx-auto">
-<a class="group relative aspect-square overflow-hidden bg-sand/30 block" href="#">
-<img alt="Instagram 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRSTDaBwQKEink7M9nMCjuS1X1eixAL-pNQc_PukgDpk7Xp_58LLZOXl7X5lhi9l8YemtNrcKSw9p8v_YZcWTALRgx01h-yh6x2hZV0raAQ8pyXkaQKqi73XPhNx-PkuQzTatROVZ4xCgeZBRL3hNzGEmpMnki-g5kACaSCpwNoCkgmZYa91X_JcZ6CDYN6IwkxZcML_JsKN15Ki6re6VmjX0CBcKEXSJKnUie_8tGW_QG9EvWGIRAXNL_8oNc5yVPc_ndWgujCg"/>
-<div class="absolute inset-0 bg-onyx/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-<span class="material-symbols-outlined text-white">favorite</span>
-</div>
-</a>
-<a class="group relative aspect-square overflow-hidden bg-sand/30 block" href="#">
-<img alt="Instagram 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQA4x0o3z5pqcEUSKfzW3BLdkQW56rEJFgm09np0H4vKwk0x1pVDuCGR6lI7TcwS4Jl6uzNEdej6GLTP3dd7pKOttHwZKwD03nUbCNtjG5rJ5pGs2X7kypKBas_E_1RthGXXXJ2ZLFisULcoA-whV0TChlNi24ypzMObrZkZIPSCkBCFcFbAdnbF971YXy5kGcKlDIMDedutsEyv2Af-HoCbNvplFXlyIrfBCXa97U6AKFMQ2jInFRtvd86nzLAm-wOsw7ICjGmA"/>
-<div class="absolute inset-0 bg-onyx/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-<span class="material-symbols-outlined text-white">favorite</span>
-</div>
-</a>
-<a class="group relative aspect-square overflow-hidden bg-sand/30 block" href="#">
-<img alt="Instagram 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDizYVyhm2rCWb5R_VAGugZH6WFUPvTBaQDGay8FqKibhLM-dNh9NLoxLwz5C6aPu_DXSB4PE8vtecpB1LuX4j0I_xNdajWGpqRwmq3scXmBn-ZV2XDxjJjiA3aqAXfh_EvUME6eueJjg12oM0Stk-G8CTCCWxN6Yu-wKEFOEMmf6KM9T9MMMuM_6GqmeAq7Ch_mWtcJ9GlqSGy71aYD7E7rzxnvF-x47gO7DSuo11wVxBeeVcd358l6ToTfwussTwus-3HjaNRAA"/>
-<div class="absolute inset-0 bg-onyx/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-<span class="material-symbols-outlined text-white">favorite</span>
-</div>
-</a>
-<a class="group relative aspect-square overflow-hidden bg-sand/30 block" href="#">
-<img alt="Instagram 4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxbGziFIUr-OX_TInZnIhFIM5Ggf8WYxnzCnRJK3odls6boCJVSjYAdbzLtg77j4QImRokSRBTS0RlbA3nPWKbHzOk-9xkCiNMIkwl-keLEMEF7bt2yCh5XZz2QrqAqwpaeE4Wwl0Jdr4veVqmhypawV9cyxgfpVDNZh1Yne4U2tOuK5aeRdW25glmhggyz9Wg2VicS_Kk78jkzAH5tYzWu5oSi1QpoLwTlG9HYMe5x1PsjNhwHFS8stOFJ3KU3AKdKz8S2FUJ7Q"/>
-<div class="absolute inset-0 bg-onyx/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-<span class="material-symbols-outlined text-white">favorite</span>
-</div>
-</a>
-</div>
-</section>
-<section class="py-24 px-6 bg-terracotta text-white">
-<div class="max-w-md mx-auto text-center space-y-8">
-<div class="space-y-3">
-<h3 class="text-3xl md:text-4xl font-medium italic">Join the Atelier</h3>
-<p class="text-[11px] uppercase tracking-widest text-white/80 font-medium">Exclusives &amp; Early Access</p>
-</div>
-<form class="space-y-6">
-<input class="w-full bg-transparent border-b border-white/50 py-3 text-sm focus:outline-none focus:border-white placeholder:text-white/60 text-center uppercase tracking-widest font-light" placeholder="Email Address" type="email"/>
-<button class="w-full bg-white text-terracotta font-medium py-4 text-[11px] tracking-extra-wide uppercase hover:bg-onyx hover:text-white transition-colors duration-500 shadow-md">Subscribe</button>
+<form class="relative max-w-md mx-auto group">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-4 font-label text-xs tracking-widest focus:ring-0 focus:border-primary transition-all duration-500 placeholder:text-stone-400" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 text-primary font-label text-xs tracking-widest hover:translate-x-2 transition-transform duration-300" type="submit">
+                    SUBSCRIBE
+                </button>
 </form>
 </div>
 </section>
-</main>
-<footer class="bg-onyx text-white px-8 py-20 text-center space-y-16">
+<!-- Footer -->
+<footer class="bg-[#eae8e3] dark:bg-stone-900 border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 px-20 py-24 w-full">
+<!-- Brand Column -->
+<div class="space-y-8">
+<h4 class="text-xl font-serif tracking-widest text-[#1b1c19] dark:text-stone-100">AURELIAN</h4>
+<p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed max-w-xs font-body">
+                    A celebration of Mediterranean artisan craft and the eternal beauty of precious materials.
+                </p>
+<div class="flex gap-6">
+<a class="text-primary hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-primary hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a class="text-primary hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+</a>
+</div>
+</div>
+<!-- Links Column -->
 <div class="space-y-6">
-<h2 class="text-2xl tracking-extra-wide font-display uppercase font-semibold">Ayla Atelier</h2>
-<div class="flex justify-center gap-8 text-white/50">
-<a class="hover:text-terracotta transition-colors" href="#"><span class="material-symbols-outlined font-light scale-110">public</span></a>
-<a class="hover:text-terracotta transition-colors" href="#"><span class="material-symbols-outlined font-light scale-110">mail</span></a>
-<a class="hover:text-terracotta transition-colors" href="#"><span class="material-symbols-outlined font-light scale-110">share</span></a>
+<h5 class="font-label uppercase tracking-widest text-primary text-xs">Discover</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-600 dark:text-stone-400 text-sm hover:text-[#775a19] transition-all" href="#">Collections</a></li>
+<li><a class="text-stone-600 dark:text-stone-400 text-sm hover:text-[#775a19] transition-all" href="#">Bespoke Design</a></li>
+<li><a class="text-stone-600 dark:text-stone-400 text-sm hover:text-[#775a19] transition-all" href="#">The Atelier</a></li>
+<li><a class="text-stone-600 dark:text-stone-400 text-sm hover:text-[#775a19] transition-all" href="#">Journal</a></li>
+</ul>
+</div>
+<!-- Service Column -->
+<div class="space-y-6">
+<h5 class="font-label uppercase tracking-widest text-primary text-xs">Information</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-600 dark:text-stone-400 text-sm hover:text-[#775a19] transition-all" href="#">Shipping &amp; Returns</a></li>
+<li><a class="text-stone-600 dark:text-stone-400 text-sm hover:text-[#775a19] transition-all" href="#">Care Guide</a></li>
+<li><a class="text-stone-600 dark:text-stone-400 text-sm hover:text-[#775a19] transition-all" href="#">Sustainability</a></li>
+<li><a class="text-stone-600 dark:text-stone-400 text-sm hover:text-[#775a19] transition-all" href="#">Press</a></li>
+</ul>
+</div>
+<!-- Contact Column -->
+<div class="space-y-6">
+<h5 class="font-label uppercase tracking-widest text-primary text-xs">Atelier Contact</h5>
+<ul class="space-y-4 font-body text-sm text-stone-600 dark:text-stone-400">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                        Via dell'Oro, Florence
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-xs">mail</span>
+                        atelier@aurelian.com
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-xs">call</span>
+                        +39 055 123 456
+                    </li>
+</ul>
 </div>
 </div>
-<div class="w-24 h-px bg-white/10 mx-auto"></div>
-<nav class="flex flex-wrap justify-center gap-x-8 gap-y-6 text-[10px] uppercase tracking-widest text-white/70 font-medium">
-<a class="hover:text-white transition-colors" href="#">Shipping</a>
-<a class="hover:text-white transition-colors" href="#">Returns</a>
-<a class="hover:text-white transition-colors" href="#">Stockists</a>
-<a class="hover:text-white transition-colors" href="#">Contact</a>
-<a class="hover:text-white transition-colors" href="#">Privacy</a>
-</nav>
-<p class="text-[9px] text-white/40 tracking-[0.3em] uppercase font-light pt-8">© 2024 Ayla Atelier. Pure Mediterranean Spirit.</p>
+<div class="px-20 py-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label text-[10px] tracking-widest text-stone-500 uppercase">© 2024 AURELIAN ATELIER. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8">
+<a class="font-label text-[10px] tracking-widest text-stone-500 uppercase hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label text-[10px] tracking-widest text-stone-500 uppercase hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
 </footer>
-</div>
-<script>
-document.addEventListener("click", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("mousedown", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("mouseup", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("submit", function(e) { e.preventDefault(); }, true);
-</script></body></html>
+</body></html>

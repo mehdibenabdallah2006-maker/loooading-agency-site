@@ -1,254 +1,397 @@
 <!DOCTYPE html>
-<html lang="fr"><head>
+
+<html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SmileCare Clinic - Votre Sourire, Notre Priorité</title>
+<title>Ethereal Clinic | SmileCare Redesign</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#0066cc",
-              "secondary": "#e6f2ff",
-              "accent": "#004d99",
-              "background-light": "#f8fafc",
-              "background-dark": "#0f172a",
-            },
-            fontFamily: {
-              "display": ["Lexend", "sans-serif"]
-            },
-            borderRadius: {"DEFAULT": "0.375rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px"},
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-error-container": "#93000a",
+            "on-surface-variant": "#404752",
+            "on-primary": "#ffffff",
+            "inverse-primary": "#a1c9ff",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed": "#001c37",
+            "on-primary-fixed-variant": "#00487f",
+            "primary": "#005ea3",
+            "surface-tint": "#0061a7",
+            "on-tertiary-fixed": "#311300",
+            "on-secondary-fixed-variant": "#2d4869",
+            "on-tertiary-fixed-variant": "#733600",
+            "tertiary-container": "#b85a02",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#f1f3fb",
+            "surface-container": "#ebeef5",
+            "background": "#f8f9ff",
+            "tertiary": "#934600",
+            "on-surface": "#181c21",
+            "secondary": "#456082",
+            "primary-fixed-dim": "#a1c9ff",
+            "surface-bright": "#f8f9ff",
+            "outline": "#717783",
+            "error-container": "#ffdad6",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#d2e4ff",
+            "outline-variant": "#c0c7d3",
+            "tertiary-fixed-dim": "#ffb688",
+            "on-secondary-fixed": "#001c37",
+            "secondary-container": "#bbd6fe",
+            "inverse-surface": "#2d3136",
+            "error": "#ba1a1a",
+            "on-primary-container": "#fdfcff",
+            "inverse-on-surface": "#eef0f8",
+            "on-tertiary-container": "#fffbff",
+            "surface-dim": "#d7dae1",
+            "primary-fixed": "#d2e4ff",
+            "primary-container": "#0077cc",
+            "on-error": "#ffffff",
+            "surface": "#f8f9ff",
+            "secondary-fixed-dim": "#adc9ef",
+            "surface-variant": "#e0e2ea",
+            "surface-container-high": "#e6e8f0",
+            "surface-container-highest": "#e0e2ea",
+            "tertiary-fixed": "#ffdbc7",
+            "on-background": "#181c21",
+            "on-secondary-container": "#425d7f"
           },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
         },
-      }
-    </script>
-<style type="text/tailwindcss">
-        @layer base {
-            body {
-                @apply font-display text-slate-800 bg-background-light;
-            }
-        }
-        .hero-overlay {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
+      },
+    }
+  </script>
 <style>
-    body {
-      min-height: max(884px, 100dvh);
+    body { font-family: 'Inter', sans-serif; background-color: #f8f9ff; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-nav {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
     }
   </style>
-  </head>
-<body class="transition-colors duration-300">
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-<header class="flex items-center bg-white border-b border-slate-100 px-6 py-4 sticky top-0 z-50 justify-between">
-<div class="flex items-center gap-2">
-<div class="text-primary flex size-10 shrink-0 items-center justify-center bg-secondary rounded-lg">
-<span class="material-symbols-outlined text-3xl">dentistry</span>
+</head>
+<body class="text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0_8px_32px_rgba(0,97,167,0.06)]">
+<div class="flex justify-between items-center px-12 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-sky-900 dark:text-sky-100">
+        Ethereal Clinic
+      </div>
+<div class="hidden md:flex items-center space-x-8 font-inter tracking-tight font-medium text-body-lg">
+<a class="text-sky-700 dark:text-sky-400 font-bold border-b-2 border-sky-700 pb-1" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-600 transition-colors" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-600 transition-colors" href="#">Specialists</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-600 transition-colors" href="#">Testimonials</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-sky-600 transition-colors" href="#">Contact</a>
 </div>
-<h1 class="text-slate-900 text-xl font-bold leading-tight tracking-tight">SmileCare Clinic</h1>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-semibold scale-95 active:scale-90 transition-transform hover:bg-primary-container">
+        Book Appointment
+      </button>
 </div>
-<nav class="hidden md:flex items-center gap-8 text-slate-600 font-medium">
-<a class="hover:text-primary transition-colors" href="#">Accueil</a>
-<a class="hover:text-primary transition-colors" href="#services">Services</a>
-<a class="hover:text-primary transition-colors" href="#team">Équipe</a>
-<a class="hover:text-primary transition-colors" href="#testimonials">Témoignages</a>
-<a class="hover:text-primary transition-colors" href="#contact">Contact</a>
 </nav>
-<button class="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded-full font-bold transition-all shadow-md active:scale-95">
-                Prendre RDV
-            </button>
-</header>
-<main class="flex-1">
-<section class="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkivblazDaNTW5BxbpLp5lDiBBlfon27PtyiuIjqrTyr7YtcJ6kw0nnzp27kY6NsyYeUqpzoOc2mIEPoFQwemGIM5jF-U8qwMUVeA1ni2P74lXxrtT0BwOn3zGaIdRAyKaH3etv8RthJZD3MpsFIhbNwS4ZaM2SLCEqtqhFUhoghdveIJGM7fG64qo1oZsocgXH35H4lAyLawNN9OXdAl9kgRZ_uYUutIFoL6FMh2Cxd1YU5q0Cpucz7l3sg7QJZRPUk9uDJseW72X");'>
-<div class="absolute inset-0 bg-slate-900/40"></div>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-15" data-alt="Modern high-end dental clinic interior with soft natural lighting and minimalist aesthetic, featuring clean white surfaces and blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4wpwui3PMB1Rsm8vgN5mFwMO7NzPTRYvLVXkl61aVX-fAuGFB95y_tWFTzVWH1dl5Oktm8s304goAGNb1XeYHOpM1I0phq7HwJhRMc3Rr3Q67N8LaKwmM93XCU0t-DUVK5BS5UUPIOAqY1yQQT0nGgzHT-z1dB8i6dNxImfVAAmgiZZ24Rx2Dg8182tWU0sQf3xfPxtYH4V0_W8LyUuMfzWFMdy7awpslNgVsp-uQKRQHGIYlxWXarxuoj3VbO8GPKo12zY1gLv_1"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-surface via-surface/80 to-transparent"></div>
 </div>
-<div class="relative z-10 text-center px-4 max-w-4xl">
-<h2 class="text-white text-4xl md:text-6xl font-black mb-6 leading-tight drop-shadow-lg">
-                        Votre Sourire, Notre Priorité
-                    </h2>
-<p class="text-white/90 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
-                        Découvrez une approche moderne et bienveillante de la médecine dentaire. Une équipe d'experts à votre écoute pour des résultats d'exception.
-                    </p>
-<button class="bg-primary hover:bg-accent text-white px-10 py-4 rounded-full text-lg font-bold transition-all shadow-xl hover:scale-105 active:scale-95">
-                        Prendre RDV
-                    </button>
-</div>
-</section>
-<section class="max-w-7xl mx-auto px-6 py-24" id="services">
-<div class="text-center mb-16">
-<h3 class="text-slate-900 text-3xl font-bold mb-4">Nos Services Spécialisés</h3>
-<div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-shadow group">
-<div class="size-14 rounded-2xl bg-secondary text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-3xl">health_and_safety</span>
-</div>
-<h4 class="text-xl font-bold text-slate-900 mb-3">Dentisterie Générale</h4>
-<p class="text-slate-600 leading-relaxed">Prévention, soins conservateurs et détartrage pour maintenir une hygiène bucco-dentaire optimale.</p>
-</div>
-<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-shadow group">
-<div class="size-14 rounded-2xl bg-secondary text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-3xl">align_items_stretch</span>
-</div>
-<h4 class="text-xl font-bold text-slate-900 mb-3">Orthodontie</h4>
-<p class="text-slate-600 leading-relaxed">Alignement dentaire pour enfants et adultes grâce aux dernières technologies invisibles ou bagues.</p>
-</div>
-<div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-shadow group">
-<div class="size-14 rounded-2xl bg-secondary text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined text-3xl">auto_awesome</span>
-</div>
-<h4 class="text-xl font-bold text-slate-900 mb-3">Soins Esthétiques</h4>
-<p class="text-slate-600 leading-relaxed">Blanchiment professionnel, facettes et reconstructions esthétiques pour un sourire éclatant.</p>
-</div>
-</div>
-</section>
-<section class="bg-white py-24" id="team">
-<div class="max-w-7xl mx-auto px-6">
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<div class="relative z-10 max-w-screen-2xl mx-auto px-12 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 <div>
-<h3 class="text-slate-900 text-3xl font-bold mb-2">Notre Équipe d'Experts</h3>
-<p class="text-slate-500">Des praticiens passionnés dédiés à votre santé.</p>
+<span class="inline-block py-1 px-3 bg-secondary-container text-on-secondary-container rounded-full text-sm font-bold tracking-wide uppercase mb-6">
+            Clinical Serenity Defined
+          </span>
+<h1 class="text-[5rem] leading-[1.1] font-extrabold tracking-tighter text-on-surface mb-8">
+            Your Smile, <br/><span class="text-primary">Our Priority.</span>
+</h1>
+<p class="text-on-surface-variant text-xl leading-relaxed max-w-lg mb-12">
+            Experience a new standard of dental care where advanced medical precision meets restorative clinical serenity. We don't just treat teeth; we curate confidence.
+          </p>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+              Schedule a Consultation
+            </button>
+<button class="flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
+<span>View Specialist Profiles</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
 </div>
-<div class="h-0.5 flex-1 bg-slate-100 mx-8 hidden md:block"></div>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-<div class="text-center">
-<div class="aspect-[4/5] rounded-3xl overflow-hidden mb-6 shadow-lg grayscale hover:grayscale-0 transition-all duration-500">
-<img alt="Dr. Sophie Martin" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO0TbGTlbHMCt0I3VnvWkkA0W3teeydaYlhvv2pxZ3Rsh9oNrGO9c-7QofG3tbo1dyJG8IrMuYJt6HTt2pzCP6MaAjkA4mM5DFWpFpYQeuGZzEdkpPGR4VMKVMKyo6bNvQSopoMclwHEigo_6U0aWdMtcPGAJ2muDWdq5IawjrtAzkClMh3mzvFZa6hfDsIpYaGQLNKA2mLHn61zsUYkBxRN5fyt_2ZuY0yw6wDD_Yl49sD8MummeohoH0laid7OXo2-u98p-6sCiM"/>
+<div class="relative">
+<div class="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl">
+<img class="w-full h-[600px] object-cover" data-alt="Professional friendly female dentist smiling warmly in a bright modern clinical setting, wearing clean white lab coat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMlb3A8kR_ECXRkioH-5YykcmcC1eXo6vD9ICGyJRlVOUSq67dt0_Zspewc__nKl2EHTBeXD6sZyMgQB49KjTJGUMIeRqRU6zCsLIRYZOxEBZ7RXRGwmG3OCv4OX6-YL2d6Qmvp4EvVndVYdkB9fzBBviOINBfkWuidprmOMdECrzxbuv7P-qC4fbYnh5XfAQISW969_iuV0xCcKP5n05Wg9iAwVVqymUnlfsmGXsg4kOpS8W_eTl2dZzVjvyonNHB0oDLiiEJxkN8"/>
 </div>
-<h4 class="text-xl font-bold text-slate-900">Dr. Sophie Martin</h4>
-<p class="text-primary font-medium">Orthodontiste D.E.</p>
+<!-- Decorative Tonal Blobs -->
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary-container/20 blur-3xl rounded-full -z-10"></div>
+<div class="absolute -bottom-12 -left-12 w-64 h-64 bg-secondary-container/30 blur-3xl rounded-full -z-10"></div>
 </div>
-<div class="text-center">
-<div class="aspect-[4/5] rounded-3xl overflow-hidden mb-6 shadow-lg grayscale hover:grayscale-0 transition-all duration-500">
-<img alt="Dr. Thomas Petit" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzRbDYRzB0xWki2oO17HNOsMEqOHDJLAMBPcPxn3BkVwDTIi-no99L0_1gwOZk1SBKlozws8pSnMVFW674EftNHI3foU3H89IITlEpFxjqPjQRfZNciE8TwrUg7Ccq0YHgy3ESAIQ2LEXOpHGq1gbBJOqcRLlJoCMA5SO8CuePl37Q1EH0L07hB8lzrOz0aGk8ooY8xYyWpdVkYxfJtToDaG50ZbkfHeh91R2BNXFWCRfiFZFo9JUhuz5BsPMdyAxNQdxkqn7ae07g"/>
 </div>
-<h4 class="text-xl font-bold text-slate-900">Dr. Thomas Petit</h4>
-<p class="text-primary font-medium">Chirurgien-Dentiste</p>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto px-12">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<h2 class="text-4xl font-extrabold tracking-tight mb-4">Our Services</h2>
+<p class="text-on-surface-variant text-lg">Comprehensive oral care delivered with a gentle touch and state-of-the-art technology.</p>
 </div>
-<div class="text-center hidden lg:block">
-<div class="aspect-[4/5] rounded-3xl overflow-hidden mb-6 shadow-lg bg-secondary flex items-center justify-center text-slate-400">
-<span class="material-symbols-outlined text-6xl">person</span>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Dentistry -->
+<div class="group bg-surface-container-lowest p-10 rounded-3xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,97,167,0.1)]">
+<div class="w-14 h-14 bg-primary-fixed-dim rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="dentistry">dentistry</span>
 </div>
-<h4 class="text-xl font-bold text-slate-900">Dr. Marc Lefèvre</h4>
-<p class="text-primary font-medium">Spécialiste en Implantologie</p>
+<h3 class="text-2xl font-bold mb-4">Dentistry</h3>
+<p class="text-on-surface-variant leading-relaxed">Routine check-ups, cleaning, and preventative care for a lifelong healthy foundation.</p>
+</div>
+<!-- Orthodontics -->
+<div class="group bg-surface-container-lowest p-10 rounded-3xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,97,167,0.1)]">
+<div class="w-14 h-14 bg-primary-fixed-dim rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="straighten">straighten</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Orthodontics</h3>
+<p class="text-on-surface-variant leading-relaxed">Modern alignment solutions including clear aligners and precision braces for all ages.</p>
+</div>
+<!-- Cosmetic -->
+<div class="group bg-surface-container-lowest p-10 rounded-3xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,97,167,0.1)]">
+<div class="w-14 h-14 bg-primary-fixed-dim rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="auto_fix_high">auto_fix_high</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Cosmetic Procedures</h3>
+<p class="text-on-surface-variant leading-relaxed">Transformative whitening, veneers, and bonding to create the smile you've always wanted.</p>
+</div>
+<!-- Oral Surgery -->
+<div class="group bg-surface-container-lowest p-10 rounded-3xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,97,167,0.1)]">
+<div class="w-14 h-14 bg-primary-fixed-dim rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="medical_services">medical_services</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Oral Surgery</h3>
+<p class="text-on-surface-variant leading-relaxed">Expert surgical care, from wisdom teeth removal to implants, in a calm, safe environment.</p>
 </div>
 </div>
 </div>
 </section>
-<section class="bg-secondary/30 py-24" id="testimonials">
-<div class="max-w-4xl mx-auto px-6">
-<h3 class="text-slate-900 text-3xl font-bold mb-12 text-center">Ce que nos patients disent</h3>
-<div class="space-y-8">
-<div class="bg-white p-8 rounded-3xl shadow-sm relative border border-slate-100">
-<div class="flex gap-1 text-amber-400 mb-4">
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
+<!-- Specialists Section -->
+<section class="py-32">
+<div class="max-w-screen-2xl mx-auto px-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-extrabold tracking-tight mb-4">Meet Our Specialists</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Our world-class doctors bring decades of collective expertise and a commitment to patient-centered care.</p>
 </div>
-<p class="text-slate-700 text-lg italic mb-6 leading-relaxed">
-                                "Une expérience exceptionnelle du début à la fin. Le Dr Martin est d'une douceur remarquable et a su m'expliquer chaque étape de mon traitement d'orthodontie invisible."
-                            </p>
-<div class="flex items-center gap-3">
-<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">ER</div>
-<p class="font-bold text-slate-900">Émilie R.</p>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-xl font-semibold">View All Staff</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Dr. Sophie Martin -->
+<div class="flex gap-8 items-center bg-surface-container rounded-[2rem] p-8">
+<img class="w-48 h-64 object-cover rounded-2xl shadow-xl" data-alt="Professional portrait of Dr. Sophie Martin, a female dental specialist in medical attire, confident and friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ6s3mq3EjozuOd_5jLjeZPM7ivcJJqN31J8E3_HCYoBK3ODu1_N5r8EAG1OYaSQyRH17CNe76kBKLQVoJk_rQWGmyexpt4-9IfH8q_XviAwEsjngOffg7UK5ImNRaPlled4XJZyn2w5Ef32ZBA314xWffkP4fDM4gft7proUzCz-09FTHfBmRzuI4lYVr8uW400W18E1LDwIqIRkLigImHhFqIgkj_DhrJ15PIhOok4xIMZJk_xBs1DpmtrwGNAMvnPDe_6Job1aC"/>
+<div>
+<h3 class="text-3xl font-bold mb-1">Dr. Sophie Martin</h3>
+<p class="text-primary font-medium mb-4">Chief Orthodontist</p>
+<p class="text-on-surface-variant mb-6 leading-relaxed">Specializing in discreet orthodontic solutions with over 15 years of clinical excellence.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-outline">verified</span>
+<span class="material-symbols-outlined text-outline">clinical_notes</span>
 </div>
 </div>
-<div class="bg-white p-8 rounded-3xl shadow-sm relative border border-slate-100">
-<div class="flex gap-1 text-amber-400 mb-4">
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
 </div>
-<p class="text-slate-700 text-lg italic mb-6 leading-relaxed">
-                                "Cabinet très moderne et rassurant. Toute l'équipe est aux petits soins. Je recommande vivement pour toute la famille."
-                            </p>
-<div class="flex items-center gap-3">
-<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">JD</div>
-<p class="font-bold text-slate-900">Jean-Daniel P.</p>
+<!-- Dr. James Wilson -->
+<div class="flex gap-8 items-center bg-surface-container rounded-[2rem] p-8">
+<img class="w-48 h-64 object-cover rounded-2xl shadow-xl" data-alt="Professional portrait of Dr. James Wilson, a male dentist in a white coat, leaning against a clean clinical wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLy1mXYCAjS6rldLZoZ75Y2_JSzPU7q2G_o9vPp1WNlx_7vgrcjsqQvCJmXVD_VpU1HR317YP8O_gt_tIRVi1Fy_Qo5zEYbWS_tHYR0523UbM40gQmm86bc9Oq4eHk_ohCfiuuDdLj9kOSCESd-dxtvrQKN1hvb1oIQ5FZHv454c35CTBJ1LF2_6YNGyMZxoPpLwMgFAm4hpRWeJPhitAjoWwsXqvkVyGdJ8m2XXNmPAHu1sZS787v-ULm1ZcyMqoqzHKK-lZ_PCeA"/>
+<div>
+<h3 class="text-3xl font-bold mb-1">Dr. James Wilson</h3>
+<p class="text-primary font-medium mb-4">Cosmetic Specialist</p>
+<p class="text-on-surface-variant mb-6 leading-relaxed">A pioneer in aesthetic reconstruction and smile design technologies.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-outline">verified</span>
+<span class="material-symbols-outlined text-outline">clinical_notes</span>
+</div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section class="bg-primary py-20">
-<div class="max-w-4xl mx-auto px-6 text-center">
-<h2 class="text-white text-3xl md:text-4xl font-bold mb-6">Prêt pour votre nouveau sourire ?</h2>
-<p class="text-white/80 text-lg mb-10">Rejoignez nos patients satisfaits et prenez rendez-vous dès aujourd'hui pour une consultation.</p>
-<button class="bg-white text-primary hover:bg-slate-50 px-12 py-5 rounded-full text-xl font-bold shadow-2xl transition-all hover:-translate-y-1">
-                        Prendre RDV en ligne
-                    </button>
+<!-- Testimonials Section -->
+<section class="py-32 bg-primary">
+<div class="max-w-screen-2xl mx-auto px-12 text-on-primary">
+<h2 class="text-4xl font-extrabold tracking-tight mb-20 text-center">What Our Patients Say</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-white/10 backdrop-blur-lg p-10 rounded-3xl border border-white/10">
+<div class="flex text-tertiary-fixed-dim mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-xl italic leading-relaxed mb-8">"The serenity of the clinic immediately put me at ease. Dr. Martin is thorough and incredibly kind. Best experience I've had."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-primary font-bold">EM</div>
+<div>
+<p class="font-bold">Elena Moretti</p>
+<p class="text-sm opacity-70">Patient since 2022</p>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white/10 backdrop-blur-lg p-10 rounded-3xl border border-white/10">
+<div class="flex text-tertiary-fixed-dim mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-xl italic leading-relaxed mb-8">"Truly professional. They explained every step of my procedure. The results were better than I could have imagined."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-primary font-bold">JD</div>
+<div>
+<p class="font-bold">Jean Dupont</p>
+<p class="text-sm opacity-70">Patient since 2023</p>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white/10 backdrop-blur-lg p-10 rounded-3xl border border-white/10">
+<div class="flex text-tertiary-fixed-dim mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-xl italic leading-relaxed mb-8">"The dental technology here is amazing. Everything was seamless from the booking to the final visit."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-primary font-bold">SC</div>
+<div>
+<p class="font-bold">Sarah Chen</p>
+<p class="text-sm opacity-70">Patient since 2021</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map & Contact Section -->
+<section class="py-32">
+<div class="max-w-screen-2xl mx-auto px-12 grid grid-cols-1 md:grid-cols-2 gap-16">
+<div>
+<h2 class="text-4xl font-extrabold tracking-tight mb-8">Find Us in Paris</h2>
+<div class="space-y-8 mb-12">
+<div class="flex items-start gap-4">
+<div class="bg-surface-container p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-bold text-lg">Our Location</p>
+<p class="text-on-surface-variant">123 Avenue de la Santé, 75008 Paris</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-container p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-bold text-lg">Phone Number</p>
+<p class="text-on-surface-variant">+33 1 23 45 67 89</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-container p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-bold text-lg">Email Address</p>
+<p class="text-on-surface-variant">contact@smilecare.clinic</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-8 rounded-2xl">
+<h3 class="font-bold text-xl mb-4">Office Hours</h3>
+<div class="space-y-3">
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span>Mon - Fri</span>
+<span class="font-medium text-primary">08:00 - 19:00</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span>Saturday</span>
+<span class="font-medium text-primary">09:00 - 14:00</span>
+</div>
+<div class="flex justify-between">
+<span>Sunday</span>
+<span class="text-error font-medium">Closed</span>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-3xl overflow-hidden shadow-xl min-h-[400px]">
+<img class="w-full h-full object-cover" data-alt="Satellite map view of 8th arrondissement in Paris highlighting Avenue de la Santé" data-location="Paris, France" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt56HcGjlJmUjSK15VLN0ZczzPW6zunImBVRFMc-OB05I-NkgLPMS4E7ZjusRPd_Xjwn-nQTsHKwJiIyKoH2jfAR8GTI1uykyb85Je2a8xZ6IQX_hxwMgw-_Xr_bGiSa4qq132JAVXdmJVy3mLa5GzHj5pY18jetfDrqPVv3r0gbLR3VxC2nLCptelT0ezrn6ZR9qgvdkD5YrEYFrqG3di6SKwJlO8OZXq0UI2kUhnFPvyOdw7ml2Avit4IvSy3cq6WZnDOwuEvqa1"/>
+</div>
 </div>
 </section>
 </main>
-<footer class="bg-slate-950 text-slate-400 py-16 px-6" id="contact">
-<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-<div class="col-span-1 md:col-span-1">
-<div class="flex items-center gap-2 text-white mb-6">
-<span class="material-symbols-outlined text-3xl text-primary">dentistry</span>
-<span class="text-xl font-bold tracking-tight">SmileCare Clinic</span>
+<!-- Footer -->
+<footer class="w-full pt-24 pb-12 bg-slate-50 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 px-12 max-w-screen-2xl mx-auto">
+<div class="space-y-6">
+<div class="text-xl font-bold text-sky-900 dark:text-sky-100">Ethereal Clinic</div>
+<p class="text-slate-500 leading-relaxed font-inter text-body-sm">Defining clinical serenity through expert dental precision and high-end patient hospitality in the heart of Paris.</p>
+<div class="flex gap-4">
+<div class="w-10 h-10 bg-surface-container rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">social_leaderboard</span>
 </div>
-<p class="text-sm leading-relaxed">
-                        Excellence et bienveillance au service de votre santé bucco-dentaire depuis 2015.
-                    </p>
+<div class="w-10 h-10 bg-surface-container rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+</div>
 </div>
 <div>
-<h5 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Navigation</h5>
-<ul class="space-y-4 text-sm">
-<li><a class="hover:text-primary transition-colors" href="#">Accueil</a></li>
-<li><a class="hover:text-primary transition-colors" href="#services">Services</a></li>
-<li><a class="hover:text-primary transition-colors" href="#team">Notre Équipe</a></li>
-<li><a class="hover:text-primary transition-colors" href="#testimonials">Témoignages</a></li>
+<h4 class="font-bold text-sky-800 dark:text-sky-300 mb-8 uppercase tracking-widest text-xs">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-sky-600 hover:translate-x-1 transition-transform inline-block" href="#">Home</a></li>
+<li><a class="text-slate-500 hover:text-sky-600 hover:translate-x-1 transition-transform inline-block" href="#">Services</a></li>
+<li><a class="text-slate-500 hover:text-sky-600 hover:translate-x-1 transition-transform inline-block" href="#">Specialists</a></li>
+<li><a class="text-slate-500 hover:text-sky-600 hover:translate-x-1 transition-transform inline-block" href="#">Testimonials</a></li>
+<li><a class="text-slate-500 hover:text-sky-600 hover:translate-x-1 transition-transform inline-block" href="#">Contact</a></li>
 </ul>
 </div>
 <div>
-<h5 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Contact</h5>
-<ul class="space-y-4 text-sm">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">location_on</span>
-<span>123 Avenue de la Santé, 75008 Paris</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-xl">call</span>
-<span>01 23 45 67 89</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-xl">mail</span>
-<span>contact@smilecare.clinic</span>
-</li>
+<h4 class="font-bold text-sky-800 dark:text-sky-300 mb-8 uppercase tracking-widest text-xs">Patient Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-sky-600 hover:translate-x-1 transition-transform inline-block" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-sky-600 hover:translate-x-1 transition-transform inline-block" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 hover:text-sky-600 hover:translate-x-1 transition-transform inline-block" href="#">FAQs</a></li>
+<li><a class="text-slate-500 hover:text-sky-600 hover:translate-x-1 transition-transform inline-block" href="#">Insurance Partners</a></li>
 </ul>
 </div>
 <div>
-<h5 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Horaires</h5>
-<ul class="space-y-2 text-sm">
-<li class="flex justify-between"><span>Lun - Ven:</span> <span class="text-white">8h00 - 19h00</span></li>
-<li class="flex justify-between"><span>Samedi:</span> <span class="text-white">9h00 - 14h00</span></li>
-<li class="flex justify-between"><span>Dimanche:</span> <span class="text-red-400 italic">Fermé</span></li>
-</ul>
+<h4 class="font-bold text-sky-800 dark:text-sky-300 mb-8 uppercase tracking-widest text-xs">Newsletter</h4>
+<p class="text-slate-500 text-sm mb-6">Stay informed about clinical updates and dental health tips.</p>
+<div class="flex gap-2">
+<input class="bg-surface-container border-none rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg"><span class="material-symbols-outlined">send</span></button>
 </div>
 </div>
-<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center text-xs text-slate-600">
-<p>© 2024 SmileCare Clinic. Tous droits réservés. Mentions Légales.</p>
+</div>
+<div class="max-w-screen-2xl mx-auto px-12 mt-20 pt-8 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center text-slate-400 text-sm">
+<p>© 2024 Ethereal Clinic. Clinical Serenity Defined.</p>
+<div class="flex gap-8">
+<a href="#">Patient Portal</a>
+<a href="#">Professional Referral</a>
+</div>
 </div>
 </footer>
-</div>
-
-<script>
-document.addEventListener("click", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("mousedown", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("mouseup", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("submit", function(e) { e.preventDefault(); }, true);
-</script></body></html>
+</body></html>

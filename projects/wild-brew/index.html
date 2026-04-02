@@ -1,344 +1,305 @@
+<!DOCTYPE html>
+
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Wild Brew | Premium Organic Kombucha</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<title>Organic Craft Collective | Naturally Wild, Purely Brewed</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#13ec6d",
-                        "forest": "#102218",
-                        "sage": "#4c9a6c",
-                        "amber-brew": "#d97706",
-                        "cream": "#f8fcfa",
-                        "moss": "#2d4c39",
-                    },
-                    fontFamily: {
-                        "display": ["Be Vietnam Pro", "sans-serif"]
-                    },
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-dim": "#12661e",
+              "on-surface": "#3b3906",
+              "secondary-dim": "#874800",
+              "surface-container-highest": "#f0ec92",
+              "tertiary-fixed": "#9df197",
+              "on-tertiary-fixed-variant": "#12661e",
+              "on-tertiary-container": "#005c15",
+              "background": "#fffbff",
+              "on-secondary": "#ffffff",
+              "on-tertiary-fixed": "#00460e",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#7c4100",
+              "surface-dim": "#ebe788",
+              "secondary-fixed-dim": "#ffb375",
+              "surface-variant": "#f0ec92",
+              "outline": "#858349",
+              "inverse-surface": "#100f00",
+              "on-secondary-fixed": "#532a00",
+              "surface-tint": "#576c00",
+              "on-error": "#ffffff",
+              "on-background": "#3b3906",
+              "outline-variant": "#bfbc7c",
+              "surface-container-high": "#f6f29d",
+              "on-surface-variant": "#696730",
+              "tertiary-container": "#9df197",
+              "tertiary-fixed-dim": "#90e28a",
+              "secondary-container": "#ffc69a",
+              "primary-fixed-dim": "#c1ed00",
+              "primary-fixed": "#cefc22",
+              "tertiary": "#237329",
+              "on-error-container": "#520c00",
+              "error": "#be2d06",
+              "on-primary-fixed": "#3b4a00",
+              "primary-container": "#cefc22",
+              "surface-bright": "#fffbff",
+              "primary-dim": "#4c5f00",
+              "secondary-fixed": "#ffc69a",
+              "inverse-primary": "#cefc22",
+              "surface-container-low": "#fffbd2",
+              "secondary": "#995200",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#a2a062",
+              "error-container": "#f95630",
+              "on-secondary-container": "#6f3a00",
+              "error-dim": "#b92902",
+              "on-primary-fixed-variant": "#546900",
+              "primary": "#576c00",
+              "surface": "#fffbff",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#4b5e00",
+              "surface-container": "#fbf7a7"
             },
-        }
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
     </script>
-<style type="text/tailwindcss">
-        @layer utilities {
-            .diagonal-divider {
-                clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-            }
-            .diagonal-divider-reverse {
-                clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-            }
-            .no-scrollbar::-webkit-scrollbar {
-                display: none;
-            }
-            .no-scrollbar {
-                -ms-overflow-style: none;
-                scrollbar-width: none;
-            }
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .blob-bg {
+            filter: blur(80px);
+            opacity: 0.4;
+            z-index: -1;
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-cream font-display text-forest">
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-<header class="flex items-center justify-between bg-cream/90 backdrop-blur-md px-6 md:px-12 py-4 sticky top-0 z-50 border-b border-sage/10">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-sage text-3xl">eco</span>
-<h1 class="text-forest text-xl font-black tracking-tighter uppercase">Wild Brew</h1>
+</head>
+<body class="bg-background font-body text-on-background selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl dark:bg-stone-900/70 shadow-xl shadow-stone-900/5">
+<nav class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black text-stone-900 dark:text-stone-50 tracking-tighter font-headline">
+                Organic Craft Collective
+            </div>
+<div class="hidden md:flex items-center gap-8 font-epilogue font-bold tracking-tight">
+<a class="text-orange-500 border-b-2 border-orange-500 pb-1 hover:scale-105 transition-transform duration-200" href="#">Shop</a>
+<a class="text-stone-700 dark:text-stone-300 hover:text-lime-600 hover:scale-105 transition-transform duration-200" href="#">Ferments</a>
+<a class="text-stone-700 dark:text-stone-300 hover:text-lime-600 hover:scale-105 transition-transform duration-200" href="#">Brewery</a>
+<a class="text-stone-700 dark:text-stone-300 hover:text-lime-600 hover:scale-105 transition-transform duration-200" href="#">Subscription</a>
+<a class="text-stone-700 dark:text-stone-300 hover:text-lime-600 hover:scale-105 transition-transform duration-200" href="#">Community</a>
 </div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-bold uppercase tracking-widest hover:text-sage transition-colors" href="#">Shop</a>
-<a class="text-sm font-bold uppercase tracking-widest hover:text-sage transition-colors" href="#">Our Story</a>
-<a class="text-sm font-bold uppercase tracking-widest hover:text-sage transition-colors" href="#">Benefits</a>
-<a class="text-sm font-bold uppercase tracking-widest hover:text-sage transition-colors" href="#">Find Us</a>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-stone-700 hover:scale-105 active:scale-90 transition-all" data-icon="shopping_cart">shopping_cart</button>
+<button class="material-symbols-outlined text-stone-700 hover:scale-105 active:scale-90 transition-all" data-icon="person">person</button>
+</div>
 </nav>
-<div class="flex items-center gap-4">
-<button class="hidden md:block bg-forest text-white px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-moss transition-all">
-                    Buy Online
-                </button>
-<button class="flex items-center justify-center rounded-lg h-10 w-10 text-forest relative">
-<span class="material-symbols-outlined text-2xl">shopping_bag</span>
-<span class="absolute top-1 right-1 bg-primary text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">2</span>
-</button>
-</div>
 </header>
-<section class="relative min-h-[85vh] flex items-center justify-center diagonal-divider bg-forest overflow-hidden">
-<div class="absolute inset-0 opacity-40">
-<img alt="Natural texture background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_6c8DUKFtfqEHXt-4FdBqEa47ZJGrpHNAjhqHCL59ilCzoaKY8DMg4rtaaTN66_8zQMH8IEHIB6ulNc5sa-a-J_D4ky322kp3lNi4YJq1rvjuiDcHMhosBz1LWatRAKMpV97d-Yzb9Qfr6lg9khKQZl1AbFxQ62OhjxRv83h2-UBLLfyfOKmmq2ejKfUyOkkivY8lT2PxWXsSFRb1JuifwW9PxM909XWoOAJZaI2NIofPJ4Znr1a8rVC5o_N-oO1EdDpkJB_e5w"/>
-</div>
-<div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
-<div class="text-center md:text-left">
-<span class="inline-block px-4 py-1 rounded-full border border-primary/30 text-primary text-xs font-bold uppercase tracking-[0.2em] mb-6">Unfiltered &amp; Raw</span>
-<h2 class="text-white text-5xl md:text-7xl font-black leading-tight mb-6">
-                        Naturally <br/> Wild.
-                    </h2>
-<p class="text-white/80 text-lg md:text-xl max-w-md mb-8">
-                        The world's most sophisticated organic kombucha, brewed in small batches with wild-harvested botanicals.
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden px-8">
+<!-- Decorative Blobs -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary-container rounded-full blob-bg"></div>
+<div class="absolute top-1/2 -right-24 w-[30rem] h-[30rem] bg-secondary-container rounded-full blob-bg"></div>
+<div class="max-w-screen-2xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<h1 class="font-headline text-6xl md:text-8xl font-black text-on-background tracking-tighter leading-[0.9] mb-8">
+                        Naturally <span class="text-primary italic">Wild</span>,<br/>
+                        Purely <span class="text-secondary">Brewed</span>.
+                    </h1>
+<p class="text-xl md:text-2xl text-on-surface-variant max-w-lg mb-10 leading-relaxed font-medium">
+                        Experience the vibrant, refreshing taste of wild-crafted kombucha, fermented in small batches with ancient traditions and modern craft.
                     </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-<button class="bg-primary text-forest px-10 py-5 rounded-full font-black uppercase tracking-widest text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-transform">
-                            Buy Online Now
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary text-on-secondary px-10 py-5 rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-xl shadow-secondary/20">
+                            Shop All Flavors
                         </button>
-<button class="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white/20 transition-all">
-                            Explore Flavors
+<button class="border-2 border-primary text-primary px-10 py-5 rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-all">
+                            Our Process
                         </button>
 </div>
 </div>
-<div class="relative flex justify-center">
-<div class="absolute inset-0 bg-primary/20 blur-[120px] rounded-full scale-75"></div>
-<img alt="Wild Brew Bottle" class="relative z-10 w-full max-w-[400px] drop-shadow-2xl hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRdqwoTrcj5JFSvSGr6pI6Lglrpoc95TTB55RR1kaqspbv5Uv_ljNYenocawLkTY5CpcR6D_xXJ7z3ARZcPyi0_SqBN5OkilMIKRYDRb2B-t70Ey6D_OQ2ZrNaPzMeb5WNQHau8I_Fpa5uoOdhikiiwxu0NpKVkH5-Lk6cHgPupho8dmvMMowWDe8C2TLj6PC5UPN5_lxHZPEMboqCnH-NXblgAoVsC5vPKrXhTJM0BjmWwqjPSiXBLxnse9E-ohWciKPQI4cI8A"/>
+<div class="relative flex justify-center lg:justify-end">
+<div class="relative w-full max-w-lg aspect-[4/5] rounded-xl overflow-visible">
+<!-- Liquid shape background -->
+<div class="absolute inset-0 bg-surface-container rounded-[4rem] rotate-3 -z-10"></div>
+<img alt="Wild Brew Kombucha Bottle" class="w-full h-full object-cover rounded-xl shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-700" data-alt="Premium glass bottle of golden kombucha with condensation on a minimalist warm textured background with soft organic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhAnIKnnqsZqhmKurA9MkDu9ryaOPj8zjwI9kn5Y4du2idZgTILCcSmlb3Td1AXX1inc45SfHVl2So685KrvKL4fvK8BLdCCOX_Lbk8xeq8gsYqohCCVj620BJGo0hkyZYAQF4h74ru04hHOLafZ4gJGhtsRGnql3fKstLt5NoI6yrQWjFSoPNQEUphg8dwmmLslg0ZpmgeH0ZJ3Ij5G60mERjWLQdc9TGCvWswkHJGhhI7O5zlHnLPE2sw5uNhooVwJSs5UbNGw"/>
+</div>
 </div>
 </div>
 </section>
-<section class="py-24 bg-cream -mt-20 md:-mt-32 relative z-20">
-<div class="container mx-auto px-6">
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<!-- Our Story Section -->
+<section class="py-24 bg-surface-container-low px-8 rounded-t-[3rem]">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1 relative">
+<div class="grid grid-cols-2 gap-4">
+<img class="w-full h-80 object-cover rounded-lg shadow-lg" data-alt="Close-up of fresh organic ginger roots on a clean white surface with natural morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl-4xcDA08TKZZf-rhDdktC8bCCRJL_6yUMf4Sws59eo6qaJkWVAYOFHUxNDdQWfqXUjRZrygeUXFBm0EprwwV-X8Y50zYrR7EzFH1AUUiE-RfMmuF2OlDecnLVMNDm8Tqjn76e9MXUKPPtRr7uEG0wc8ZHyqz93Vl4q8OUVzlF3a3g3vMvWuBO8cOayaNa1_UZQOjOG-9E0leFCxQDqWjLQYGpzLLd96LIbgiMnRsXx_PCRtaGcVoOXFYz-anS0GD0WWYuTb8Yw"/>
+<img class="w-full h-80 object-cover rounded-lg shadow-lg mt-12" data-alt="Hand picking high-quality green tea leaves in a misty mountain plantation during spring harvest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqElskQHZE78yVReUAu5khtgqlwL-wqvSCxuFyk0Hrxg62D7tkD1mKHwqyP8LxMIMZzZ99nYL0tewiWq-dO5FtR6U-V9g2XeEpLHg84hZag8VI4lC6ckUDJuWD5r7zj2o0p_mAMsTN1dJQ2nzle2_GpH5MOO81-FMVfOx7FCDVaMe525GIm5ZWjh3-p84e_JH3uBr3tSz0D9TPnXq5dZeN-Dl0h0c2C5-ixY-CgVmu6OLfnst5NQBR7Vpy4gu6yeXV5jaf4UvLgg"/>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="font-headline font-bold text-secondary tracking-widest text-sm uppercase">The Narrative</span>
+<h2 class="font-headline text-5xl font-extrabold mt-4 mb-8 leading-tight">Grown by Nature,<br/>Perfected by Time</h2>
+<p class="text-lg text-on-surface-variant mb-6 leading-relaxed">
+                            At Organic Craft Collective, we don't just brew; we cultivate. Every bottle is a living ecosystem of beneficial cultures, forged through a meticulous 21-day fermentation cycle using only the finest heirloom tea leaves and raw, cold-pressed botanicals.
+                        </p>
+<p class="text-lg text-on-surface-variant mb-10 leading-relaxed">
+                            Our mission is to bring the "wild" back into your daily ritual. No pasteurization, no shortcuts—just pure, unadulterated vitality in a bottle.
+                        </p>
+<a class="inline-flex items-center gap-2 font-bold text-primary hover:gap-4 transition-all" href="#">
+                            Read the full story <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- The Collection Section -->
+<section class="py-32 px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
 <div>
-<h2 class="text-4xl md:text-5xl font-black text-forest leading-none">Saveurs</h2>
-<p class="text-sage font-medium mt-2">Discover our seasonal wild signatures.</p>
+<h2 class="font-headline text-6xl font-black text-on-background tracking-tighter">The Collection</h2>
+<p class="text-xl text-on-surface-variant mt-4">Small batches, massive flavor profiles.</p>
 </div>
-<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
-<button class="px-6 py-2 rounded-full bg-forest text-white text-xs font-bold uppercase tracking-widest whitespace-nowrap">All</button>
-<button class="px-6 py-2 rounded-full border border-sage/20 text-forest text-xs font-bold uppercase tracking-widest whitespace-nowrap hover:bg-sage/5 transition-colors">Citrus</button>
-<button class="px-6 py-2 rounded-full border border-sage/20 text-forest text-xs font-bold uppercase tracking-widest whitespace-nowrap hover:bg-sage/5 transition-colors">Herbal</button>
-<button class="px-6 py-2 rounded-full border border-sage/20 text-forest text-xs font-bold uppercase tracking-widest whitespace-nowrap hover:bg-sage/5 transition-colors">Spiced</button>
-</div>
+<button class="bg-surface-container-high text-on-surface px-8 py-4 rounded-full font-bold hover:bg-primary-container transition-colors">
+                        View Full Menu
+                    </button>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="group relative pt-12">
-<div class="absolute inset-0 bg-amber-brew/5 rounded-3xl translate-y-4 translate-x-4"></div>
-<div class="relative bg-white border border-sage/10 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
-<div class="absolute -right-10 -top-10 bg-amber-brew/10 w-40 h-40 rounded-full blur-3xl"></div>
-<img alt="Ginger" class="h-64 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKJNLLZvKx_wDgA2ejpiK8LaeFM9bw1xOyxXnO-2ubpXyQW8p4Bt63GjlBbpnmkwciBKXCJWIxaEJVD9UyxXFIadBjU9HY_pqufDlsBEke1HOt-P1O-y8wxkNdLMutgUJABBHoyr0byorOWZpMhEV7G3vrztTrEq3RUArYBJHfkEDcs4hQfjXrDPjYSulC3zoZ3dStkNEqdusort0LDqeS8EOSIUVK6Bb7OSPcjM3qxybvJwnn6odeFZzpZ5YZb4m4z8t1WS7vKw"/>
-<h3 class="text-2xl font-black mb-2">Wild Ginger</h3>
-<p class="text-sm text-slate-500 mb-6 leading-relaxed">Infused with raw organic ginger root for a spicy, gut-healing kick.</p>
+<!-- Product Card 1 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-primary-container/20">
+<div class="relative mb-8 bg-surface-container rounded-lg p-6 overflow-hidden">
+<img class="w-full h-80 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Artisanal glass bottle of Original flavor kombucha with minimal label design on a soft yellow background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2cgQBDLduw2xeUNL1hl7BFFFhYc94_S2ll7HQdcKV2ShtZ0iVyg4lnQ7m3Q1HHwidHk8BoFbWBOulP_BJUmAxM2z2d3ST9Yfw-ReTVomVe6NbyzObVyPBZhbCrWyI369i3xA__wrOomEllCTjfFunzQab5PfQR0Rksyr3JUYzbb94461JD2np8I50ZSZWyvHIIdbmZ2PRtWCcyDYybTOceC5sWIndptokuIB8HzpNcwbJEY_yAXz7Y9hJB1B4gchg6FHNaDbF8g"/>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-2">Original Culture</h3>
+<p class="text-on-surface-variant mb-6">Crisp, slightly tart, and remarkably refreshing. The pure essence of tea.</p>
 <div class="flex items-center justify-between">
-<span class="text-xl font-bold text-amber-brew">$5.50</span>
-<button class="bg-forest text-white p-3 rounded-xl hover:bg-primary hover:text-forest transition-colors">
+<span class="text-2xl font-black text-on-background">$5.50</span>
+<button class="bg-primary text-on-primary w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl hover:shadow-2xl transition-all duration-500 mt-0 md:mt-12 border border-transparent hover:border-secondary-container/20">
+<div class="relative mb-8 bg-secondary-container/20 rounded-lg p-6 overflow-hidden">
+<img class="w-full h-80 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Vibrant orange-colored kombucha bottle with ginger infusion visible, glowing under warm professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyCa4YkgoPb0S4p6603FmMfARGdHH6dJFypOfrrEqYR6fY6rfzAMO8oVFnLPdRQpQVa6UrM2WXaFn-oXduSZDDzqVKVu1wThRFjyCxTkBud6rY1icHlVw2FrAvEVJoisZnGenCwqU1zKMplPKOfkcvsDHFSIe3uUaJxv6Rd2jA6GHwSesd2GTLSfbZVDsFnSRwl3Nwbpjvn-70y41aR7t6GCRdPvzPYcug7C_4QXpp8YkS4-yDpBhyjr7fvg-1A01HROL-5TG4oA"/>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-2">Wild Ginger</h3>
+<p class="text-on-surface-variant mb-6">A bold, spicy kick balanced with subtle honey notes. Nature's digestive fire.</p>
+<div class="flex items-center justify-between">
+<span class="text-2xl font-black text-on-background">$5.95</span>
+<button class="bg-primary text-on-primary w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-primary-container/20">
+<div class="relative mb-8 bg-surface-container rounded-lg p-6 overflow-hidden">
+<img class="w-full h-80 object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Deep purple berry flavored kombucha in a craft glass bottle against a clean neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkshcvEE3YlxGgrSm2nemTBsxxGsPvKYA2neOHj_PjXd9S3yBIWOs8Qcr9XJcxdjmo4_MXO73wmNWxG4TkffUIH-OnkKtbLnpV1euq1eMwcwslTTVGfBpSEXkS2_ODyG4NuQ7_Q8UEgB2JC7so2Tym986QcP8tRX26E1DKg6rNQjTlvJGkvVhcevF2OASTQRqGkVbJ9tAgPjlONPvkdbal28Ris1PkV743ZGDOczGojZNmuswAWElbpXAPtWq0ygKKNRHNJfu7dQ"/>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-2">Berry Wild</h3>
+<p class="text-on-surface-variant mb-6">A wild symphony of organic raspberries, blueberries, and elderflower.</p>
+<div class="flex items-center justify-between">
+<span class="text-2xl font-black text-on-background">$6.25</span>
+<button class="bg-primary text-on-primary w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 active:scale-95 transition-all">
 <span class="material-symbols-outlined">add_shopping_cart</span>
 </button>
 </div>
 </div>
 </div>
-<div class="group relative pt-12 md:pt-0">
-<div class="absolute inset-0 bg-sage/5 rounded-3xl translate-y-4 translate-x-4"></div>
-<div class="relative bg-white border border-sage/10 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
-<div class="absolute -right-10 -top-10 bg-sage/10 w-40 h-40 rounded-full blur-3xl"></div>
-<img alt="Forest" class="h-64 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB84OTP8RawzYPIqbYIVw5fd8MSiSUFVevblKh_hR94dyE17voqHbN5IpXvFNiV7TroxgLJ4EW1ZqWPR4o8oAI1DLlE1hmXgHt-NqNFB5ct1qf2TxWsQLEuCb2Gkc5dIAOujjWam245xSGxpi8lTe89k6JAtGRhyvbPOho6e6SPbqWdx1JAZVc7QOFKBxK_0eYw9VOY53d-hTO0ALW1NoB_r4eOWjFonxxl7BMDUQypLlydqnwHgaepS3fAyzuQD_O91Nt2XtlnWA"/>
-<h3 class="text-2xl font-black mb-2">Forest Moss</h3>
-<p class="text-sm text-slate-500 mb-6 leading-relaxed">Crisp pine notes and herbal essences for a refreshing mountain vibe.</p>
-<div class="flex items-center justify-between">
-<span class="text-xl font-bold text-sage">$5.50</span>
-<button class="bg-forest text-white p-3 rounded-xl hover:bg-primary hover:text-forest transition-colors">
-<span class="material-symbols-outlined">add_shopping_cart</span>
-</button>
 </div>
+</section>
+<!-- Why Choose Us Section -->
+<section class="py-24 bg-primary text-on-primary px-8 rounded-[3rem] mx-4 mb-12">
+<div class="max-w-screen-2xl mx-auto text-center">
+<h2 class="font-headline text-5xl font-black mb-20 tracking-tight">The Wild Standards</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 bg-on-primary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">eco</span>
 </div>
+<h3 class="text-2xl font-bold mb-3">100% Organic</h3>
+<p class="text-on-primary/80 max-w-xs">Certified organic ingredients, sourced directly from regenerative farms we trust.</p>
 </div>
-<div class="group relative pt-12">
-<div class="absolute inset-0 bg-primary/5 rounded-3xl translate-y-4 translate-x-4"></div>
-<div class="relative bg-white border border-sage/10 p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
-<div class="absolute -right-10 -top-10 bg-primary/10 w-40 h-40 rounded-full blur-3xl"></div>
-<img alt="Berry" class="h-64 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClSRDquFkRaq6gD6VI7rbM4MCq-e6fR8JpNZ4xVbJI9cflYQv9aJFT4JZBP7n1_hJmVWkS5w1BYE3SOnGAg90aLNw4hlfqPnvqY4oVetqTi6yPrm-17QLbgH4RxcdBx_qse96GMsBqnIguKuw6ZhWv0XgMTZGJ-EA1mXx2Jz00sdfi0Bf0muAKriEn3n_SjQIga8-Z-IAE5osJDPMGAZ5pcviCgx5UsqxJttbn1ZVtkshqBuGSKq4j-DNlwU8UgmrtgwjrCfysyw"/>
-<h3 class="text-2xl font-black mb-2">Berry Wild</h3>
-<p class="text-sm text-slate-500 mb-6 leading-relaxed">Tart wild berries and hibiscus flowers for an antioxidant boost.</p>
-<div class="flex items-center justify-between">
-<span class="text-xl font-bold text-primary-dark text-emerald-600">$5.50</span>
-<button class="bg-forest text-white p-3 rounded-xl hover:bg-primary hover:text-forest transition-colors">
-<span class="material-symbols-outlined">add_shopping_cart</span>
-</button>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 bg-on-primary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">science</span>
 </div>
+<h3 class="text-2xl font-bold mb-3">Live Cultures</h3>
+<p class="text-on-primary/80 max-w-xs">Billions of probiotics in every bottle, never compromised by pasteurization.</p>
 </div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 bg-on-primary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">recycling</span>
+</div>
+<h3 class="text-2xl font-bold mb-3">Eco-Brewed</h3>
+<p class="text-on-primary/80 max-w-xs">Solar-powered brewery and carbon-neutral shipping in fully recyclable glass.</p>
 </div>
 </div>
 </div>
 </section>
-<section class="py-24 bg-forest diagonal-divider-reverse text-white">
-<div class="container mx-auto px-6">
-<div class="max-w-3xl mx-auto text-center mb-20">
-<span class="text-primary font-bold uppercase tracking-widest text-xs mb-4 block">Crafted with Intention</span>
-<h2 class="text-4xl font-black mb-6">Why the world is going Wild.</h2>
-</div>
-<div class="grid grid-cols-2 lg:grid-cols-4 gap-12">
-<div class="flex flex-col items-center text-center">
-<div class="size-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-primary">
-<span class="material-symbols-outlined text-4xl">eco</span>
-</div>
-<h4 class="font-bold text-lg mb-2">100% Organic</h4>
-<p class="text-sm text-white/60">No pesticides, no shortcuts. Just pure nature.</p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="size-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-primary">
-<span class="material-symbols-outlined text-4xl">microbiology</span>
-</div>
-<h4 class="font-bold text-lg mb-2">Live Cultures</h4>
-<p class="text-sm text-white/60">Billions of active probiotics for gut harmony.</p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="size-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-primary">
-<span class="material-symbols-outlined text-4xl">energy_savings_leaf</span>
-</div>
-<h4 class="font-bold text-lg mb-2">Eco-Brewed</h4>
-<p class="text-sm text-white/60">Brewed using 100% renewable solar energy.</p>
-</div>
-<div class="flex flex-col items-center text-center">
-<div class="size-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-primary">
-<span class="material-symbols-outlined text-4xl">nutrition</span>
-</div>
-<h4 class="font-bold text-lg mb-2">Zero Sugars</h4>
-<p class="text-sm text-white/60">Fermented to perfection for a clean profile.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-cream">
-<div class="container mx-auto px-6">
-<div class="flex justify-between items-end mb-12">
-<h2 class="text-3xl font-black text-forest">Shop Collection</h2>
-<a class="text-sage text-sm font-bold uppercase border-b-2 border-sage/20 hover:border-sage transition-all pb-1" href="#">View Full Range</a>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-<div class="bg-white p-4 rounded-3xl border border-sage/5 group">
-<div class="aspect-square bg-cream rounded-2xl overflow-hidden mb-4 p-4 relative">
-<img alt="Product" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRdqwoTrcj5JFSvSGr6pI6Lglrpoc95TTB55RR1kaqspbv5Uv_ljNYenocawLkTY5CpcR6D_xXJ7z3ARZcPyi0_SqBN5OkilMIKRYDRb2B-t70Ey6D_OQ2ZrNaPzMeb5WNQHau8I_Fpa5uoOdhikiiwxu0NpKVkH5-Lk6cHgPupho8dmvMMowWDe8C2TLj6PC5UPN5_lxHZPEMboqCnH-NXblgAoVsC5vPKrXhTJM0BjmWwqjPSiXBLxnse9E-ohWciKPQI4cI8A"/>
-<button class="absolute top-2 right-2 p-2 bg-white/80 backdrop-blur rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-sm">favorite</span>
-</button>
-</div>
-<h5 class="font-bold text-sm text-forest truncate">Ginger Zest 6-Pack</h5>
-<p class="text-xs text-slate-400 mb-2">Signature Fermentation</p>
-<div class="flex items-center justify-between">
-<span class="font-black text-forest">$28.00</span>
-<button class="text-primary bg-forest px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-tighter">Add</button>
-</div>
-</div>
-<div class="bg-white p-4 rounded-3xl border border-sage/5 group">
-<div class="aspect-square bg-cream rounded-2xl overflow-hidden mb-4 p-4 relative">
-<img alt="Product" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA3F0FnpmU_7x2-nF2oL0c42nJ6UDGNBJV5Xl22EyaGRUWeKK84lq1m1i4eUR8lDGJY1PVkHjGmFG7OfMRcqX_ycjI8kAtLxoyHBrOg-nNkYUlKvNvY5t0yKGLJwtLDR50YBR1Nze6tAzA1HNdvSR5pTzgOV06-uUzbZ1WGrptyh_UswoX66TMv0VO5yyO5UQ_b2LVb9jN8C_ZzRH4GkH0z-NtfanT5o3F2F4xHU_Q971T5VP5le1fYPW-hV6tfkFHENB6FxT-zQ"/>
-<button class="absolute top-2 right-2 p-2 bg-white/80 backdrop-blur rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-sm">favorite</span>
-</button>
-</div>
-<h5 class="font-bold text-sm text-forest truncate">Variety Starter Pack</h5>
-<p class="text-xs text-slate-400 mb-2">Mixed 12-Pack</p>
-<div class="flex items-center justify-between">
-<span class="font-black text-forest">$45.00</span>
-<button class="text-primary bg-forest px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-tighter">Add</button>
-</div>
-</div>
-<div class="bg-white p-4 rounded-3xl border border-sage/5 group">
-<div class="aspect-square bg-cream rounded-2xl overflow-hidden mb-4 p-4 relative">
-<img alt="Product" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB84OTP8RawzYPIqbYIVw5fd8MSiSUFVevblKh_hR94dyE17voqHbN5IpXvFNiV7TroxgLJ4EW1ZqWPR4o8oAI1DLlE1hmXgHt-NqNFB5ct1qf2TxWsQLEuCb2Gkc5dIAOujjWam245xSGxpi8lTe89k6JAtGRhyvbPOho6e6SPbqWdx1JAZVc7QOFKBxK_0eYw9VOY53d-hTO0ALW1NoB_r4eOWjFonxxl7BMDUQypLlydqnwHgaepS3fAyzuQD_O91Nt2XtlnWA"/>
-<button class="absolute top-2 right-2 p-2 bg-white/80 backdrop-blur rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-sm">favorite</span>
-</button>
-</div>
-<h5 class="font-bold text-sm text-forest truncate">Forest Moss 6-Pack</h5>
-<p class="text-xs text-slate-400 mb-2">Herbal Essence</p>
-<div class="flex items-center justify-between">
-<span class="font-black text-forest">$28.00</span>
-<button class="text-primary bg-forest px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-tighter">Add</button>
-</div>
-</div>
-<div class="bg-white p-4 rounded-3xl border border-sage/5 group">
-<div class="aspect-square bg-cream rounded-2xl overflow-hidden mb-4 p-4 relative">
-<img alt="Product" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClSRDquFkRaq6gD6VI7rbM4MCq-e6fR8JpNZ4xVbJI9cflYQv9aJFT4JZBP7n1_hJmVWkS5w1BYE3SOnGAg90aLNw4hlfqPnvqY4oVetqTi6yPrm-17QLbgH4RxcdBx_qse96GMsBqnIguKuw6ZhWv0XgMTZGJ-EA1mXx2Jz00sdfi0Bf0muAKriEn3n_SjQIga8-Z-IAE5osJDPMGAZ5pcviCgx5UsqxJttbn1ZVtkshqBuGSKq4j-DNlwU8UgmrtgwjrCfysyw"/>
-<button class="absolute top-2 right-2 p-2 bg-white/80 backdrop-blur rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-sm">favorite</span>
-</button>
-</div>
-<h5 class="font-bold text-sm text-forest truncate">Berry Wild 6-Pack</h5>
-<p class="text-xs text-slate-400 mb-2">Anti-oxidant Rich</p>
-<div class="flex items-center justify-between">
-<span class="font-black text-forest">$28.00</span>
-<button class="text-primary bg-forest px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-tighter">Add</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-primary px-6">
-<div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
-<div class="md:w-1/2">
-<h2 class="text-4xl font-black text-forest mb-4 leading-tight">Join the Tribe.</h2>
-<p class="text-forest/80 font-medium">Subscribe for wild recipes, limited flavor drops, and 15% off your first online order.</p>
-</div>
-<div class="md:w-1/2 w-full">
-<form class="flex flex-col sm:flex-row gap-3">
-<input class="flex-1 bg-white border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-forest" placeholder="email@example.com" type="email"/>
-<button class="bg-forest text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm hover:bg-moss transition-colors" type="submit">Join</button>
-</form>
-</div>
-</div>
-</section>
-<footer class="bg-forest text-white pt-20 pb-12 px-6">
-<div class="container mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-<div>
-<div class="flex items-center gap-2 mb-6">
-<span class="material-symbols-outlined text-primary text-3xl">eco</span>
-<h2 class="text-2xl font-black tracking-tighter uppercase">Wild Brew</h2>
-</div>
-<p class="text-white/40 text-sm leading-relaxed mb-6">
-                            Brewing the spirit of nature in every bottle. Small batch, organic, and wildly delicious.
-                        </p>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-800 rounded-t-[3rem] mt-12 font-label text-sm tracking-wide">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 max-w-screen-2xl mx-auto">
+<div class="md:col-span-1">
+<span class="text-xl font-black text-stone-900 dark:text-stone-50 mb-4 block font-headline">Organic Craft Collective</span>
+<p class="text-stone-600 dark:text-stone-400 mb-6">Cultivating wellness through ancient fermentation and modern craft.</p>
 <div class="flex gap-4">
-<span class="material-symbols-outlined text-white/60 hover:text-primary transition-colors cursor-pointer">share</span>
-<span class="material-symbols-outlined text-white/60 hover:text-primary transition-colors cursor-pointer">photo_camera</span>
-<span class="material-symbols-outlined text-white/60 hover:text-primary transition-colors cursor-pointer">play_circle</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">public</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">alternate_email</span>
 </div>
 </div>
 <div>
-<h4 class="font-bold uppercase tracking-widest text-xs mb-6 text-primary">Shop</h4>
-<ul class="space-y-4 text-white/60 text-sm">
-<li><a class="hover:text-white transition-colors" href="#">Kombucha</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Subscritions</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Wholesale</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Merchandise</a></li>
+<h4 class="font-bold text-stone-900 dark:text-stone-50 mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-600 dark:text-stone-400 hover:text-lime-500 hover:translate-x-1 transition-transform duration-300 block" href="#">Our Story</a></li>
+<li><a class="text-stone-600 dark:text-stone-400 hover:text-lime-500 hover:translate-x-1 transition-transform duration-300 block" href="#">Wholesale</a></li>
+<li><a class="text-stone-600 dark:text-stone-400 hover:text-lime-500 hover:translate-x-1 transition-transform duration-300 block" href="#">Sustainability</a></li>
 </ul>
 </div>
 <div>
-<h4 class="font-bold uppercase tracking-widest text-xs mb-6 text-primary">Explore</h4>
-<ul class="space-y-4 text-white/60 text-sm">
-<li><a class="hover:text-white transition-colors" href="#">Our Story</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Health Benefits</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Brewing Process</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Sustainability</a></li>
+<h4 class="font-bold text-stone-900 dark:text-stone-50 mb-6">Transparency</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-600 dark:text-stone-400 hover:text-lime-500 hover:translate-x-1 transition-transform duration-300 block" href="#">Lab Results</a></li>
+<li><a class="text-stone-600 dark:text-stone-400 hover:text-lime-500 hover:translate-x-1 transition-transform duration-300 block" href="#">Privacy Policy</a></li>
+<li><a class="text-stone-600 dark:text-stone-400 hover:text-lime-500 hover:translate-x-1 transition-transform duration-300 block" href="#">Shipping &amp; Returns</a></li>
 </ul>
 </div>
 <div>
-<h4 class="font-bold uppercase tracking-widest text-xs mb-6 text-primary">Support</h4>
-<ul class="space-y-4 text-white/60 text-sm">
-<li><a class="hover:text-white transition-colors" href="#">Contact Us</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Shipping Policy</a></li>
-<li><a class="hover:text-white transition-colors" href="#">Store Locator</a></li>
-<li><a class="hover:text-white transition-colors" href="#">FAQs</a></li>
-</ul>
-</div>
-</div>
-<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-6 text-[10px] text-white/30 uppercase tracking-[0.2em] font-bold">
-<p>© 2024 Wild Brew Beverages Co. All rights reserved.</p>
-<div class="flex gap-8">
-<a href="#">Privacy Policy</a>
-<a href="#">Terms of Service</a>
+<h4 class="font-bold text-stone-900 dark:text-stone-50 mb-6">Newsletter</h4>
+<p class="text-stone-600 dark:text-stone-400 mb-4">Join the ferment. Get brewing tips and new drops.</p>
+<div class="relative focus-within:ring-2 focus-within:ring-lime-500 rounded-full transition-all">
+<input class="w-full bg-white dark:bg-stone-700 border-none rounded-full px-6 py-3 text-sm focus:ring-0" placeholder="email@craft.com" type="email"/>
+<button class="absolute right-2 top-2 bg-primary text-on-primary w-8 h-8 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
 </div>
 </div>
 </div>
+<div class="px-12 py-8 border-t border-stone-200 dark:border-stone-700 max-w-screen-2xl mx-auto text-center text-stone-500 dark:text-stone-500">
+            © 2024 The Organic Craft Collective. Stay Wild, Stay Fermented.
+        </div>
 </footer>
-</div>
-
-<script>
-document.addEventListener("click", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("mousedown", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("mouseup", function(e) { e.preventDefault(); e.stopPropagation(); }, true);
-document.addEventListener("submit", function(e) { e.preventDefault(); }, true);
-</script></body></html>
+</body></html>
