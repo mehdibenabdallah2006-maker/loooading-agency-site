@@ -519,11 +519,11 @@ select {
       <div class="grid-2">
         <div class="question">
           <label class="q-label">Nom de la marque / entreprise</label>
-          <input type="text" name="brand_name" placeholder="Ex : Maison Arlen">
+          <input type="text" name="brand_name" placeholder="Ex : Maison Arlen" required>
         </div>
         <div class="question">
           <label class="q-label">Secteur d'activité</label>
-          <input type="text" name="sector" placeholder="Ex : Hôtellerie de luxe, Tech B2B…">
+          <input type="text" name="sector" placeholder="Ex : Hôtellerie de luxe, Tech B2B…" required>
         </div>
       </div>
       <div class="question">
@@ -544,7 +544,7 @@ select {
         <div class="question">
           <label class="q-label">Stade de développement</label>
           <div class="choices">
-            <div class="choice-item"><input type="radio" name="stage" id="s1" value="pre-launch"><label for="s1">Pré-lancement</label></div>
+            <div class="choice-item"><input type="radio" name="stage" id="s1" value="pre-launch" required><label for="s1">Pré-lancement</label></div>
             <div class="choice-item"><input type="radio" name="stage" id="s2" value="launch"><label for="s2">Lancement récent</label></div>
             <div class="choice-item"><input type="radio" name="stage" id="s3" value="growth"><label for="s3">Croissance</label></div>
             <div class="choice-item"><input type="radio" name="stage" id="s4" value="mature"><label for="s4">Marque mature</label></div>
@@ -554,7 +554,7 @@ select {
         <div class="question">
           <label class="q-label">Taille de l'équipe</label>
           <div class="choices">
-            <div class="choice-item"><input type="radio" name="team_size" id="ts1" value="1"><label for="ts1">1 personne (solo)</label></div>
+            <div class="choice-item"><input type="radio" name="team_size" id="ts1" value="1" required><label for="ts1">1 personne (solo)</label></div>
             <div class="choice-item"><input type="radio" name="team_size" id="ts2" value="2-5"><label for="ts2">2–5 personnes</label></div>
             <div class="choice-item"><input type="radio" name="team_size" id="ts3" value="6-20"><label for="ts3">6–20 personnes</label></div>
             <div class="choice-item"><input type="radio" name="team_size" id="ts4" value="20-50"><label for="ts4">20–50 personnes</label></div>
@@ -576,7 +576,7 @@ select {
         <label class="q-label">Budget envisagé pour ce projet</label>
         <p class="q-hint">Cela nous aide à calibrer le niveau de détail du brand book.</p>
         <div class="choices">
-          <div class="choice-item"><input type="radio" name="budget" id="b1" value="<5k"><label for="b1">Moins de 5 000 DH</label></div>
+          <div class="choice-item"><input type="radio" name="budget" id="b1" value="<5k" required><label for="b1">Moins de 5 000 DH</label></div>
           <div class="choice-item"><input type="radio" name="budget" id="b2" value="5k-10k"><label for="b2">5 000 – 10 000 DH</label></div>
           <div class="choice-item"><input type="radio" name="budget" id="b3" value="10k-20k"><label for="b3">10 000 – 20 000 DH</label></div>
           <div class="choice-item"><input type="radio" name="budget" id="b4" value="20k+"><label for="b4">Plus de 20 000 DH</label></div>
@@ -597,7 +597,7 @@ select {
       <div class="question">
         <label class="q-label">Mission — Quel problème fondamental votre marque résout-elle ?</label>
         <p class="q-hint">Au-delà du profit, quel impact voulez-vous avoir sur vos clients ou la société ?</p>
-        <textarea name="mission"></textarea>
+        <textarea name="mission" required></textarea>
       </div>
       <div class="question">
         <label class="q-label">Vision — Où voulez-vous amener votre marque dans 5–10 ans ?</label>
@@ -632,7 +632,7 @@ select {
       <div class="question">
         <label class="q-label">Décrivez votre client idéal</label>
         <p class="q-hint">Âge, profession, style de vie, aspirations, frustrations, habitudes de consommation.</p>
-        <textarea name="persona_main" rows="4"></textarea>
+        <textarea name="persona_main" rows="4" required></textarea>
       </div>
       <div class="question">
         <label class="q-label">Persona secondaire (si existant)</label>
@@ -686,7 +686,7 @@ select {
         <div class="question">
           <label class="q-label">Positionnement tarifaire</label>
           <div class="choices">
-            <div class="choice-item"><input type="radio" name="pricing" id="p1" value="accessible"><label for="p1">Accessible</label></div>
+            <div class="choice-item"><input type="radio" name="pricing" id="p1" value="accessible" required><label for="p1">Accessible</label></div>
             <div class="choice-item"><input type="radio" name="pricing" id="p2" value="mid"><label for="p2">Milieu de gamme</label></div>
             <div class="choice-item"><input type="radio" name="pricing" id="p3" value="premium"><label for="p3">Premium</label></div>
             <div class="choice-item"><input type="radio" name="pricing" id="p4" value="luxury"><label for="p4">Luxe / Ultra-premium</label></div>
@@ -695,7 +695,7 @@ select {
         <div class="question">
           <label class="q-label">Modèle de distribution</label>
           <div class="choices">
-            <div class="choice-item"><input type="checkbox" name="distribution" id="dist1" value="direct"><label for="dist1">Vente directe (boutique, e-commerce)</label></div>
+            <div class="choice-item"><input type="checkbox" name="distribution" id="dist1" value="direct" required><label for="dist1">Vente directe (boutique, e-commerce)</label></div>
             <div class="choice-item"><input type="checkbox" name="distribution" id="dist2" value="resellers"><label for="dist2">Distributeurs / Revendeurs</label></div>
             <div class="choice-item"><input type="checkbox" name="distribution" id="dist3" value="marketplace"><label for="dist3">Marketplace (Amazon, Jumia…)</label></div>
             <div class="choice-item"><input type="checkbox" name="distribution" id="dist4" value="b2b"><label for="dist4">B2B (vente aux entreprises)</label></div>
@@ -1063,11 +1063,11 @@ select {
       <div class="grid-2">
         <div class="question">
           <label class="q-label">Nom & Prénom</label>
-          <input type="text" name="contact_name">
+          <input type="text" name="contact_name" required>
         </div>
         <div class="question">
           <label class="q-label">Email</label>
-          <input type="email" name="contact_email">
+          <input type="email" name="contact_email" required>
         </div>
       </div>
       <div class="grid-2">
